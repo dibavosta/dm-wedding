@@ -27,7 +27,8 @@
 .bottom {
   height: 30px;
   border-style: solid;
-  border-color: --background-rgb --background-rgb #b97b52;
+  border-color: var(--background-color) var(--background-color)
+    var(--theme-color-dark);
   margin-top: 16px;
   display: flex;
   flex-direction: row;
@@ -76,6 +77,20 @@
 
 .hamburger-react {
   margin-left: 5%;
+}
+
+.ul-list-lang {
+  list-style-type: none;
+  display: inline-flex;
+}
+
+.li-lang {
+  display: inline;
+  margin: 5px;
+}
+
+.margin {
+  padding: 10px;
 }
 
 @media only screen and (max-width: 600px) {

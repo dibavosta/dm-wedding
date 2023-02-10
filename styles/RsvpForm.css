@@ -1,7 +1,7 @@
 .form-container {
-  background-color: white;
+  background-color: var(--foreground-primary);
   border-radius: 6px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 8px var(--background-shadow);
   margin-bottom: 48px;
   /* max-width: 600px; */
   max-width: 100%;
@@ -21,7 +21,7 @@
   font-weight: bold;
   margin-bottom: 0.5rem;
   text-align: start;
-  color: #8f683d;
+  color: var(--theme-color-dark);
 }
 
 .input-control input,
@@ -30,7 +30,7 @@
   font: inherit;
   font-size: small;
   border-radius: 4px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--foreground-tertiary);
   padding: 0.25rem;
   width: 100%;
 }
@@ -38,7 +38,7 @@
 textarea:focus,
 input:focus {
   outline: none;
-  border: 1px solid #b97b52;
+  border: 1px solid var(--theme-color-light);
 }
 
 .radio-button-control {
@@ -48,7 +48,7 @@ input:focus {
 .question {
   margin-bottom: 0.5rem;
   text-align: start;
-  color: #8f683d;
+  color: var(--theme-color-dark);
   display: block;
   font-weight: bold;
 }
@@ -61,16 +61,16 @@ input:focus {
 .actions button {
   font: inherit;
   cursor: pointer;
-  background-color: #8f683d;
-  color: white;
+  background-color: var(--theme-color-dark);
+  color: var(--text-secondary);
   padding: 0.5rem 1.5rem;
-  border: 1px solid #8f683d;
+  border: 1px solid var(--theme-color-dark);
   border-radius: 4px;
   font-weight: bold;
 }
 
 .actions button:hover,
 .actions button:active {
-  background-color: #b97b52;
-  border-color: #b97b52;
+  background-color: var(--theme-color-light);
+  border-color: var(--theme-color-light);
 }

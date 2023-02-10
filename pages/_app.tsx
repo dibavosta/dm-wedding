@@ -6,9 +6,6 @@ import "@/styles/Story.css";
 import "@/styles/RsvpForm.css";
 import "@/styles/ImageWithDescription.css";
 import "@/styles/RadioButtonContainer.css";
-import "@/styles/RadioButton.css";
-
-// import "../i18n.ts";
 
 import type { AppProps } from "next/app";
 import Layout from "@/components/Layout";

@@ -1,27 +1,24 @@
 import { useTranslation } from "next-i18next";
+import Link from "next/link";
 
 export interface Props {
-  lang: string;
   displayName: string;
   active: boolean;
+  locale: string;
+  href: string;
 }
 
 const LanguageButton = (props: Props) => {
   const { i18n } = useTranslation("common");
 
-  const handleClick = (language: string) => {
-    console.log("clicked on " + language);
-    i18n.changeLanguage(language);
-  };
-
   return (
-    <button
-      onClick={handleClick.bind(this, props.lang)}
-      disabled={props.active}
-      className={`langBtn ${props.active ? "active" : ""}`}
+    <Link
+      className={props.active ? "active" : ""}
+      href={props.href}
+      locale={props.locale}
     >
       <p className="dark-color">{props.displayName}</p>
-    </button>
+    </Link>
   );
 };
 
