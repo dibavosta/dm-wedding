@@ -1,0 +1,50 @@
+{
+  "page": {
+    "title": "Diba & Manolo"
+  },
+  "index": {
+    "path": "Hem",
+    "title": "Välkommen!"
+  },
+  "story": {
+    "path": "Vår berättelse",
+    "title": "Berättelsen",
+    "text": "Det hela började 2015, när både Manolo och Diba började sitt första år på KTH. Manolo började plugga datateknik, och Diba började plugga medieteknik. Grejen med de här två programmen är att de delar sektionslokal på KTH, båda har META som sektionslokal. På onsdagar brukar datateknik ha sin pub och på torsdagar är det medietekniks tur. Och det var alltså här som Manolo och Diba träffades för första gången, på en torsdagspub i META under den hösten 2015. Manolo och hans kompis Oscar höll på att köra beer pong mot varandra och Diba ville också köra, så hon gick fram och frågade om när de möjligtvis skulle vara klara. Och resten är som de säger. Efter att de senare träffades på livets första tentapub (också i Meta), hittade Manolo till Diba på facebook och de började skriva till varandra. De gick på sin första dejt den 13 november 2015 och tog en drink på Little Persia som fanns på söder förut."
+  },
+  "rsvp": {
+    "path": "RSVP",
+    "title": "Skicka in din RSVP",
+    "firstName": "Förnamn",
+    "lastName": "Efternamn",
+    "foodPreferences": "Matpreferenser",
+    "busTo": "Vill du ta den inhyrda bussen till lokalen?",
+    "busFrom": "Vill du ta den inhyrda bussen till centralstationen i slutet av kvällen?",
+    "yesBus": "Ja, tack!",
+    "noBus": "Nej, tack. Jag tar mig dit på egen hand.",
+    "speech": "Vill du hålla ett tal under middagen?",
+    "yes": "Ja",
+    "no": "Nej",
+    "attendance": "Kommer du på bröllopet?"
+  },
+  "location": {
+    "path": "Lokalen",
+    "text": "Vigseln, följt av middag och festen kommer alla att hålla till på Sundby Gård. Adressen är Sundby Gårdsväg 5, 141 91 Huddinge",
+    "title": "Lokalen",
+    "directions": "Hitta hit",
+    "car": {
+      "title": "Med bil",
+      "directions": "Det är bara att skriva in adressen i Google Maps och följa anvisningarna. Det finns gratis parkering vid lokalen."
+    },
+    "bus": {
+      "title": "Med abonnerad buss",
+      "directions": "Vi har abonnerat en buss som åker till Sundby Gård från Stockholms Centralstation. Bussen avgår klockan XX:XX. Det finns även en buss som åker tillbaka samma väg i slutet av kvällen. Den bussen kommer att avgå kl 02:00 från Sundby Gård. Om ni är intresserade av att ta den här bussen får ni fylla i det i ert svar."
+    },
+    "publicTransport": {
+      "title": "Med kollektivtrafik",
+      "directions": "Med Buss 709 från Huddinge pendeltågsstation, gå av vid stationen Sundby Gård. Med buss 865 från Flemingsbergs station alternativt från Handenterminalen, stannar ute vid väg 259 stationen Gladövägen, 15 minuters gångväg"
+    }
+  },
+  "image": {
+    "description": "bildtext"
+  }
+}

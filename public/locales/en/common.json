@@ -1,0 +1,50 @@
+{
+  "page": {
+    "title": "Diba & Manolo"
+  },
+  "index": {
+    "path": "Home",
+    "title": "Welcome!"
+  },
+  "story": {
+    "path": "Our story",
+    "title": "The story",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam felis lectus, mollis vel auctor eget, posuere eu nunc. Mauris venenatis nulla id ante luctus lacinia. Mauris sit amet sapien id nibh tristique mattis ut vitae nisi. Cras malesuada mi sit amet sapien consequat rhoncus nec a erat. Donec augue erat, ornare vitae congue imperdiet, viverra id lorem. Mauris interdum leo vitae arcu feugiat, et posuere ex tincidunt. Suspendisse sit amet gravida nisi. Aliquam porta dictum ornare. In sed ante id arcu tempus tempor id nec tellus. Vestibulum finibus vulputate purus, sed interdum dui vehicula sodales.        In facilisis tortor ligula, ac convallis diam dapibus ut. Praesent viverra dui est, ac sollicitudin odio eleifend nec. Vestibulum convallis nunc quis leo sagittis feugiat. Pellentesque commodo, nisl eget tristique pellentesque, risus est tincidunt nibh, quis aliquam sapien metus ut ligula. Phasellus congue porta porta. Morbi sed urna blandit, placerat dolor ut, molestie enim. Fusce id dolor sed sem sagittis volutpat et ac justo. Vivamus accumsan sem eu gravida congue. Donec nec ultrices arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean malesuada imperdiet lectus, eu pharetra turpis. Quisque eu maximus magna. Nulla sed dolor nisl. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas varius quam mauris. Nullam ut nulla ut nisi consequat tincidunt et id lacus. Mauris nec dictum lacus. Curabitur posuere imperdiet eros, sed pellentesque massa semper a. Pellentesque sed sem in neque cursus finibus. Vestibulum fermentum tortor a ipsum auctor, ut ornare turpis rutrum. Aliquam mollis cursus iaculis. Donec lobortis tempor ligula ac lacinia. Praesent eu consequat dui, eu fringilla felis. Nam libero sem, malesuada vitae orci nec, tincidunt bibendum ipsum. Duis quam dui, fermentum ac viverra et, feugiat vel dui."
+  },
+  "rsvp": {
+    "path": "RSVP",
+    "title": "Send us your RSVP",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "foodPreferences": "Food preferences",
+    "busTo": "Do you want to take the private bus to the venue?",
+    "busFrom": "Do you want to take the private bus back to the city?",
+    "yesBus": "Yes, please!",
+    "noBus": "No, thank you. I will sort my own transportation",
+    "speech": "Do you want to say a few words during the dinner?",
+    "yes": "Yes",
+    "no": "Noe",
+    "attendance": "Will you be attending the wedding?"
+  },
+  "location": {
+    "path": "Venue",
+    "text": "titel",
+    "title": "The venue",
+    "directions": "How to get to the venue",
+    "car": {
+      "title": "Get here by car",
+      "directions": "Just put the address in Google Maps and follow the directions to the venue. There is free parking on the premises."
+    },
+    "bus": {
+      "title": "Transportation",
+      "directions": "We will blablabla"
+    },
+    "publicTransport": {
+      "title": "Get here with public transportation",
+      "directions": "Get on bus blablabla"
+    }
+  },
+  "image": {
+    "description": "image description"
+  }
+}

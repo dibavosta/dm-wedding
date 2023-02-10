@@ -1,0 +1,29 @@
+.radio-button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.radio-button-label:hover {
+    cursor: pointer;
+}
+
+
+.radio-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px 0 0 16px;   
+}
+
+.radio-button-label {
+    text-align: start;
+    color: #8f683d;
+    font-size: small;
+    margin-left: 8px;
+}
+
+input {
+	accent-color: #b97b52;
+}

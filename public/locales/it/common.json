@@ -1,0 +1,50 @@
+{
+  "page": {
+    "title": "Diba & Manolo"
+  },
+  "index": {
+    "path": "Casa",
+    "title": "Benvenuto!"
+  },
+  "story": {
+    "path": "Home",
+    "title": "La bella storia.",
+    "text": "Lorem ipsum"
+  },
+  "rsvp": {
+    "path": "RSVP",
+    "title": "S",
+    "firstName": "Nome",
+    "lastName": "Cognome",
+    "foodPreferences": "",
+    "busTo": "Autobus per la location?",
+    "busFrom": "Autobus per la stazione centrale alle fine de la serata?",
+    "yesBus": "Sí, grazie!",
+    "noBus": "No, grazie.",
+    "speech": "S",
+    "yes": "Sí",
+    "no": "No",
+    "attendance": "S"
+  },
+  "location": {
+    "path": "L",
+    "text": "t",
+    "title": "T",
+    "directions": "Direziones",
+    "car": {
+      "title": "Con macchina",
+      "directions": "1"
+    },
+    "bus": {
+      "title": "Con autobus privata",
+      "directions": "2"
+    },
+    "publicTransport": {
+      "title": "Con autobus",
+      "directions": "3"
+    }
+  },
+  "image": {
+    "description": "foto"
+  }
+}

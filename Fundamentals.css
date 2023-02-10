@@ -1,0 +1,40 @@
+.title {
+  color: #8f683d;
+  margin-bottom: 10px;
+  font-size: 28px;
+  font-weight: 900;
+  /* font-family: Quicksand-bold; */
+  /* font-weight: 700; */
+}
+
+.color {
+  color: #b97b52;
+  font-family: Quicksand;
+}
+
+.dark-color {
+  color: #8f683d;
+}
+
+.outer-container {
+  margin-left: 15%;
+  margin-right: 15%;
+  display: flex;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .desktop-menu {
+    display: none;
+  }
+  .hamburger-menu {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .outer-container {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}

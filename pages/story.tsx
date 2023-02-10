@@ -1,19 +1,26 @@
-// domain.com/
 import Title from "@/components/Title";
 import { Locale } from "@/types/Locale";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import ImageWithDescription from "../components/ImageWithDescription";
 
-interface HomeProps {
+interface StoryProps {
   locale: Locale;
 }
 
-function HomePage({ locale }: HomeProps) {
+function Story({ locale }: StoryProps) {
   const { t } = useTranslation("common");
 
   return (
     <div className="content-container">
-      <Title titleText={t("index.title")} />
+      <Title titleText={t("story.title")} />
+      <div className="main-text color">
+        <p>{t("story.text")}</p>
+        <ImageWithDescription
+          imageSource={"bild.jpg"}
+          imageDescription={t("image.description")}
+        />
+      </div>
     </div>
   );
 }
@@ -27,4 +34,4 @@ export const getStaticProps = async ({ locale }: { locale: string }) => {
   };
 };
 
-export default HomePage;
+export default Story;

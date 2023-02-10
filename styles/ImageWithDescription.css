@@ -1,0 +1,11 @@
+.image-container {
+
+}
+.image-style {
+    height: 400px;
+    width: 300px;    
+}
+img {
+    height: 100%;
+    width: 100%;
+}

@@ -1,0 +1,15 @@
+.langBtn {
+  border: none;
+  /* background-color: white; */
+  color: black;
+}
+
+.langBtn:hover {
+  /* background-color: rgba(225, 236, 236, 0.486); */
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.active {
+  font-weight: 900;
+}
