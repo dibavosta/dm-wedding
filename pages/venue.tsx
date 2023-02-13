@@ -5,6 +5,7 @@ import Title from "@/components/Title";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 import { Locale } from "@/types/Locale";
+import Head from "next/head";
 
 interface VenueProps {
   locale: Locale;
@@ -15,6 +16,9 @@ function VenuePage({ locale }: VenueProps) {
 
   return (
     <div className="content-container">
+      <Head>
+        <title>{t("location.path")}</title>
+      </Head>
       <Title titleText={t("location.title")} />
       <div className="main-text color">
         <p>{t("location.text")}</p>

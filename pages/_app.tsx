@@ -11,8 +11,6 @@ import type { AppProps } from "next/app";
 import Layout from "@/components/Layout";
 import { appWithTranslation } from "next-i18next";
 import { Locale } from "@/types/Locale";
-import { useTranslation } from "next-i18next";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 interface LocaleProps {
   locale: Locale;

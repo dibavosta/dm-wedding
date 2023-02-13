@@ -2,6 +2,7 @@ import Title from "@/components/Title";
 import { Locale } from "@/types/Locale";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import Head from "next/head";
 import ImageWithDescription from "../components/ImageWithDescription";
 
 interface StoryProps {
@@ -13,6 +14,9 @@ function Story({ locale }: StoryProps) {
 
   return (
     <div className="content-container">
+      <Head>
+        <title>{t("story.path")}</title>
+      </Head>
       <Title titleText={t("story.title")} />
       <div className="main-text color">
         <p>{t("story.text")}</p>

@@ -5,6 +5,9 @@ import { Fade as Hamburger } from "hamburger-react";
 import Link from "next/link";
 import { Locale } from "@/types/Locale";
 import { useRouter } from "next/router";
+import ModernUpdate from "../assets/ModernUpdate.svg";
+import DeluxeLogo from "../assets/MDdeluxe.svg";
+import Favicon from "./Favicon";
 
 interface NavigationProps {
   locale: Locale;
@@ -26,6 +29,7 @@ function Navigation({ locale }: NavigationProps) {
         <div className="top-center">
           <div className="header dark-color">
             <h1>{t("page.title")}</h1>
+            <Favicon />
           </div>
         </div>
         <div className="top-right text-color">

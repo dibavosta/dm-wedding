@@ -1,4 +1,4 @@
-import { useTranslation } from "react-i18next";
+import Image from "next/image";
 
 export interface Props {
   imageDescription: string;
@@ -6,12 +6,14 @@ export interface Props {
 }
 
 const ImageWithDescription = (props: Props) => {
-  console.log(props.imageSource);
   const imageSource = props.imageSource;
   return (
     <div className="image-container">
       <div className="image-style">
-        <img src={require("../assets/" + props.imageSource)}></img>
+        <Image
+          src={require("../assets/" + props.imageSource)}
+          alt="image alt"
+        ></Image>
       </div>
       <p>{props.imageDescription}</p>
     </div>

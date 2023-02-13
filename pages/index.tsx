@@ -3,6 +3,7 @@ import Title from "@/components/Title";
 import { Locale } from "@/types/Locale";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import Head from "next/head";
 
 interface HomeProps {
   locale: Locale;
@@ -13,6 +14,9 @@ function HomePage({ locale }: HomeProps) {
 
   return (
     <div className="content-container">
+      <Head>
+        <title>{t("index.path")}</title>
+      </Head>
       <Title titleText={t("index.title")} />
     </div>
   );
