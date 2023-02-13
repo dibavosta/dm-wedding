@@ -9,12 +9,24 @@
 }
 
 .main-text {
-  text-align: start;
+  display: grid;
+  grid: auto-flow dense/ repeat(2, 50%);
+  place-items: center;
+
+  /* text-align: start; */
+}
+
+:nth-child(4n - 1) {
+  grid-column: 2;
 }
 
 @media only screen and (max-width: 600px) {
   .content-container {
     margin-left: 10%;
     margin-right: 10%;
+  }
+  .main-text {
+    display: flex;
+    flex-direction: column;
   }
 }

@@ -1,6 +1,7 @@
 :root {
-  --theme-color-dark: #8f683d;
+  /* --theme-color-dark: #8f683d; */
   --theme-color-light: #b97b52;
+  --theme-color-dark: #b97b52;
 
   --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
