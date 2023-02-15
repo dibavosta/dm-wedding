@@ -1,5 +1,5 @@
 .title {
-  color: var(--theme-color-dark);
+  color: var(--text-primary);
   margin-bottom: 12px;
   font-size: 28px;
   font-weight: 900;
@@ -8,12 +8,8 @@
 }
 
 .color {
-  color: var(--theme-color-light);
+  color: var(--theme-color);
   font-family: Quicksand;
-}
-
-.dark-color {
-  color: var(--theme-color-dark);
 }
 
 .outer-container {
@@ -27,6 +23,15 @@
 .headline {
   margin-top: 16px;
   margin-bottom: 8px;
+  color: var(--text-primary);
+}
+
+.text {
+  color: var(--text-secondary);
+}
+
+.header {
+  color: var(--theme-color);
 }
 
 @media only screen and (max-width: 600px) {

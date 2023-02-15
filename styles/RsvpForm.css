@@ -21,7 +21,7 @@
   font-weight: bold;
   margin-bottom: 0.5rem;
   text-align: start;
-  color: var(--theme-color-dark);
+  color: var(--text-primary);
 }
 
 .input-control input,
@@ -38,7 +38,7 @@
 textarea:focus,
 input:focus {
   outline: none;
-  border: 1px solid var(--theme-color-light);
+  border: 1px solid var(--text-secondary);
 }
 
 .radio-button-control {
@@ -48,7 +48,7 @@ input:focus {
 .question {
   margin-bottom: 0.5rem;
   text-align: start;
-  color: var(--theme-color-dark);
+  color: var(--text-primary);
   display: block;
   font-weight: bold;
 }
@@ -61,16 +61,16 @@ input:focus {
 .actions button {
   font: inherit;
   cursor: pointer;
-  background-color: var(--theme-color-dark);
-  color: var(--text-secondary);
+  background-color: var(--theme-color);
+  color: var(--text-primary-inverted);
   padding: 0.5rem 1.5rem;
-  border: 1px solid var(--theme-color-dark);
+  border: 1px solid var(--theme-color);
   border-radius: 4px;
   font-weight: bold;
 }
 
 .actions button:hover,
 .actions button:active {
-  background-color: var(--theme-color-light);
-  border-color: var(--theme-color-light);
+  background-color: var(--text-secondary);
+  border-color: var(--text-secondary);
 }

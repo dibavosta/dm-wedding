@@ -18,11 +18,11 @@
 
 .radio-button-label {
   text-align: start;
-  color: var(--theme-color-dark);
+  color: var(--text-primary);
   font-size: small;
   margin-left: 8px;
 }
 
 input {
-  accent-color: var(--theme-color-light);
+  accent-color: var(--text-secondary);
 }

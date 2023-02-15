@@ -47,5 +47,20 @@
   },
   "image": {
     "description": "bildtext"
+  },
+  "program": {
+    "path": "Program",
+    "title": "Dagens program",
+    "ceremonyTitle": "Vigsel",
+    "ceremonyText": "Vi blir man och hustru",
+    "drinksTitle": "Mingel",
+    "drinksText": "Vi får lite förfriskningar och hälsar på varandra",
+    "dinnerTitle": "Middag",
+    "dinnerText": "Vi njuter av en 3 rätters middag",
+    "cake": "Tårta",
+    "partyTitle": "Festen är igång",
+    "partyText": "Vi dansar loss och har det trevligt",
+    "endTitle": "Kvällen når sitt slut",
+    "endText": "Vi lämnar Sundby gård och tackar för oss!"
   }
 }

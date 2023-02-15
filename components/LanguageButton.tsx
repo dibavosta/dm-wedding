@@ -17,7 +17,7 @@ const LanguageButton = (props: Props) => {
       href={props.href}
       locale={props.locale}
     >
-      <p className="dark-color">{props.displayName}</p>
+      <p>{props.displayName}</p>
     </Link>
   );
 };

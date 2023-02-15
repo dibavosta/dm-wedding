@@ -1,7 +1,8 @@
 :root {
-  /* --theme-color-dark: #8f683d; */
-  --theme-color-light: #b97b52;
-  --theme-color-dark: #b97b52;
+  /* --theme-dark: #8f683d; */
+  --theme-color: #b97b52;
+  --text-primary: var(--text-primary);
+  --text-secondary: var(--text-secondary);
 
   --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
@@ -15,7 +16,9 @@
     --foreground-primary: #f8f8f8;
     --foreground-tertiary: #e0e0e0;
     --background-shadow: rgba(0, 0, 0, 0.2);
-    --text-primary: #000000;
+    --text-primary: #b97b52;
+    --text-secondary: #8f683d;
+    --text-primary-inverted: #ffffff;
     /* --foreground-rgb: #ffffff; */
   }
 }
@@ -29,8 +32,9 @@
     --foreground-tertiary: #000000;
     --background-shadow: rgba(0, 0, 0, 0.2);
     --foreground-rgb: #ffffff;
-    --text-primary: #ffffffef;
-    --text-secondary: #ffffffcc;
+    --text-primary: rgba(255, 255, 255, 0.87);
+    --text-secondary: rgba(255, 255, 255, 0.6);
+    --text-primary-inverted: #000000;
   }
 }
 

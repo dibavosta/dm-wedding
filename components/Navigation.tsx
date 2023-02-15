@@ -27,7 +27,7 @@ function Navigation({ locale }: NavigationProps) {
     <div className="navbar">
       <div className="top">
         <div className="top-center">
-          <div className="header dark-color">
+          <div className="header">
             <h1>{t("page.title")}</h1>
             <Favicon />
           </div>
@@ -39,11 +39,11 @@ function Navigation({ locale }: NavigationProps) {
                 <LanguageButton
                   displayName={
                     locale === "sv"
-                      ? "🇸🇪 SVE"
+                      ? "🇸🇪"
                       : locale === "en"
-                      ? "🇬🇧 ENG"
+                      ? "🇬🇧"
                       : locale === "it"
-                      ? "🇮🇹 ITA"
+                      ? "🇮🇹"
                       : ""
                   }
                   active={i18n.language === locale}
@@ -58,6 +58,9 @@ function Navigation({ locale }: NavigationProps) {
       <div className="desktop-menu bottom text-color">
         <Link className="link-decoration color" href="/" locale={locale}>
           {t("index.path")}
+        </Link>
+        <Link className="link-decoration color" href="/program" locale={locale}>
+          {t("program.path")}
         </Link>
         <Link className="link-decoration color" href="/story" locale={locale}>
           {t("story.path")}
@@ -81,6 +84,13 @@ function Navigation({ locale }: NavigationProps) {
         <div className={"mobile-menu" + (isOpen ? " open" : "")}>
           <Link className="link-decoration color" href="/" locale={locale}>
             {t("index.path")}
+          </Link>
+          <Link
+            className="link-decoration color"
+            href="/program"
+            locale={locale}
+          >
+            {t("program.path")}
           </Link>
           <Link className="link-decoration color" href="/story" locale={locale}>
             {t("story.path")}

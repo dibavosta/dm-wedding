@@ -1,19 +1,8 @@
 .title {
-  color: var(--theme-color-dark);
+  color: var(--text-primary);
   margin-bottom: 10px;
   font-size: 28px;
   font-weight: 900;
-  /* font-family: Quicksand-bold; */
-  /* font-weight: 700; */
-}
-
-.color {
-  color: var(--theme-color-light);
-  font-family: Quicksand;
-}
-
-.dark-color {
-  color: var(--theme-color-dark);
 }
 
 .outer-container {

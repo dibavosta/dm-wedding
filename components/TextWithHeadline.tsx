@@ -12,8 +12,8 @@ function TextWithHeadline(props: Props) {
 
   return (
     <div>
-      <h3 className="dark-color headline">{t(props.headlineText)}</h3>
-      <p>{t(props.mainText)}</p>
+      <h3 className="headline">{t(props.headlineText)}</h3>
+      <p className="text">{t(props.mainText)}</p>
     </div>
   );
 }

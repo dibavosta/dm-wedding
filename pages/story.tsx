@@ -14,24 +14,34 @@ function Story({ locale }: StoryProps) {
   const { t } = useTranslation("common");
 
   return (
-    <div className="content-container">
+    <div className="outer">
       <Head>
         <title>{t("story.path")}</title>
       </Head>
-      <Title titleText={t("story.title")} />
-      <div className="main-text color">
-        <p>{t("story.text1")}</p>
-        {/* <ImageWithDescription
-          imageSource={"bild.jpg"}
-          imageDescription={t("image.description")}
-        /> */}
-        <Image src={require("../assets/bild.jpg")} alt="image alt"></Image>
-        <p>{t("story.text2")}</p>
-        <Image src={require("../assets/bild.jpg")} alt="image alt"></Image>
-        {/* <ImageWithDescription
-          imageSource={"bild.jpg"}
-          imageDescription={t("image.description")}
-        /> */}
+      <div className="layout">
+        <div className="layout__item layout__item--body">
+          <h2 className="headline">First meeting</h2>
+          <p className="text">{t("story.text1")}</p>
+        </div>
+        <div className="layout__item layout__item--figure">
+          <ImageWithDescription
+            imageSource={"bild.jpg"}
+            imageDescription={t("image.description")}
+          />
+        </div>
+      </div>
+
+      <div className="layout">
+        <div className="layout__item layout__item--body">
+          <h2 className="headline">First date</h2>
+          <p className="text">{t("story.text2")}</p>
+        </div>
+        <div className="layout__item layout__item--figure">
+          <ImageWithDescription
+            imageSource={"bild.jpg"}
+            imageDescription={t("image.description")}
+          />
+        </div>
       </div>
     </div>
   );

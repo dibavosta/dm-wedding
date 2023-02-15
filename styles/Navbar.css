@@ -28,7 +28,7 @@
   height: 30px;
   border-style: solid;
   border-color: var(--background-color) var(--background-color)
-    var(--theme-color-dark);
+    var(--text-primary);
   margin-top: 16px;
   display: flex;
   flex-direction: row;

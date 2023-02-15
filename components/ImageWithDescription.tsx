@@ -8,14 +8,14 @@ export interface Props {
 const ImageWithDescription = (props: Props) => {
   const imageSource = props.imageSource;
   return (
-    <div className="image-container">
+    <div>
       <div className="image-style">
         <Image
           src={require("../assets/" + props.imageSource)}
           alt="image alt"
         ></Image>
       </div>
-      <p>{props.imageDescription}</p>
+      {/* <p className="text">{props.imageDescription}</p> */}
     </div>
   );
 };

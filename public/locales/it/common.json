@@ -47,5 +47,20 @@
   },
   "image": {
     "description": "foto"
+  },
+  "program": {
+    "path": "Program",
+    "title": "Dagens program",
+    "ceremonyTitle": "",
+    "ceremonyText": "",
+    "drinksTitle": "",
+    "drinksText": "",
+    "dinnerTitle": "",
+    "dinnerText": "",
+    "cake": "",
+    "partyTitle": "",
+    "partyText": "",
+    "endTitle": "",
+    "endText": ""
   }
 }

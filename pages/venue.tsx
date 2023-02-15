@@ -20,9 +20,9 @@ function VenuePage({ locale }: VenueProps) {
         <title>{t("location.path")}</title>
       </Head>
       <Title titleText={t("location.title")} />
-      <div className="main-text color">
-        <p>{t("location.text")}</p>
-        <h2 className="dark-color headline">{t("location.directions")}</h2>
+      <div>
+        <p className="text">{t("location.text")}</p>
+        <h2 className="headline">{t("location.directions")}</h2>
         <TextWithHeadline
           headlineText="location.car.title"
           mainText="location.car.directions"

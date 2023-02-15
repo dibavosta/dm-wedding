@@ -47,5 +47,20 @@
   },
   "image": {
     "description": "image description"
+  },
+  "program": {
+    "path": "Program",
+    "title": "The program",
+    "ceremonyTitle": "Wedding ceremony",
+    "ceremonyText": "We become husband & wife!",
+    "drinksTitle": "Mingle",
+    "drinksText": "We sip on something sparking and make the rounds",
+    "dinnerTitle": "Dinner",
+    "dinnerText": "We enjoy a 3 course dinner",
+    "cake": "Cake",
+    "partyTitle": "Dance",
+    "partyText": "We dance the night away",
+    "endTitle": "Closing hour",
+    "endText": "Thank you for having been here"
   }
 }
