@@ -1,7 +1,7 @@
 .radio-button-container {
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
 }
 
 .radio-button-label:hover {
@@ -17,7 +17,7 @@
 }
 
 .radio-button-label {
-  text-align: start;
+  text-align: flex-start;
   color: var(--text-primary);
   font-size: small;
   margin-left: 8px;

@@ -72,7 +72,7 @@
   flex-direction: column;
   width: 150px;
   margin-left: 15%;
-  text-align: start;
+  text-align: flex-start;
 }
 
 .hamburger-react {

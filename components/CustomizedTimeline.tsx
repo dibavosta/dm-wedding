@@ -29,23 +29,39 @@ export default function CustomizedTimeline(props: TimelineProps) {
     <Timeline position="alternate">
       <TimelineItem>
         <TimelineOppositeContent
-          sx={{ m: "auto 0", color: "#ffffff" }}
+          sx={{ m: "auto 0" }}
           align="right"
           variant="body2"
-          color="text.secondary"
         >
-          17:00
+          <Typography
+            variant="body2"
+            sx={{
+              fontSize: 13,
+            }}
+          >
+            17:00
+          </Typography>
         </TimelineOppositeContent>
         <TimelineSeparator>
-          <TimelineConnector />
+          <TimelineConnector
+            sx={{
+              background: "#b97b52",
+            }}
+          />
           <TimelineDot
+            color="inherit"
+            variant="outlined"
             sx={{
               color: "#b97b52",
             }}
           >
             <Favorite />
           </TimelineDot>
-          <TimelineConnector />
+          <TimelineConnector
+            sx={{
+              background: "#b97b52",
+            }}
+          />
         </TimelineSeparator>
         <TimelineContent sx={{ py: "12px", px: 2 }}>
           <Typography
@@ -67,23 +83,36 @@ export default function CustomizedTimeline(props: TimelineProps) {
         </TimelineContent>
       </TimelineItem>
       <TimelineItem>
-        <TimelineOppositeContent
-          sx={{ m: "auto 0", color: "#ffffff" }}
-          variant="body2"
-          color="text.primary"
-        >
-          17:30
+        <TimelineOppositeContent sx={{ m: "auto 0" }} variant="body2">
+          <Typography
+            variant="body2"
+            sx={{
+              fontSize: 13,
+            }}
+          >
+            17:30
+          </Typography>
         </TimelineOppositeContent>
         <TimelineSeparator>
-          <TimelineConnector />
+          <TimelineConnector
+            sx={{
+              background: "#b97b52",
+            }}
+          />
           <TimelineDot
+            color="inherit"
+            variant="outlined"
             sx={{
               color: "#b97b52",
             }}
           >
             <WineBar />
           </TimelineDot>
-          <TimelineConnector />
+          <TimelineConnector
+            sx={{
+              background: "#b97b52",
+            }}
+          ></TimelineConnector>
         </TimelineSeparator>
         <TimelineContent sx={{ py: "12px", px: 2 }}>
           <Typography
@@ -106,23 +135,39 @@ export default function CustomizedTimeline(props: TimelineProps) {
       </TimelineItem>
       <TimelineItem>
         <TimelineOppositeContent
-          sx={{ m: "auto 0", color: "#ffffff" }}
+          sx={{ m: "auto 0" }}
           align="right"
           variant="body2"
-          color="text.secondary"
         >
-          18:30
+          <Typography
+            variant="body2"
+            sx={{
+              fontSize: 13,
+            }}
+          >
+            18:30
+          </Typography>
         </TimelineOppositeContent>
         <TimelineSeparator>
-          <TimelineConnector />
+          <TimelineConnector
+            sx={{
+              background: "#b97b52",
+            }}
+          />
           <TimelineDot
+            color="inherit"
+            variant="outlined"
             sx={{
               color: "#b97b52",
             }}
           >
             <Restaurant />
           </TimelineDot>
-          <TimelineConnector />
+          <TimelineConnector
+            sx={{
+              background: "#b97b52",
+            }}
+          />
         </TimelineSeparator>
         <TimelineContent sx={{ py: "12px", px: 2 }}>
           <Typography
@@ -145,23 +190,40 @@ export default function CustomizedTimeline(props: TimelineProps) {
       </TimelineItem>
       <TimelineItem>
         <TimelineOppositeContent
-          sx={{ m: "auto 0", color: "#ffffff" }}
+          sx={{ m: "auto 0" }}
           align="right"
           variant="body2"
-          color="text.secondary"
         >
-          21:30
+          {" "}
+          <Typography
+            variant="body2"
+            sx={{
+              fontSize: 13,
+            }}
+          >
+            21:30
+          </Typography>
         </TimelineOppositeContent>
         <TimelineSeparator>
-          <TimelineConnector />
+          <TimelineConnector
+            sx={{
+              background: "#b97b52",
+            }}
+          />
           <TimelineDot
+            color="inherit"
+            variant="outlined"
             sx={{
               color: "#b97b52",
             }}
           >
             <Cake />
           </TimelineDot>
-          <TimelineConnector />
+          <TimelineConnector
+            sx={{
+              background: "#b97b52",
+            }}
+          />
         </TimelineSeparator>
         <TimelineContent sx={{ py: "12px", px: 2 }}>
           <Typography
@@ -171,28 +233,48 @@ export default function CustomizedTimeline(props: TimelineProps) {
               fontSize: 14,
             }}
           >
-            {t("program.cake")}
+            {t("program.cakeTitle")}
+          </Typography>
+          <Typography
+            sx={{
+              fontSize: 10,
+            }}
+          >
+            {t("program.cakeText")}
           </Typography>
         </TimelineContent>
       </TimelineItem>
       <TimelineItem>
-        <TimelineOppositeContent
-          sx={{ m: "auto 0", color: "#ffffff" }}
-          variant="body2"
-          color="text.secondary"
-        >
-          22:00
+        <TimelineOppositeContent sx={{ m: "auto 0" }} variant="body2">
+          <Typography
+            variant="body2"
+            sx={{
+              fontSize: 13,
+            }}
+          >
+            22:00
+          </Typography>
         </TimelineOppositeContent>
         <TimelineSeparator>
-          <TimelineConnector />
+          <TimelineConnector
+            sx={{
+              background: "#b97b52",
+            }}
+          />
           <TimelineDot
+            color="inherit"
+            variant="outlined"
             sx={{
               color: "#b97b52",
             }}
           >
             <Nightlife />
           </TimelineDot>
-          <TimelineConnector />
+          <TimelineConnector
+            sx={{
+              background: "#b97b52",
+            }}
+          />
         </TimelineSeparator>
         <TimelineContent sx={{ py: "12px", px: 2 }}>
           <Typography
@@ -214,23 +296,36 @@ export default function CustomizedTimeline(props: TimelineProps) {
         </TimelineContent>
       </TimelineItem>
       <TimelineItem>
-        <TimelineOppositeContent
-          sx={{ m: "auto 0", color: "#ffffff" }}
-          variant="body2"
-          color="text.secondary"
-        >
-          02:00
+        <TimelineOppositeContent sx={{ m: "auto 0" }} variant="body2">
+          <Typography
+            variant="body2"
+            sx={{
+              fontSize: 13,
+            }}
+          >
+            02:00
+          </Typography>
         </TimelineOppositeContent>
         <TimelineSeparator>
-          <TimelineConnector />
+          <TimelineConnector
+            sx={{
+              background: "#b97b52",
+            }}
+          />
           <TimelineDot
+            color="inherit"
+            variant="outlined"
             sx={{
               color: "#b97b52",
             }}
           >
             <Bedtime />
           </TimelineDot>
-          <TimelineConnector />
+          <TimelineConnector
+            sx={{
+              background: "#b97b52",
+            }}
+          />
         </TimelineSeparator>
         <TimelineContent sx={{ py: "12px", px: 2 }}>
           <Typography
@@ -251,37 +346,6 @@ export default function CustomizedTimeline(props: TimelineProps) {
           </Typography>
         </TimelineContent>
       </TimelineItem>
-      {/* 
-      <TimelineItem>
-        <TimelineSeparator>
-          <TimelineConnector />
-          <TimelineDot color="primary" variant="outlined">
-            <Restaurant />
-          </TimelineDot>
-          <TimelineConnector sx={{ bgcolor: "secondary.main" }} />
-        </TimelineSeparator>
-        <TimelineContent sx={{ py: "12px", px: 2 }}>
-          <Typography variant="h6" component="span">
-            Sleep
-          </Typography>
-          <Typography>Because you need rest</Typography>
-        </TimelineContent>
-      </TimelineItem>
-      <TimelineItem>
-        <TimelineSeparator>
-          <TimelineConnector sx={{ bgcolor: "secondary.main" }} />
-          <TimelineDot color="secondary">
-            <RepeatIcon />
-          </TimelineDot>
-          <TimelineConnector />
-        </TimelineSeparator>
-        <TimelineContent sx={{ py: "12px", px: 2 }}>
-          <Typography variant="h6" component="span">
-            Repeat
-          </Typography>
-          <Typography>Because this is the life you love!</Typography>
-        </TimelineContent>
-      </TimelineItem>*/}
     </Timeline>
   );
 }

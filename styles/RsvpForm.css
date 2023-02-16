@@ -47,7 +47,7 @@ input:focus {
 
 .question {
   margin-bottom: 0.5rem;
-  text-align: start;
+  text-align: flex-start;
   color: var(--text-primary);
   display: block;
   font-weight: bold;
