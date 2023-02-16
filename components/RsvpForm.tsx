@@ -3,6 +3,11 @@ import { useRef, useState } from "react";
 import RadioButtonContainer from "./RadioButtonContainer";
 import RsvpDetailsForm from "./RsvpDetailsForm";
 import { useTranslation } from "next-i18next";
+import FullRsvpForm from "./FullRsvpForm";
+import SendIcon from "@mui/icons-material/Send";
+import Button from "@mui/material/Button";
+import AddPersonSpeedDial from "./AddPersonSpeedDial";
+import ChildRsvpForm from "./ChildRsvpForm";
 
 export interface Props {
   onSubmitForm: (params: any) => void;
@@ -13,6 +18,8 @@ function RsvpForm(props: Props) {
   const firstNameRef = useRef<HTMLInputElement>(null);
   const lastNameRef = useRef<HTMLInputElement>(null);
   const [attending, setAttending] = useState(false);
+  const [addPartner, setAddPartner] = useState(false);
+  const [addChild, setAddChild] = useState(false);
   let foodPreferences: string | null;
   let busTo: boolean | null;
   let busFrom: boolean | null;
@@ -26,11 +33,23 @@ function RsvpForm(props: Props) {
     }
   };
 
+  const addPartnerResponseHandler = () => {
+    setAddPartner(!addPartner);
+  };
+
+  const addChildResponseHandler = () => {
+    setAddChild(!addChild);
+  };
+
   const registerDetailResponse = (enteredDetails: any) => {
     foodPreferences = enteredDetails.foodPreferences;
     busTo = enteredDetails.busTo;
     busFrom = enteredDetails.busFrom;
     speech = enteredDetails.speech;
+  };
+
+  const registerFullResponse = (enteredDetails: any) => {
+    console.log("+1: ", enteredDetails);
   };
 
   function submitHandler(event: React.SyntheticEvent) {
@@ -55,7 +74,7 @@ function RsvpForm(props: Props) {
       console.log("gonna add attending guest");
     }
     console.log(enteredFormData);
-    props.onSubmitForm(enteredFormData);
+    // props.onSubmitForm(enteredFormData);
   }
 
   const { t } = useTranslation("common");
@@ -85,14 +104,68 @@ function RsvpForm(props: Props) {
           />
         </div>
         {attending ? (
-          <RsvpDetailsForm
-            onSendForm={registerDetailResponse}
-            locale={props.locale}
-          />
-        ) : (
-          <div className="actions">
-            <button type="submit">Send rsvp</button>
+          <div>
+            <RsvpDetailsForm
+              onSendForm={registerDetailResponse}
+              locale={props.locale}
+            />
+            <div className="actionz">
+              <div className="buttt">
+                <AddPersonSpeedDial
+                  onAddPartner={addPartnerResponseHandler}
+                  onAddChild={addChildResponseHandler}
+                />
+              </div>
+              <div className="butt">
+                {addPartner ? (
+                  <div />
+                ) : addChild ? (
+                  <div />
+                ) : (
+                  <Button
+                    variant="contained"
+                    type="submit"
+                    endIcon={<SendIcon />}
+                    sx={{
+                      background: "#b97b52",
+                      ":hover": {
+                        bgcolor: "#8f683d",
+                      },
+                    }}
+                  >
+                    Send
+                  </Button>
+                )}
+              </div>
+            </div>
+            {addPartner ? (
+              <FullRsvpForm
+                onSendForm={registerFullResponse}
+                locale={props.locale}
+              />
+            ) : addChild ? (
+              <ChildRsvpForm
+                onSendForm={registerFullResponse}
+                locale={props.locale}
+              />
+            ) : (
+              <div />
+            )}
           </div>
+        ) : (
+          <Button
+            variant="contained"
+            type="submit"
+            endIcon={<SendIcon />}
+            sx={{
+              background: "#b97b52",
+              ":hover": {
+                bgcolor: "#8f683d",
+              },
+            }}
+          >
+            Send
+          </Button>
         )}
       </form>
     </div>

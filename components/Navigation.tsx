@@ -35,7 +35,7 @@ function Navigation({ locale }: NavigationProps) {
         <div className="top-right text-color">
           <ul className="ul-list-lang">
             {router.locales?.map((locale) => (
-              <li className="li-lang">
+              <li className="li-lang" key={locale}>
                 <LanguageButton
                   displayName={
                     locale === "sv"

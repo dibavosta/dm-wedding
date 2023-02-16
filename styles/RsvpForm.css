@@ -53,9 +53,43 @@ input:focus {
   font-weight: bold;
 }
 
+.add-new {
+  padding-bottom: 8px;
+}
+
+.actionz {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.butt {
+  display: flex;
+}
+
+.buttt {
+  display: flex;
+  /* transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms; */
+}
+
+.actions.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .actions {
   margin-top: 1rem;
-  text-align: right;
+}
+
+.addPerson {
+  border-radius: 50% !important;
+  padding: 8px 13px !important;
+}
+
+.addPerson.minus {
+  padding: 8px 15px !important;
 }
 
 .actions button {

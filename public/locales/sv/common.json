@@ -25,7 +25,9 @@
     "speech": "Vill du hålla ett tal under middagen?",
     "yes": "Ja",
     "no": "Nej",
-    "attendance": "Kommer du på bröllopet?"
+    "attendance": "Kommer du på bröllopet?",
+    "children": "Har du några barn som du vill ta med på bröllopet",
+    "howManyChildren": "Hur många barn gäller det?"
   },
   "location": {
     "path": "Lokalen",

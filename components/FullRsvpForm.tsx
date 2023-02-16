@@ -2,44 +2,51 @@ import { useRef, useState } from "react";
 import { useTranslation } from "next-i18next";
 import RadioButtonContainer from "./RadioButtonContainer";
 import { Locale } from "@/types/Locale";
+import SendIcon from "@mui/icons-material/Send";
+import Button from "@mui/material/Button";
 
 export interface Props {
   onSendForm: (params: any) => void;
   locale: Locale;
 }
 
-function RsvpDetailsForm(props: Props) {
+function FullRsvpForm(props: Props) {
   const { t } = useTranslation("common");
+  const firstNameRef = useRef<HTMLInputElement>(null);
+  const lastNameRef = useRef<HTMLInputElement>(null);
+  const [attending, setAttending] = useState(false);
   const foodPreferencesRef = useRef<HTMLTextAreaElement>(null);
   const [enteredSpeech, setEnteredSpeech] = useState("");
   const [enteredBusTo, setEnteredBusTo] = useState("");
   const [enteredBusFrom, setEnteredBusFrom] = useState("");
-  const [children, setChildren] = useState(false);
 
-  const childrenResponse = (enteredResponse: any) => {
-    if (enteredResponse === true) {
-      setChildren(true);
+  const attendanceResponse = (attendanceResponse: any) => {
+    if (attendanceResponse === true) {
+      setAttending(true);
     } else {
-      setChildren(false);
+      setAttending(false);
     }
   };
 
   const speechResponse = (enteredResponse: string) => {
     setEnteredSpeech(enteredResponse);
   };
-
   const busToResponse = (enteredResponse: string) => {
     setEnteredBusTo(enteredResponse);
   };
-
   const busFromResponse = (enteredResponse: string) => {
     setEnteredBusFrom(enteredResponse);
   };
 
   const sendForm = () => {
+    const firstName = firstNameRef.current?.value;
+    const lastName = lastNameRef.current?.value;
     const foodPreferences = foodPreferencesRef.current?.value;
 
     const enteredData = {
+      firstName: firstName,
+      lastName: lastName,
+      attending: attending,
       foodPreferences: foodPreferences,
       speech: enteredSpeech,
       busTo: enteredBusTo,
@@ -49,7 +56,29 @@ function RsvpDetailsForm(props: Props) {
   };
 
   return (
-    <div className="attending">
+    <div className="attending margin-top">
+      <h3 className="add-new">Enter details of partner</h3>
+      <div className="input-control">
+        <label htmlFor="firstName">{t("rsvp.firstName")}</label>
+        <input required type="text" id="firstName" ref={firstNameRef} />
+      </div>
+      <div className="input-control">
+        <label htmlFor="lastName">{t("rsvp.lastName")}</label>
+        <input required type="text" id="lastName" ref={lastNameRef} />
+      </div>
+      <div className="radio-button-control">
+        <label className="question" htmlFor="attendance">
+          {t("rsvp.attendance")}
+        </label>
+        <RadioButtonContainer
+          numberOfButtons={2}
+          name="attendance"
+          labels={["rsvp.yes", "rsvp.no"]}
+          radioIds={["attendanceYes", "attendanceNo"]}
+          onSetValue={attendanceResponse}
+          locale={props.locale}
+        />
+      </div>
       <div className="input-control">
         <label htmlFor="foodPreferences">{t("rsvp.foodPreferences")}</label>
         <textarea id="foodPreferences" rows={2} ref={foodPreferencesRef} />
@@ -93,8 +122,21 @@ function RsvpDetailsForm(props: Props) {
           locale={props.locale}
         />
       </div>
+
+      <Button
+        variant="contained"
+        endIcon={<SendIcon />}
+        sx={{
+          background: "#b97b52",
+          ":hover": {
+            bgcolor: "#8f683d",
+          },
+        }}
+      >
+        Send
+      </Button>
     </div>
   );
 }
 
-export default RsvpDetailsForm;
+export default FullRsvpForm;

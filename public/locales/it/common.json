@@ -25,7 +25,9 @@
     "speech": "S",
     "yes": "Sí",
     "no": "No",
-    "attendance": "S"
+    "attendance": "S",
+    "children": "Do you have any children that you want to bring?",
+    "howManyChildren": "How many children do you have?"
   },
   "location": {
     "path": "L",

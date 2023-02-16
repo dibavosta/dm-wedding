@@ -6,7 +6,7 @@ import "@/styles/Story.css";
 import "@/styles/RsvpForm.css";
 import "@/styles/ImageWithDescription.css";
 import "@/styles/RadioButtonContainer.css";
-import "@/styles/newStory.css";
+import "@/styles/FullRsvpForm.css";
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
