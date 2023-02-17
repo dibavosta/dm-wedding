@@ -10,7 +10,6 @@ import Typography from "@mui/material/Typography";
 import {
   Bedtime,
   Cake,
-  DinnerDining,
   Favorite,
   Nightlife,
   Restaurant,

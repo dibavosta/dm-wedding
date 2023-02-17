@@ -4,6 +4,7 @@ import SpeedDialIcon from "@mui/material/SpeedDialIcon";
 import SpeedDialAction from "@mui/material/SpeedDialAction";
 import { EscalatorWarning, Favorite, Edit } from "@mui/icons-material";
 import Box from "@mui/material/Box";
+import { useState } from "react";
 
 interface SpeedDialProps {
   onAddPartner: () => void;
@@ -11,14 +12,30 @@ interface SpeedDialProps {
 }
 
 function AddPersonSpeedDial(props: SpeedDialProps) {
+  const [addedPartner, setAddedPartner] = useState(false);
+  const [addedChild, setAddedChild] = useState(false);
+  const [hideDial, setHideDial] = useState(false);
+
   const handlePartnerAction = () => {
     console.log("clicked on partner");
-    props.onAddPartner();
+
+    setAddedPartner(true);
   };
 
   const handleChildAction = () => {
     console.log("clicked on child");
-    props.onAddChild();
+
+    setAddedChild(true);
+  };
+
+  const requestingToClose = () => {
+    if (addedChild) {
+      setHideDial(true);
+      props.onAddChild();
+    } else if (addedPartner) {
+      setHideDial(true);
+      props.onAddPartner();
+    }
   };
 
   return (
@@ -30,10 +47,11 @@ function AddPersonSpeedDial(props: SpeedDialProps) {
       }}
     >
       <SpeedDial
-        ariaLabel="SpeedDial playground example"
-        icon={<SpeedDialIcon />}
-        openIcon={<Edit />}
+        ariaLabel="Add a partner or child to the RSVP"
+        icon={<SpeedDialIcon openIcon={<Edit />} />}
         direction="right"
+        onClose={requestingToClose}
+        hidden={hideDial}
         sx={{
           "& .MuiFab-primary": {
             width: 40,
@@ -80,6 +98,7 @@ function AddPersonSpeedDial(props: SpeedDialProps) {
           }}
           icon={<EscalatorWarning fontSize="small" />}
           tooltipTitle="Child"
+          tooltipPlacement="top"
           onClick={handleChildAction}
         />
       </SpeedDial>

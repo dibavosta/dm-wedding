@@ -2,9 +2,25 @@
   background-color: var(--foreground-primary);
   border-radius: 6px;
   box-shadow: 0 2px 8px var(--background-shadow);
-  margin-bottom: 48px;
+  margin-bottom: 16px;
   /* max-width: 600px; */
   max-width: 100%;
+}
+
+.additional-form {
+  margin-bottom: 48px;
+}
+
+.additional-form-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bottom-button {
+  display: flex;
+  justify-content: end;
 }
 
 .form {
@@ -66,11 +82,6 @@ input:focus {
 
 .butt {
   display: flex;
-}
-
-.buttt {
-  display: flex;
-  /* transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms; */
 }
 
 .actions.flex {
