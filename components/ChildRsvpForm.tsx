@@ -95,7 +95,7 @@ function ChildRsvpForm(props: Props) {
               numberOfButtons={2}
               name="busToChoice"
               labels={["rsvp.yesBus", "rsvp.noBus"]}
-              radioIds={["busToYes", "busToNo"]}
+              radioIds={["childBusToYes", "childBusToNo"]}
               onSetValue={busToResponse}
               locale={props.locale}
             />
@@ -108,7 +108,7 @@ function ChildRsvpForm(props: Props) {
               numberOfButtons={2}
               name="busFromChoice"
               labels={["rsvp.yesBus", "rsvp.noBus"]}
-              radioIds={["busFromYes", "busFromNo"]}
+              radioIds={["childBusFromYes", "childBusFromNo"]}
               onSetValue={busFromResponse}
               locale={props.locale}
             />

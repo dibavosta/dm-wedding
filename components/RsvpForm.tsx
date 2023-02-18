@@ -8,7 +8,6 @@ import SendIcon from "@mui/icons-material/Send";
 import Button from "@mui/material/Button";
 import AddPersonSpeedDial from "./AddPersonSpeedDial";
 import ChildRsvpForm from "./ChildRsvpForm";
-import IconButton from "@mui/material/IconButton";
 
 export interface Props {
   onSubmitForm: (params: any) => void;
@@ -36,10 +35,12 @@ function RsvpForm(props: Props) {
   };
 
   const addPartnerResponseHandler = () => {
+    console.log("adding partner");
     setAddPartner(!addPartner);
   };
 
   const addChildResponseHandler = () => {
+    console.log("adding child");
     setAddChild(!addChild);
   };
 
@@ -48,6 +49,7 @@ function RsvpForm(props: Props) {
     busTo = enteredDetails.busTo;
     busFrom = enteredDetails.busFrom;
     speech = enteredDetails.speech;
+    console.log("setting values: ", enteredDetails);
   };
 
   const registerFullResponse = (enteredDetails: any) => {

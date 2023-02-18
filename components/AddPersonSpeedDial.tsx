@@ -4,7 +4,7 @@ import SpeedDialIcon from "@mui/material/SpeedDialIcon";
 import SpeedDialAction from "@mui/material/SpeedDialAction";
 import { EscalatorWarning, Favorite, Edit } from "@mui/icons-material";
 import Box from "@mui/material/Box";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 
 interface SpeedDialProps {
@@ -63,6 +63,9 @@ function AddPersonSpeedDial(props: SpeedDialProps) {
 
   const handleClose = () => {
     setOpen(false);
+  };
+
+  useEffect(() => {
     if (addedChild) {
       setHideDial(true);
       props.onAddChild();
@@ -70,7 +73,7 @@ function AddPersonSpeedDial(props: SpeedDialProps) {
       setHideDial(true);
       props.onAddPartner();
     }
-  };
+  }, [open]);
 
   return (
     <Box

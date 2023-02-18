@@ -17,7 +17,7 @@ function FullRsvpForm(props: Props) {
   const { t } = useTranslation("common");
   const firstNameRef = useRef<HTMLInputElement>(null);
   const lastNameRef = useRef<HTMLInputElement>(null);
-  const [attending, setAttending] = useState(false);
+  const [partnerAttending, setpartnerAttending] = useState(false);
   const foodPreferencesRef = useRef<HTMLTextAreaElement>(null);
   const [enteredSpeech, setEnteredSpeech] = useState("");
   const [enteredBusTo, setEnteredBusTo] = useState("");
@@ -25,9 +25,9 @@ function FullRsvpForm(props: Props) {
 
   const attendanceResponse = (attendanceResponse: any) => {
     if (attendanceResponse === true) {
-      setAttending(true);
+      setpartnerAttending(true);
     } else {
-      setAttending(false);
+      setpartnerAttending(false);
     }
   };
 
@@ -42,6 +42,7 @@ function FullRsvpForm(props: Props) {
   };
 
   const removeAdditionalForm = () => {
+    console.log("remove form");
     props.onRemoveAdditionalForm();
   };
 
@@ -53,7 +54,7 @@ function FullRsvpForm(props: Props) {
     const enteredData = {
       firstName: firstName,
       lastName: lastName,
-      attending: attending,
+      partnerAttending: partnerAttending,
       foodPreferences: foodPreferences,
       speech: enteredSpeech,
       busTo: enteredBusTo,
@@ -100,7 +101,7 @@ function FullRsvpForm(props: Props) {
               numberOfButtons={2}
               name="attendance"
               labels={["rsvp.yes", "rsvp.no"]}
-              radioIds={["attendanceYes", "attendanceNo"]}
+              radioIds={["partnerAttendanceYes", "partnerAttendanceNo"]}
               onSetValue={attendanceResponse}
               locale={props.locale}
             />
@@ -117,7 +118,7 @@ function FullRsvpForm(props: Props) {
               numberOfButtons={2}
               name="speech"
               labels={["rsvp.yes", "rsvp.no"]}
-              radioIds={["speechYes", "speechNo"]}
+              radioIds={["partnerSpeechYes", "partnerSpeechNo"]}
               onSetValue={speechResponse}
               locale={props.locale}
             />
@@ -130,7 +131,7 @@ function FullRsvpForm(props: Props) {
               numberOfButtons={2}
               name="busToChoice"
               labels={["rsvp.yesBus", "rsvp.noBus"]}
-              radioIds={["busToYes", "busToNo"]}
+              radioIds={["partnerBusToYes", "partnerBusToNo"]}
               onSetValue={busToResponse}
               locale={props.locale}
             />
@@ -143,7 +144,7 @@ function FullRsvpForm(props: Props) {
               numberOfButtons={2}
               name="busFromChoice"
               labels={["rsvp.yesBus", "rsvp.noBus"]}
-              radioIds={["busFromYes", "busFromNo"]}
+              radioIds={["partnerBusFromYes", "partnerBusFromNo"]}
               onSetValue={busFromResponse}
               locale={props.locale}
             />

@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "next-i18next";
 import RadioButtonContainer from "./RadioButtonContainer";
 import { Locale } from "@/types/Locale";
@@ -14,6 +14,11 @@ function RsvpDetailsForm(props: Props) {
   const [enteredSpeech, setEnteredSpeech] = useState("");
   const [enteredBusTo, setEnteredBusTo] = useState("");
   const [enteredBusFrom, setEnteredBusFrom] = useState("");
+
+  const handleChange = () => {
+    sendForm();
+  };
+
   const [children, setChildren] = useState(false);
 
   const childrenResponse = (enteredResponse: any) => {
@@ -34,17 +39,22 @@ function RsvpDetailsForm(props: Props) {
 
   const busFromResponse = (enteredResponse: string) => {
     setEnteredBusFrom(enteredResponse);
+    // sendForm();
   };
+
+  useEffect(() => {
+    sendForm();
+  }, [enteredSpeech, enteredBusTo, enteredBusFrom]);
 
   const sendForm = () => {
     const foodPreferences = foodPreferencesRef.current?.value;
-
     const enteredData = {
       foodPreferences: foodPreferences,
       speech: enteredSpeech,
       busTo: enteredBusTo,
       busFrom: enteredBusFrom,
     };
+
     props.onSendForm(enteredData);
   };
 
@@ -52,7 +62,12 @@ function RsvpDetailsForm(props: Props) {
     <div className="attending">
       <div className="input-control">
         <label htmlFor="foodPreferences">{t("rsvp.foodPreferences")}</label>
-        <textarea id="foodPreferences" rows={2} ref={foodPreferencesRef} />
+        <textarea
+          id="foodPreferences"
+          rows={2}
+          onChange={handleChange}
+          ref={foodPreferencesRef}
+        />
       </div>
       <div className="radio-button-control">
         <label className="question" htmlFor="speech">
