@@ -25,7 +25,12 @@
     "speech": "S",
     "yes": "Sí",
     "no": "No",
-    "attendance": "S"
+    "attendance": "S",
+    "child": {
+      "name": "",
+      "age": "",
+      "foodPreferences": ""
+    }
   },
   "location": {
     "path": "L",

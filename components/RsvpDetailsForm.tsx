@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "next-i18next";
 import RadioButtonContainer from "./RadioButtonContainer";
 import { Locale } from "@/types/Locale";
@@ -10,30 +10,41 @@ export interface Props {
 
 function RsvpDetailsForm(props: Props) {
   const { t } = useTranslation("common");
+  const foodPreferencesRef = useRef<HTMLTextAreaElement>(null);
   const [enteredSpeech, setEnteredSpeech] = useState("");
   const [enteredBusTo, setEnteredBusTo] = useState("");
   const [enteredBusFrom, setEnteredBusFrom] = useState("");
-  const foodPreferencesRef = useRef<HTMLTextAreaElement>(null);
+
+  const handleChange = () => {
+    sendForm();
+  };
 
   const speechResponse = (enteredResponse: string) => {
     setEnteredSpeech(enteredResponse);
   };
+
   const busToResponse = (enteredResponse: string) => {
     setEnteredBusTo(enteredResponse);
   };
+
   const busFromResponse = (enteredResponse: string) => {
     setEnteredBusFrom(enteredResponse);
+    // sendForm();
   };
+
+  useEffect(() => {
+    sendForm();
+  }, [enteredSpeech, enteredBusTo, enteredBusFrom]);
 
   const sendForm = () => {
     const foodPreferences = foodPreferencesRef.current?.value;
-
     const enteredData = {
       foodPreferences: foodPreferences,
       speech: enteredSpeech,
       busTo: enteredBusTo,
       busFrom: enteredBusFrom,
     };
+
     props.onSendForm(enteredData);
   };
 
@@ -41,7 +52,12 @@ function RsvpDetailsForm(props: Props) {
     <div className="attending">
       <div className="input-control">
         <label htmlFor="foodPreferences">{t("rsvp.foodPreferences")}</label>
-        <textarea id="foodPreferences" rows={2} ref={foodPreferencesRef} />
+        <textarea
+          id="foodPreferences"
+          rows={2}
+          onChange={handleChange}
+          ref={foodPreferencesRef}
+        />
       </div>
       <div className="radio-button-control">
         <label className="question" htmlFor="speech">
@@ -81,11 +97,6 @@ function RsvpDetailsForm(props: Props) {
           onSetValue={busFromResponse}
           locale={props.locale}
         />
-      </div>
-      <div className="actions">
-        <button type="submit" onClick={sendForm}>
-          Send rsvp
-        </button>
       </div>
     </div>
   );

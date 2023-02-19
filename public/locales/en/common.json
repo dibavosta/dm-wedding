@@ -25,7 +25,12 @@
     "speech": "Do you want to say a few words during the dinner?",
     "yes": "Yes",
     "no": "Noe",
-    "attendance": "Will you be attending the wedding?"
+    "attendance": "Will you be attending the wedding?",
+    "child": {
+      "name": "Name of the child/children",
+      "age": "Age of the child/children",
+      "foodPreferences": "Food preferences of the child/children"
+    }
   },
   "location": {
     "path": "Venue",

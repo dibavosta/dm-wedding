@@ -7,15 +7,12 @@ import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
 import TimelineDot from "@mui/lab/TimelineDot";
 import Typography from "@mui/material/Typography";
-import {
-  Bedtime,
-  Cake,
-  DinnerDining,
-  Favorite,
-  Nightlife,
-  Restaurant,
-  WineBar,
-} from "@mui/icons-material";
+import Favorite from "@mui/icons-material/Favorite";
+import Bedtime from "@mui/icons-material/Bedtime";
+import Cake from "@mui/icons-material/Cake";
+import Nightlife from "@mui/icons-material/Nightlife";
+import Restaurant from "@mui/icons-material/Restaurant";
+import WineBar from "@mui/icons-material/WineBar";
 import { useTranslation } from "next-i18next";
 
 interface TimelineProps {

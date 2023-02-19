@@ -2,9 +2,25 @@
   background-color: var(--foreground-primary);
   border-radius: 6px;
   box-shadow: 0 2px 8px var(--background-shadow);
-  margin-bottom: 48px;
+  margin-bottom: 16px;
   /* max-width: 600px; */
   max-width: 100%;
+}
+
+.additional-form {
+  margin-bottom: 48px;
+}
+
+.additional-form-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bottom-button {
+  display: flex;
+  justify-content: end;
 }
 
 .form {
@@ -45,6 +61,16 @@ input:focus {
   margin-bottom: 1rem;
 }
 
+.input-control.children input {
+  width: 80%;
+  margin: 12px 0;
+}
+
+.child-input {
+  display: flex;
+  flex-direction: row;
+}
+
 .question {
   margin-bottom: 0.5rem;
   text-align: flex-start;
@@ -53,9 +79,38 @@ input:focus {
   font-weight: bold;
 }
 
+.add-new {
+  padding-bottom: 8px;
+}
+
+.actionz {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.butt {
+  display: flex;
+}
+
+.actions.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .actions {
   margin-top: 1rem;
-  text-align: right;
+}
+
+.addPerson {
+  border-radius: 50% !important;
+  padding: 8px 13px !important;
+}
+
+.addPerson.minus {
+  padding: 8px 15px !important;
 }
 
 .actions button {

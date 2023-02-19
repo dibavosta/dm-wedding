@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Navigation from "./Navigation";
-import Favicon from "../components/Favicon";
 
 function Layout(props: any) {
   return (

@@ -13,17 +13,17 @@ function RSVP({ locale }: RsvpProps) {
   const { t } = useTranslation("common");
 
   async function rsvpResponseHandler(enteredData: any) {
-    console.log(enteredData);
-    const response = await fetch("/api/send-rsvp", {
-      method: "POST",
-      body: JSON.stringify(enteredData),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    console.log("Submitting to db: ", enteredData);
+    // const response = await fetch("/api/send-rsvp", {
+    //   method: "POST",
+    //   body: JSON.stringify(enteredData),
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    // });
 
-    const data = await response.json();
-    console.log(data);
+    // const data = await response.json();
+    // console.log(data);
   }
 
   return (

@@ -32,7 +32,7 @@ function RadioButtonContainer(props: Props) {
 
   for (let i = 0; i < props.numberOfButtons; i++) {
     radioButtons.push(
-      <div className="radio-button">
+      <div className="radio-button" key={props.radioIds[i]}>
         <input
           type="radio"
           id={props.radioIds[i]}
