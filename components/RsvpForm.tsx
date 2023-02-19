@@ -68,7 +68,7 @@ function RsvpForm(props: Props) {
   const onRemoveAdditionalChildForm = () => {
     setAddChild(false);
   };
-  // event: React.SyntheticEvent;
+
   function submitHandler(event: React.SyntheticEvent) {
     event.preventDefault();
     var fullFormData = getFormData();
