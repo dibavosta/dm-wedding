@@ -1,10 +1,8 @@
-import ImageWithDescription from "@/components/ImageWithDescription";
 import CustomizedTimeline from "@/components/CustomizedTimeline";
 import { Locale } from "@/types/Locale";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Head from "next/head";
-import Image from "next/image";
 import * as React from "react";
 import Title from "@/components/Title";
 

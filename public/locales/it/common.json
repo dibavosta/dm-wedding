@@ -26,8 +26,11 @@
     "yes": "Sí",
     "no": "No",
     "attendance": "S",
-    "children": "Do you have any children that you want to bring?",
-    "howManyChildren": "How many children do you have?"
+    "child": {
+      "name": "",
+      "age": "",
+      "foodPreferences": ""
+    }
   },
   "location": {
     "path": "L",

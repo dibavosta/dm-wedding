@@ -26,8 +26,11 @@
     "yes": "Yes",
     "no": "Noe",
     "attendance": "Will you be attending the wedding?",
-    "children": "Do you have any children that you want to bring?",
-    "howManyChildren": "How many children do you have?"
+    "child": {
+      "name": "Name of the child/children",
+      "age": "Age of the child/children",
+      "foodPreferences": "Food preferences of the child/children"
+    }
   },
   "location": {
     "path": "Venue",

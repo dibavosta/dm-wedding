@@ -4,10 +4,10 @@ import RadioButtonContainer from "./RadioButtonContainer";
 import RsvpDetailsForm from "./RsvpDetailsForm";
 import { useTranslation } from "next-i18next";
 import FullRsvpForm from "./FullRsvpForm";
-import SendIcon from "@mui/icons-material/Send";
-import Button from "@mui/material/Button";
 import AddPersonSpeedDial from "./AddPersonSpeedDial";
 import ChildRsvpForm from "./ChildRsvpForm";
+import Button from "@mui/material/Button";
+import SendIcon from "@mui/icons-material/Send";
 
 export interface Props {
   onSubmitForm: (params: any) => void;
@@ -52,8 +52,12 @@ function RsvpForm(props: Props) {
     console.log("setting values: ", enteredDetails);
   };
 
-  const registerFullResponse = (enteredDetails: any) => {
+  const registerPartnerResponse = (enteredDetails: any) => {
     console.log("+1: ", enteredDetails);
+  };
+
+  const registerChildResponse = (enteredDetails: any) => {
+    console.log("+child: ", enteredDetails);
   };
 
   const onRemoveAdditionalForm = () => {
@@ -61,11 +65,12 @@ function RsvpForm(props: Props) {
   };
 
   const onRemoveAdditionalChildForm = () => {
+    console.log("removinf child");
     setAddChild(false);
   };
-
-  function submitHandler(event: React.SyntheticEvent) {
-    event.preventDefault();
+  // event: React.SyntheticEvent;
+  function submitHandler() {
+    // event.preventDefault();
     const firstName = firstNameRef.current?.value;
     const lastName = lastNameRef.current?.value;
 
@@ -140,13 +145,13 @@ function RsvpForm(props: Props) {
       </div>
       {addPartner ? (
         <FullRsvpForm
-          onSendForm={registerFullResponse}
+          onSendForm={registerPartnerResponse}
           onRemoveAdditionalForm={onRemoveAdditionalForm}
           locale={props.locale}
         />
       ) : addChild ? (
         <ChildRsvpForm
-          onSendForm={registerFullResponse}
+          onSendForm={registerChildResponse}
           onRemoveAdditionalForm={onRemoveAdditionalChildForm}
           locale={props.locale}
         />

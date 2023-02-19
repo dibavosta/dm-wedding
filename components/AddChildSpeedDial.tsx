@@ -4,13 +4,11 @@ import SpeedDialIcon from "@mui/material/SpeedDialIcon";
 import SpeedDialAction from "@mui/material/SpeedDialAction";
 import Edit from "@mui/icons-material/Edit";
 import EscalatorWarning from "@mui/icons-material/EscalatorWarning";
-import Favorite from "@mui/icons-material/Favorite";
 import Box from "@mui/material/Box";
 import { useEffect, useState } from "react";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 
-interface SpeedDialProps {
-  onAddPartner: () => void;
+interface ChildSpeedDialProps {
   onAddChild: () => void;
 }
 
@@ -27,19 +25,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function AddPersonSpeedDial(props: SpeedDialProps) {
+function AddChildSpeedDial(props: ChildSpeedDialProps) {
   const classes = useStyles();
 
-  const [addedPartner, setAddedPartner] = useState(false);
   const [addedChild, setAddedChild] = useState(false);
   const [hideDial, setHideDial] = useState(false);
   const [open, setOpen] = React.useState(false);
-
-  const handlePartnerAction = () => {
-    console.log("clicked on partner");
-    setOpen(false);
-    setAddedPartner(true);
-  };
 
   const handleChildAction = () => {
     console.log("clicked on child");
@@ -59,9 +50,6 @@ function AddPersonSpeedDial(props: SpeedDialProps) {
     if (addedChild) {
       setHideDial(true);
       props.onAddChild();
-    } else if (addedPartner) {
-      setHideDial(true);
-      props.onAddPartner();
     }
   }, [open]);
 
@@ -79,7 +67,7 @@ function AddPersonSpeedDial(props: SpeedDialProps) {
         onClose={handleClose}
         onOpen={handleOpen}
         open={open}
-        ariaLabel="Add a partner or child to the RSVP"
+        ariaLabel="Add a child to the RSVP"
         icon={<SpeedDialIcon openIcon={<Edit />} />}
         direction="up"
         hidden={hideDial}
@@ -110,21 +98,6 @@ function AddPersonSpeedDial(props: SpeedDialProps) {
               },
             },
           }}
-          icon={<Favorite />}
-          tooltipTitle="Partner"
-          classes={classes}
-          tooltipOpen={true}
-          onClick={handlePartnerAction}
-        />
-
-        <SpeedDialAction
-          FabProps={{
-            sx: {
-              "&:hover": {
-                bgcolor: "#8f683d",
-              },
-            },
-          }}
           icon={<EscalatorWarning fontSize="small" />}
           tooltipTitle="Child"
           tooltipOpen={true}
@@ -136,4 +109,4 @@ function AddPersonSpeedDial(props: SpeedDialProps) {
   );
 }
 
-export default AddPersonSpeedDial;
+export default AddChildSpeedDial;

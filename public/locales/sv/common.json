@@ -26,8 +26,11 @@
     "yes": "Ja",
     "no": "Nej",
     "attendance": "Kommer du på bröllopet?",
-    "children": "Har du några barn som du vill ta med på bröllopet",
-    "howManyChildren": "Hur många barn gäller det?"
+    "child": {
+      "name": "Barnets/barnen namn",
+      "age": "Barnets/barnen ålder",
+      "foodPreferences": "Barnets/barnen matpreferenser"
+    }
   },
   "location": {
     "path": "Lokalen",

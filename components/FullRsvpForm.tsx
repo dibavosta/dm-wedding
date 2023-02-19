@@ -6,6 +6,8 @@ import SendIcon from "@mui/icons-material/Send";
 import DeleteIcon from "@mui/icons-material/Delete";
 import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
+import AddChildSpeedDial from "./AddChildSpeedDial";
+import ChildRsvpForm from "./ChildRsvpForm";
 
 export interface Props {
   onSendForm: (params: any) => void;
@@ -22,6 +24,7 @@ function FullRsvpForm(props: Props) {
   const [enteredSpeech, setEnteredSpeech] = useState("");
   const [enteredBusTo, setEnteredBusTo] = useState("");
   const [enteredBusFrom, setEnteredBusFrom] = useState("");
+  const [addChild, setAddChild] = useState(false);
 
   const attendanceResponse = (attendanceResponse: any) => {
     if (attendanceResponse === true) {
@@ -44,6 +47,19 @@ function FullRsvpForm(props: Props) {
   const removeAdditionalForm = () => {
     console.log("remove form");
     props.onRemoveAdditionalForm();
+  };
+
+  const addChildResponseHandler = () => {
+    console.log("adding child");
+    setAddChild(true);
+  };
+
+  const registerChildResponse = (enteredDetails: any) => {
+    console.log("+child: ", enteredDetails);
+  };
+
+  const onRemoveAdditionalChildForm = () => {
+    setAddChild(false);
   };
 
   const submitHandler = () => {
@@ -149,24 +165,38 @@ function FullRsvpForm(props: Props) {
               locale={props.locale}
             />
           </div>
+          <div className="butt">
+            {addChild ? (
+              <div></div>
+            ) : (
+              <AddChildSpeedDial onAddChild={addChildResponseHandler} />
+            )}
+          </div>
         </form>
       </div>
-      <div className="bottom-button">
-        <Button
-          type="submit"
-          variant="contained"
-          endIcon={<SendIcon />}
-          sx={{
-            background: "#b97b52",
-            ":hover": {
-              bgcolor: "#8f683d",
-            },
-            alignSelf: "flex-end",
-          }}
-        >
-          Send
-        </Button>
-      </div>
+      {addChild ? (
+        <ChildRsvpForm
+          onSendForm={registerChildResponse}
+          onRemoveAdditionalForm={onRemoveAdditionalChildForm}
+          locale={props.locale}
+        />
+      ) : (
+        <div className="bottom-button">
+          <Button
+            variant="contained"
+            type="submit"
+            endIcon={<SendIcon />}
+            sx={{
+              background: "#b97b52",
+              ":hover": {
+                bgcolor: "#8f683d",
+              },
+            }}
+          >
+            Send
+          </Button>
+        </div>
+      )}
     </div>
   );
 }

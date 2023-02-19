@@ -1,4 +1,13 @@
-import { useRef, useState } from "react";
+import {
+  createRef,
+  JSXElementConstructor,
+  ReactElement,
+  ReactFragment,
+  Ref,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import { useTranslation } from "next-i18next";
 import RadioButtonContainer from "./RadioButtonContainer";
 import { Locale } from "@/types/Locale";
@@ -13,12 +22,14 @@ export interface Props {
   locale: Locale;
 }
 
+const children = {};
+
 function ChildRsvpForm(props: Props) {
   const { t } = useTranslation("common");
-  const firstNameRef = useRef<HTMLInputElement>(null);
-  const lastNameRef = useRef<HTMLInputElement>(null);
-  const ageRef = useRef<HTMLInputElement>(null);
-  const foodPreferencesRef = useRef<HTMLTextAreaElement>(null);
+
+  const nameChildrenRef = useRef<HTMLInputElement>(null);
+  const ageChildrenRef = useRef<HTMLInputElement>(null);
+  const foodPreferencesChildrenRef = useRef<HTMLTextAreaElement>(null);
   const [enteredBusTo, setEnteredBusTo] = useState("");
   const [enteredBusFrom, setEnteredBusFrom] = useState("");
 
@@ -33,19 +44,18 @@ function ChildRsvpForm(props: Props) {
   };
 
   const submitHandler = () => {
-    const firstName = firstNameRef.current?.value;
-    const lastName = lastNameRef.current?.value;
-    const age = ageRef.current?.value;
-    const foodPreferences = foodPreferencesRef.current?.value;
+    const name = nameChildrenRef.current?.value;
+    const age = ageChildrenRef.current?.value;
+    const foodPreferences = foodPreferencesChildrenRef.current?.value;
 
     const enteredData = {
-      firstName: firstName,
-      lastName: lastName,
+      name: name,
       age: age,
       foodPreferences: foodPreferences,
       busTo: enteredBusTo,
       busFrom: enteredBusFrom,
     };
+    console.log("child data; ", enteredData);
     props.onSendForm(enteredData);
   };
 
@@ -71,21 +81,32 @@ function ChildRsvpForm(props: Props) {
               />
             </IconButton>
           </div>
+          {/* <SelectNumberOfChildren
+            onSelected={registerNumberOfChildren}
+            locale={props.locale}
+          /> */}
           <div className="input-control">
-            <label htmlFor="firstName">{t("rsvp.firstName")}</label>
-            <input required type="text" id="firstName" ref={firstNameRef} />
+            <label htmlFor="name">{t("rsvp.child.name")}</label>
+            <input
+              required
+              type="text"
+              id="nameChildren"
+              ref={nameChildrenRef}
+            />
           </div>
           <div className="input-control">
-            <label htmlFor="lastName">{t("rsvp.lastName")}</label>
-            <input required type="text" id="lastName" ref={lastNameRef} />
+            <label htmlFor="age">{t("rsvp.child.age")}</label>
+            <input required type="text" id="ageChildren" ref={ageChildrenRef} />
           </div>
           <div className="input-control">
-            <label htmlFor="age">{t("rsvp.age")}</label>
-            <input required type="text" id="age" ref={ageRef} />
-          </div>
-          <div className="input-control">
-            <label htmlFor="foodPreferences">{t("rsvp.foodPreferences")}</label>
-            <textarea id="foodPreferences" rows={2} ref={foodPreferencesRef} />
+            <label htmlFor="foodPreferences">
+              {t("rsvp.child.foodPreferences")}
+            </label>
+            <textarea
+              id="foodPreferencesChildren"
+              rows={2}
+              ref={foodPreferencesChildrenRef}
+            />
           </div>
           <div className="radio-button-control">
             <label className="question" htmlFor="busTo">

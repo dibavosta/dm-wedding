@@ -19,16 +19,6 @@ function RsvpDetailsForm(props: Props) {
     sendForm();
   };
 
-  const [children, setChildren] = useState(false);
-
-  const childrenResponse = (enteredResponse: any) => {
-    if (enteredResponse === true) {
-      setChildren(true);
-    } else {
-      setChildren(false);
-    }
-  };
-
   const speechResponse = (enteredResponse: string) => {
     setEnteredSpeech(enteredResponse);
   };
