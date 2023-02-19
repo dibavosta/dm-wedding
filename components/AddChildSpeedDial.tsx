@@ -33,7 +33,6 @@ function AddChildSpeedDial(props: ChildSpeedDialProps) {
   const [open, setOpen] = React.useState(false);
 
   const handleChildAction = () => {
-    console.log("clicked on child");
     setOpen(false);
     setAddedChild(true);
   };

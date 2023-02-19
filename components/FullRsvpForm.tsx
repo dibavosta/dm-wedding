@@ -45,21 +45,16 @@ function FullRsvpForm(props: Props) {
   };
 
   const removeAdditionalForm = () => {
-    console.log("remove form");
     props.onRemoveAdditionalForm();
   };
 
   const addChildResponseHandler = () => {
-    console.log("adding child");
     setAddChild(true);
   };
 
   const registerChildResponse = (enteredDetails: any) => {
-    console.log("+child full form: ", enteredDetails);
     const data = getFullFormData();
-    console.log("full form data: ", data);
     data["child"] = enteredDetails;
-    console.log("full resp from partner + child: ", data);
     props.onSendForm(data);
   };
 
@@ -70,7 +65,6 @@ function FullRsvpForm(props: Props) {
   function submitHandler(event: React.SyntheticEvent) {
     event.preventDefault();
     const data = getFullFormData();
-    console.log("gonna submit full form data: ", data);
     props.onSendForm(data);
   }
 
@@ -197,6 +191,7 @@ function FullRsvpForm(props: Props) {
           <Button
             variant="contained"
             form="fullForm"
+            type="submit"
             endIcon={<SendIcon />}
             sx={{
               background: "#b97b52",

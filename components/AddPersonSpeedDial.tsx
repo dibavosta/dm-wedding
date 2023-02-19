@@ -36,13 +36,11 @@ function AddPersonSpeedDial(props: SpeedDialProps) {
   const [open, setOpen] = React.useState(false);
 
   const handlePartnerAction = () => {
-    console.log("clicked on partner");
     setOpen(false);
     setAddedPartner(true);
   };
 
   const handleChildAction = () => {
-    console.log("clicked on child");
     setOpen(false);
     setAddedChild(true);
   };

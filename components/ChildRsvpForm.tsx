@@ -56,7 +56,6 @@ function ChildRsvpForm(props: Props) {
       busTo: enteredBusTo,
       busFrom: enteredBusFrom,
     };
-    console.log("child data: ", enteredData);
     props.onSendForm(enteredData);
   }
 

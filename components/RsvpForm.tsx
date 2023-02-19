@@ -26,12 +26,6 @@ function RsvpForm(props: Props) {
   const [busFrom, setBusFrom] = useState(false);
   const [speech, setSpeech] = useState(false);
 
-  //   var foodPreferences: string | null;
-  //   var busTo: boolean | null;
-  //   var busFrom: boolean | null;
-  //   var speech: boolean | null;
-  var fullFormData = useRef<{ [id: string]: any }>({});
-
   const attendanceResponse = (attendanceResponse: any) => {
     if (attendanceResponse === true) {
       setAttending(true);
@@ -41,12 +35,10 @@ function RsvpForm(props: Props) {
   };
 
   const addPartnerResponseHandler = () => {
-    console.log("adding partner");
     setAddPartner(!addPartner);
   };
 
   const addChildResponseHandler = () => {
-    console.log("adding child");
     setAddChild(!addChild);
   };
 
@@ -55,23 +47,18 @@ function RsvpForm(props: Props) {
     setBusTo(enteredDetails.busTo);
     setBusFrom(enteredDetails.busFrom);
     setSpeech(enteredDetails.speech);
-    console.log("setting values: ", enteredDetails);
   };
 
   const registerPartnerResponse = (enteredDetails: any) => {
-    console.log("+1 rsvp: ", enteredDetails);
-    setFormData();
-    fullFormData.current["partner"] = enteredDetails;
-    console.log("will submit this: ", fullFormData);
-    submitData();
+    var fullFormData = getFormData();
+    fullFormData["partner"] = enteredDetails;
+    submitData(fullFormData);
   };
 
   const registerChildResponse = (enteredDetails: any) => {
-    console.log("+child rsvp: ", enteredDetails);
-    setFormData();
-    fullFormData.current["child"] = enteredDetails;
-    console.log("will submit this: ", fullFormData);
-    submitData();
+    var fullFormData = getFormData();
+    fullFormData["child"] = enteredDetails;
+    submitData(fullFormData);
   };
 
   const onRemoveAdditionalForm = () => {
@@ -79,40 +66,33 @@ function RsvpForm(props: Props) {
   };
 
   const onRemoveAdditionalChildForm = () => {
-    console.log("removing child");
     setAddChild(false);
   };
   // event: React.SyntheticEvent;
   function submitHandler(event: React.SyntheticEvent) {
     event.preventDefault();
-    setFormData();
-
-    if (!attending) {
-      console.log("gonna add non-attending single guest");
-      // addGuest(firstName, lastName, attending, null, null, null, null)
-    } else {
-      console.log("gonna add attending single guest");
-    }
-    console.log(fullFormData);
-    submitData();
+    var fullFormData = getFormData();
+    submitData(fullFormData);
   }
 
-  function setFormData() {
+  function getFormData(): { [id: string]: any } {
     const firstName = firstNameRef.current?.value;
     const lastName = lastNameRef.current?.value;
+    var fullFormData: { [id: string]: any } = {};
 
-    fullFormData.current["firstName"] = firstName;
-    fullFormData.current["lastName"] = lastName;
-    fullFormData.current["attending"] = attending;
-    fullFormData.current["foodPreferences"] = foodPreferences;
-    fullFormData.current["busTo"] = busTo;
-    fullFormData.current["busFrom"] = busFrom;
-    fullFormData.current["speech"] = speech;
-    console.log("first person data: ", fullFormData);
+    fullFormData["firstName"] = firstName;
+    fullFormData["lastName"] = lastName;
+    fullFormData["attending"] = attending;
+    fullFormData["foodPreferences"] = foodPreferences;
+    fullFormData["busTo"] = busTo;
+    fullFormData["busFrom"] = busFrom;
+    fullFormData["speech"] = speech;
+
+    return fullFormData;
   }
 
-  function submitData() {
-    props.onSubmitForm(fullFormData.current);
+  function submitData(fullFormData: { [id: string]: any }) {
+    props.onSubmitForm(fullFormData);
   }
 
   const { t } = useTranslation("common");
