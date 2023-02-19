@@ -55,34 +55,46 @@ function FullRsvpForm(props: Props) {
   };
 
   const registerChildResponse = (enteredDetails: any) => {
-    console.log("+child: ", enteredDetails);
+    console.log("+child full form: ", enteredDetails);
+    const data = getFullFormData();
+    console.log("full form data: ", data);
+    data["child"] = enteredDetails;
+    console.log("full resp from partner + child: ", data);
+    props.onSendForm(data);
   };
 
   const onRemoveAdditionalChildForm = () => {
     setAddChild(false);
   };
 
-  const submitHandler = () => {
+  function submitHandler(event: React.SyntheticEvent) {
+    event.preventDefault();
+    const data = getFullFormData();
+    console.log("gonna submit full form data: ", data);
+    props.onSendForm(data);
+  }
+
+  function getFullFormData(): { [id: string]: any } {
     const firstName = firstNameRef.current?.value;
     const lastName = lastNameRef.current?.value;
     const foodPreferences = foodPreferencesRef.current?.value;
+    var fullFormData: { [id: string]: any } = {};
 
-    const enteredData = {
-      firstName: firstName,
-      lastName: lastName,
-      partnerAttending: partnerAttending,
-      foodPreferences: foodPreferences,
-      speech: enteredSpeech,
-      busTo: enteredBusTo,
-      busFrom: enteredBusFrom,
-    };
-    props.onSendForm(enteredData);
-  };
+    fullFormData["firstName"] = firstName;
+    fullFormData["lastName"] = lastName;
+    fullFormData["attending"] = partnerAttending;
+    fullFormData["foodPreferences"] = foodPreferences;
+    fullFormData["speech"] = enteredSpeech;
+    fullFormData["busTo"] = enteredBusTo;
+    fullFormData["busFrom"] = enteredBusFrom;
+
+    return fullFormData;
+  }
 
   return (
     <div className="additional-form">
       <div className="form-container">
-        <form className="form" onSubmit={submitHandler}>
+        <form id="fullForm" className="form" onSubmit={submitHandler}>
           <div className="additional-form-header">
             <h3 className="add-new">Enter details of partner</h3>
             <IconButton
@@ -184,7 +196,7 @@ function FullRsvpForm(props: Props) {
         <div className="bottom-button">
           <Button
             variant="contained"
-            type="submit"
+            form="fullForm"
             endIcon={<SendIcon />}
             sx={{
               background: "#b97b52",

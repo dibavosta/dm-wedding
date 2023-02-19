@@ -43,7 +43,8 @@ function ChildRsvpForm(props: Props) {
     props.onRemoveAdditionalForm();
   };
 
-  const submitHandler = () => {
+  function submitHandler(event: React.SyntheticEvent) {
+    event.preventDefault();
     const name = nameChildrenRef.current?.value;
     const age = ageChildrenRef.current?.value;
     const foodPreferences = foodPreferencesChildrenRef.current?.value;
@@ -55,14 +56,14 @@ function ChildRsvpForm(props: Props) {
       busTo: enteredBusTo,
       busFrom: enteredBusFrom,
     };
-    console.log("child data; ", enteredData);
+    console.log("child data: ", enteredData);
     props.onSendForm(enteredData);
-  };
+  }
 
   return (
     <div className="additional-form">
       <div className="form-container">
-        <form className="form" onSubmit={submitHandler}>
+        <form id="childform" className="form" onSubmit={submitHandler}>
           <div className="additional-form-header">
             <h3 className="add-new">Enter details of child</h3>
             <IconButton
@@ -140,6 +141,7 @@ function ChildRsvpForm(props: Props) {
         <Button
           variant="contained"
           type="submit"
+          form="childform"
           endIcon={<SendIcon />}
           sx={{
             background: "#b97b52",

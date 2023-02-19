@@ -13,7 +13,7 @@ function RSVP({ locale }: RsvpProps) {
   const { t } = useTranslation("common");
 
   async function rsvpResponseHandler(enteredData: any) {
-    console.log(enteredData);
+    console.log("final step: ", enteredData);
     const response = await fetch("/api/send-rsvp", {
       method: "POST",
       body: JSON.stringify(enteredData),

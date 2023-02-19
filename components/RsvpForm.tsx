@@ -21,10 +21,16 @@ function RsvpForm(props: Props) {
   const [addPartner, setAddPartner] = useState(false);
   const [addChild, setAddChild] = useState(false);
 
-  let foodPreferences: string | null;
-  let busTo: boolean | null;
-  let busFrom: boolean | null;
-  let speech: boolean | null;
+  const [foodPreferences, setFoodPreferences] = useState("");
+  const [busTo, setBusTo] = useState(false);
+  const [busFrom, setBusFrom] = useState(false);
+  const [speech, setSpeech] = useState(false);
+
+  //   var foodPreferences: string | null;
+  //   var busTo: boolean | null;
+  //   var busFrom: boolean | null;
+  //   var speech: boolean | null;
+  var fullFormData = useRef<{ [id: string]: any }>({});
 
   const attendanceResponse = (attendanceResponse: any) => {
     if (attendanceResponse === true) {
@@ -45,19 +51,27 @@ function RsvpForm(props: Props) {
   };
 
   const registerDetailResponse = (enteredDetails: any) => {
-    foodPreferences = enteredDetails.foodPreferences;
-    busTo = enteredDetails.busTo;
-    busFrom = enteredDetails.busFrom;
-    speech = enteredDetails.speech;
+    setFoodPreferences(enteredDetails.foodPreferences);
+    setBusTo(enteredDetails.busTo);
+    setBusFrom(enteredDetails.busFrom);
+    setSpeech(enteredDetails.speech);
     console.log("setting values: ", enteredDetails);
   };
 
   const registerPartnerResponse = (enteredDetails: any) => {
-    console.log("+1: ", enteredDetails);
+    console.log("+1 rsvp: ", enteredDetails);
+    setFormData();
+    fullFormData.current["partner"] = enteredDetails;
+    console.log("will submit this: ", fullFormData);
+    submitData();
   };
 
   const registerChildResponse = (enteredDetails: any) => {
-    console.log("+child: ", enteredDetails);
+    console.log("+child rsvp: ", enteredDetails);
+    setFormData();
+    fullFormData.current["child"] = enteredDetails;
+    console.log("will submit this: ", fullFormData);
+    submitData();
   };
 
   const onRemoveAdditionalForm = () => {
@@ -65,33 +79,40 @@ function RsvpForm(props: Props) {
   };
 
   const onRemoveAdditionalChildForm = () => {
-    console.log("removinf child");
+    console.log("removing child");
     setAddChild(false);
   };
   // event: React.SyntheticEvent;
-  function submitHandler() {
-    // event.preventDefault();
+  function submitHandler(event: React.SyntheticEvent) {
+    event.preventDefault();
+    setFormData();
+
+    if (!attending) {
+      console.log("gonna add non-attending single guest");
+      // addGuest(firstName, lastName, attending, null, null, null, null)
+    } else {
+      console.log("gonna add attending single guest");
+    }
+    console.log(fullFormData);
+    submitData();
+  }
+
+  function setFormData() {
     const firstName = firstNameRef.current?.value;
     const lastName = lastNameRef.current?.value;
 
-    const enteredFormData = {
-      firstName,
-      lastName,
-      attending,
-      speech,
-      busTo,
-      busFrom,
-      foodPreferences,
-    };
+    fullFormData.current["firstName"] = firstName;
+    fullFormData.current["lastName"] = lastName;
+    fullFormData.current["attending"] = attending;
+    fullFormData.current["foodPreferences"] = foodPreferences;
+    fullFormData.current["busTo"] = busTo;
+    fullFormData.current["busFrom"] = busFrom;
+    fullFormData.current["speech"] = speech;
+    console.log("first person data: ", fullFormData);
+  }
 
-    if (!attending) {
-      console.log("gonna add non-attending guest");
-      // addGuest(firstName, lastName, attending, null, null, null, null)
-    } else {
-      console.log("gonna add attending guest");
-    }
-    console.log(enteredFormData);
-    // props.onSubmitForm(enteredFormData);
+  function submitData() {
+    props.onSubmitForm(fullFormData.current);
   }
 
   const { t } = useTranslation("common");
@@ -99,7 +120,7 @@ function RsvpForm(props: Props) {
   return (
     <div className="additional-form">
       <div className="form-container">
-        <form className="form" onSubmit={submitHandler}>
+        <form id="rsvp" className="form" onSubmit={submitHandler}>
           <div className="input-control">
             <label htmlFor="firstName">{t("rsvp.firstName")}</label>
             <input required type="text" id="firstName" ref={firstNameRef} />
@@ -159,6 +180,7 @@ function RsvpForm(props: Props) {
         <div className="bottom-button">
           <Button
             variant="contained"
+            form="rsvp"
             type="submit"
             endIcon={<SendIcon />}
             sx={{
