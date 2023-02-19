@@ -6,9 +6,7 @@ async function handler(request: any, response: any) {
     const data = request.body;
 
     try {
-      const client = await MongoClient.connect(
-        "mongodb+srv://masterAdmin:KaYRGPRSzzHXgp7i@cluster0.dtlcujs.mongodb.net/rsvp?retryWrites=true&w=majority"
-      );
+      const client = await MongoClient.connect("");
       const db = client.db();
       const rsvpCollection = db.collection("rsvp");
       const result = await rsvpCollection.insertOne(data);
