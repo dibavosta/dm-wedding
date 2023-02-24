@@ -1,13 +1,4 @@
-import {
-  createRef,
-  JSXElementConstructor,
-  ReactElement,
-  ReactFragment,
-  Ref,
-  useEffect,
-  useRef,
-  useState,
-} from "react";
+import { useRef, useState } from "react";
 import { useTranslation } from "next-i18next";
 import RadioButtonContainer from "./RadioButtonContainer";
 import { Locale } from "@/types/Locale";
@@ -21,8 +12,6 @@ export interface Props {
   onRemoveAdditionalForm: () => void;
   locale: Locale;
 }
-
-const children = {};
 
 function ChildRsvpForm(props: Props) {
   const { t } = useTranslation("common");
@@ -81,10 +70,6 @@ function ChildRsvpForm(props: Props) {
               />
             </IconButton>
           </div>
-          {/* <SelectNumberOfChildren
-            onSelected={registerNumberOfChildren}
-            locale={props.locale}
-          /> */}
           <div className="input-control">
             <label htmlFor="name">{t("rsvp.child.name")}</label>
             <input

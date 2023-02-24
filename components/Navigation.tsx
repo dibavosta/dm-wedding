@@ -1,13 +1,10 @@
 import { useTranslation } from "next-i18next";
-import LanguageButton from "./LanguageButton";
 import { useState } from "react";
 import { Fade as Hamburger } from "hamburger-react";
 import Link from "next/link";
 import { Locale } from "@/types/Locale";
 import { useRouter } from "next/router";
-import ModernUpdate from "../assets/ModernUpdate.svg";
-import DeluxeLogo from "../assets/MDdeluxe.svg";
-import Favicon from "./Favicon";
+import Header from "./Header";
 
 interface NavigationProps {
   locale: Locale;
@@ -25,36 +22,7 @@ function Navigation({ locale }: NavigationProps) {
 
   return (
     <div className="navbar">
-      <div className="top">
-        <div className="top-center">
-          <div className="header">
-            <h1>{t("page.title")}</h1>
-            <Favicon />
-          </div>
-        </div>
-        <div className="top-right text-color">
-          <ul className="ul-list-lang">
-            {router.locales?.map((locale) => (
-              <li className="li-lang" key={locale}>
-                <LanguageButton
-                  displayName={
-                    locale === "sv"
-                      ? "🇸🇪"
-                      : locale === "en"
-                      ? "🇬🇧"
-                      : locale === "it"
-                      ? "🇮🇹"
-                      : ""
-                  }
-                  active={i18n.language === locale}
-                  locale={locale}
-                  href={router.asPath}
-                ></LanguageButton>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
+      <Header locale={locale} />
       <div className="desktop-menu bottom text-color">
         <Link className="link-decoration color" href="/" locale={locale}>
           {t("index.path")}

@@ -16,16 +16,22 @@ import type { AppProps } from "next/app";
 import Layout from "@/components/Layout";
 import { appWithTranslation } from "next-i18next";
 import { Locale } from "@/types/Locale";
+import { SessionProvider } from "next-auth/react";
 
 interface LocaleProps {
   locale: Locale;
 }
 
-const App = ({ Component, pageProps }: AppProps, { locale }: LocaleProps) => {
+const App = (
+  { Component, pageProps: { session, ...pageProps } }: AppProps,
+  { locale }: LocaleProps
+) => {
   return (
-    <Layout locale={locale}>
-      <Component {...pageProps} />
-    </Layout>
+    <SessionProvider session={session}>
+      <Layout locale={locale}>
+        <Component {...pageProps} />
+      </Layout>
+    </SessionProvider>
   );
 };
 
