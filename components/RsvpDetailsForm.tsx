@@ -29,7 +29,6 @@ function RsvpDetailsForm(props: Props) {
 
   const busFromResponse = (enteredResponse: string) => {
     setEnteredBusFrom(enteredResponse);
-    // sendForm();
   };
 
   useEffect(() => {

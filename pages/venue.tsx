@@ -2,6 +2,8 @@
 
 import TextWithHeadline from "@/components/TextWithHeadline";
 import Title from "@/components/Title";
+import Container from "@/components/Container";
+
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 import { Locale } from "@/types/Locale";
@@ -15,7 +17,7 @@ function VenuePage({ locale }: VenueProps) {
   const { t } = useTranslation("common");
 
   return (
-    <div className="content-container">
+    <Container>
       <Head>
         <title>{t("location.path")}</title>
       </Head>
@@ -39,7 +41,7 @@ function VenuePage({ locale }: VenueProps) {
           locale={locale}
         />
       </div>
-    </div>
+    </Container>
   );
 }
 

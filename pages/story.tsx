@@ -1,10 +1,11 @@
 import ImageWithDescription from "@/components/ImageWithDescription";
-import Title from "@/components/Title";
+import Container from "@/components/Container";
 import { Locale } from "@/types/Locale";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Head from "next/head";
 import Image from "next/image";
+import StorySection from "@/components/StorySection";
 
 interface StoryProps {
   locale: Locale;
@@ -18,31 +19,12 @@ function Story({ locale }: StoryProps) {
       <Head>
         <title>{t("story.path")}</title>
       </Head>
-      <div className="layout">
-        <div className="layout__item layout__item--body">
-          <h2 className="headline">First meeting</h2>
-          <p className="text">{t("story.text1")}</p>
-        </div>
-        <div className="layout__item layout__item--figure">
-          <ImageWithDescription
-            imageSource={"bild.jpg"}
-            imageDescription={t("image.description")}
-          />
-        </div>
-      </div>
-
-      <div className="layout">
-        <div className="layout__item layout__item--body">
-          <h2 className="headline">First date</h2>
-          <p className="text">{t("story.text2")}</p>
-        </div>
-        <div className="layout__item layout__item--figure">
-          <ImageWithDescription
-            imageSource={"bild.jpg"}
-            imageDescription={t("image.description")}
-          />
-        </div>
-      </div>
+      <StorySection locale={locale} section="first" />
+      <StorySection locale={locale} section="second" />
+      <StorySection locale={locale} section="third" />
+      <StorySection locale={locale} section="fourth" />
+      <StorySection locale={locale} section="fifth" />
+      <StorySection locale={locale} section="sixth" />
     </div>
   );
 }

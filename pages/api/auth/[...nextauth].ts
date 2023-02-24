@@ -16,15 +16,30 @@ export default NextAuth({
       },
       async authorize(credentials, req) {
         // Add logic here to look up the user from the credentials supplied
-        const user = { id: 1, name: "J Smith", email: "jsmith@example.com" };
-        if (
-          credentials?.username == "admin" &&
-          credentials?.password == "hello123"
-        ) {
-          return user;
-        } else {
-          return null;
+        // const user = { id: 1, name: "J Smith", email: "jsmith@example.com" };
+        // if (
+        //   credentials?.username == "admin" &&
+        //   credentials?.password == "hello123"
+        // ) {
+        //   return user;
+        // } else {
+        //   return null;
+        // }
+
+        console.log("credentials: ", credentials);
+        const { username, password } = credentials as {
+          username: string;
+          password: string;
+        };
+        console.log("username: ", username);
+        console.log("password: ", password);
+
+        // validate here your username and password
+        if (username !== "admin" && password !== "hello123") {
+          throw new Error("invalid credentials");
         }
+        // confirmed users
+        return { id: 1, name: "Guest" };
       },
     }),
   ],

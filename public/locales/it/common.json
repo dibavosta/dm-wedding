@@ -8,9 +8,7 @@
   },
   "story": {
     "path": "Home",
-    "title": "La bella storia.",
-    "text1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam felis lectus, mollis vel auctor eget, posuere eu nunc. Mauris venenatis nulla id ante luctus lacinia. Mauris sit amet sapien id nibh tristique mattis ut vitae nisi. Cras malesuada mi sit amet sapien consequat rhoncus nec a erat. Donec augue erat, ornare vitae congue imperdiet, viverra id lorem. ",
-    "text2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam felis lectus, mollis vel auctor eget, posuere eu nunc. Mauris venenatis nulla id ante luctus lacinia. Mauris sit amet sapien id nibh tristique mattis ut vitae nisi. Cras malesuada mi sit amet sapien consequat rhoncus nec a erat. Donec augue erat, ornare vitae congue imperdiet, viverra id lorem. Mauris interdum leo vitae arcu feugiat, et posuere ex tincidunt. Suspendisse sit amet gravida nisi. Aliquam porta dictum ornare. In sed ante id arcu tempus tempor id nec tellus. Vestibulum finibus vulputate purus, sed interdum dui vehicula sodales."
+    "title": "La bella storia."
   },
   "rsvp": {
     "path": "RSVP",
@@ -55,18 +53,6 @@
   },
   "program": {
     "path": "Program",
-    "title": "Dagens program",
-    "ceremonyTitle": "",
-    "ceremonyText": "",
-    "drinksTitle": "",
-    "drinksText": "",
-    "dinnerTitle": "",
-    "dinnerText": "",
-    "cakeTitle": "Cake",
-    "cakeText": "Time to cut the cake!",
-    "partyTitle": "",
-    "partyText": "",
-    "endTitle": "",
-    "endText": ""
+    "title": "Dagens program"
   }
 }

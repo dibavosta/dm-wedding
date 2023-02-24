@@ -14,7 +14,7 @@ interface SpeedDialProps {
   onAddChild: () => void;
 }
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme: any) => ({
   staticTooltipLabel: {
     padding: "2px 4px",
     fontSize: "10px",

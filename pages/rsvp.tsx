@@ -1,4 +1,5 @@
 import Title from "@/components/Title";
+import Container from "@/components/Container";
 import RsvpForm from "../components/RsvpForm";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
@@ -27,7 +28,7 @@ function RSVP({ locale }: RsvpProps) {
   }
 
   return (
-    <div className="content-container">
+    <Container>
       <Head>
         <title>RSVP</title>
       </Head>
@@ -35,7 +36,7 @@ function RSVP({ locale }: RsvpProps) {
         <Title titleText={t("rsvp.title")} />
         <RsvpForm onSubmitForm={rsvpResponseHandler} locale={locale} />
       </section>
-    </div>
+    </Container>
   );
 }
 

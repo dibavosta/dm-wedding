@@ -8,9 +8,7 @@
   },
   "story": {
     "path": "Vår berättelse",
-    "title": "Berättelsen",
-    "text1": "Det hela började 2015, när både Manolo och Diba började sitt första år på KTH. Manolo började plugga datateknik, och Diba började plugga medieteknik. Grejen med de här två programmen är att de delar sektionslokal på KTH, båda har META som sektionslokal. På onsdagar brukar datateknik ha sin pub och på torsdagar är det medietekniks tur. Och det var alltså här som Manolo och Diba träffades för första gången, på en torsdagspub i META under den hösten 2015.",
-    "text2": "Manolo och hans kompis Oscar höll på att köra beer pong mot varandra och Diba ville också köra, så hon gick fram och frågade om när de möjligtvis skulle vara klara. Och resten är som de säger. Efter att de senare träffades på livets första tentapub (också i Meta), hittade Manolo till Diba på facebook och de började skriva till varandra. De gick på sin första dejt den 13 november 2015 och tog en drink på Little Persia som fanns på söder förut."
+    "title": "Berättelsen"
   },
   "rsvp": {
     "path": "RSVP",
@@ -55,18 +53,6 @@
   },
   "program": {
     "path": "Program",
-    "title": "Dagens program",
-    "ceremonyTitle": "Vigsel",
-    "ceremonyText": "Vi blir man och hustru",
-    "drinksTitle": "Mingel",
-    "drinksText": "Vi får lite förfriskningar och hälsar på varandra",
-    "dinnerTitle": "Middag",
-    "dinnerText": "Vi njuter av en 3 rätters middag",
-    "cakeTitle": "Tårta",
-    "cakeText": "Dags att skära upp tårtan!",
-    "partyTitle": "Festen är igång",
-    "partyText": "Vi dansar loss och har det trevligt",
-    "endTitle": "Kvällen når sitt slut",
-    "endText": "Vi lämnar Sundby gård och tackar för oss!"
+    "title": "Dagens program"
   }
 }

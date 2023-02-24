@@ -20,7 +20,7 @@ interface TimelineProps {
 }
 
 export default function CustomizedTimeline(props: TimelineProps) {
-  const { t } = useTranslation("common");
+  const { t } = useTranslation("program");
 
   return (
     <Timeline position="alternate">
@@ -65,17 +65,17 @@ export default function CustomizedTimeline(props: TimelineProps) {
             variant="h6"
             component="span"
             sx={{
-              fontSize: 14,
+              fontSize: 16,
             }}
           >
-            {t("program.ceremonyTitle")}
+            {t("ceremony.title")}
           </Typography>
           <Typography
             sx={{
-              fontSize: 10,
+              ontSize: 12,
             }}
           >
-            {t("program.ceremonyText")}
+            {t("ceremony.text")}
           </Typography>
         </TimelineContent>
       </TimelineItem>
@@ -116,17 +116,17 @@ export default function CustomizedTimeline(props: TimelineProps) {
             variant="h6"
             component="span"
             sx={{
-              fontSize: 14,
+              fontSize: 16,
             }}
           >
-            {t("program.drinksTitle")}
+            {t("drinks.title")}
           </Typography>
           <Typography
             sx={{
-              fontSize: 10,
+              ontSize: 12,
             }}
           >
-            {t("program.drinksText")}
+            {t("drinks.text")}
           </Typography>
         </TimelineContent>
       </TimelineItem>
@@ -171,17 +171,17 @@ export default function CustomizedTimeline(props: TimelineProps) {
             variant="h6"
             component="span"
             sx={{
-              fontSize: 14,
+              fontSize: 16,
             }}
           >
-            {t("program.dinnerTitle")}
+            {t("dinner.title")}
           </Typography>
           <Typography
             sx={{
-              fontSize: 10,
+              ontSize: 12,
             }}
           >
-            {t("program.dinnerText")}
+            {t("dinner.text")}
           </Typography>
         </TimelineContent>
       </TimelineItem>
@@ -227,17 +227,17 @@ export default function CustomizedTimeline(props: TimelineProps) {
             variant="h6"
             component="span"
             sx={{
-              fontSize: 14,
+              fontSize: 16,
             }}
           >
-            {t("program.cakeTitle")}
+            {t("cake.title")}
           </Typography>
           <Typography
             sx={{
-              fontSize: 10,
+              ontSize: 12,
             }}
           >
-            {t("program.cakeText")}
+            {t("cake.text")}
           </Typography>
         </TimelineContent>
       </TimelineItem>
@@ -278,17 +278,17 @@ export default function CustomizedTimeline(props: TimelineProps) {
             variant="h6"
             component="span"
             sx={{
-              fontSize: 14,
+              fontSize: 16,
             }}
           >
-            {t("program.partyTitle")}
+            {t("party.title")}
           </Typography>
           <Typography
             sx={{
-              fontSize: 10,
+              ontSize: 12,
             }}
           >
-            {t("program.partyText")}
+            {t("party.text")}
           </Typography>
         </TimelineContent>
       </TimelineItem>
@@ -329,17 +329,17 @@ export default function CustomizedTimeline(props: TimelineProps) {
             variant="h6"
             component="span"
             sx={{
-              fontSize: 14,
+              fontSize: 16,
             }}
           >
-            {t("program.endTitle")}
+            {t("end.title")}
           </Typography>
           <Typography
             sx={{
-              fontSize: 10,
+              ontSize: 12,
             }}
           >
-            {t("program.endText")}
+            {t("end.text")}
           </Typography>
         </TimelineContent>
       </TimelineItem>

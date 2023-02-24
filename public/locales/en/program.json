@@ -1,0 +1,26 @@
+{
+  "ceremony": {
+    "title": "Wedding ceremony",
+    "text": "We become husband & wife!"
+  },
+  "drinks": {
+    "title": "Mingle",
+    "text": "We sip on something sparking and make the rounds"
+  },
+  "dinner": {
+    "title": "Dinner",
+    "text": "We enjoy a 3 course dinner"
+  },
+  "cake": {
+    "title": "Cake",
+    "text": "Time to cut the cake!"
+  },
+  "party": {
+    "title": "Dance",
+    "text": "We dance the night away"
+  },
+  "end": {
+    "title": "Closing hour",
+    "text": "Thank you for having been here"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "first": {
+    "title": "First meeting",
+    "text": "first text"
+  },
+  "second": {
+    "title": "First date",
+    "text": "second text"
+  },
+  "third": {
+    "title": "First trip",
+    "text": "third text"
+  },
+  "fourth": {
+    "title": "First apartment",
+    "text": "fourth text"
+  },
+  "fifth": {
+    "title": "We're engaged!",
+    "text": "fifth text"
+  },
+  "sixth": {
+    "title": "Something else?",
+    "text": "sixth text"
+  }
+}

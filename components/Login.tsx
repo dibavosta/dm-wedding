@@ -5,6 +5,7 @@ import * as React from "react";
 import Title from "@/components/Title";
 import LoginForm from "./LoginForm";
 import { signIn } from "next-auth/react";
+import Container from "./Container";
 
 interface StoryTimeLineProps {
   locale: Locale;
@@ -24,7 +25,7 @@ function Login({ locale }: StoryTimeLineProps) {
   }
 
   return (
-    <div className="content-container">
+    <Container>
       <Head>
         <title>Login</title>
       </Head>
@@ -32,7 +33,7 @@ function Login({ locale }: StoryTimeLineProps) {
         <Title titleText="Log in" />
         <LoginForm onSubmitForm={loginResponseHandler} locale={locale} />
       </section>
-    </div>
+    </Container>
   );
 }
 

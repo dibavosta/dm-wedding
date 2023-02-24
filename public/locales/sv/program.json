@@ -1,0 +1,26 @@
+{
+  "ceremony": {
+    "title": "Vigsel",
+    "text": "Vi blir man och hustru"
+  },
+  "drinks": {
+    "title": "Mingel",
+    "text": "Vi får lite förfriskningar och hälsar på varandra"
+  },
+  "dinner": {
+    "title": "Middag",
+    "text": "Vi njuter av en 3 rätters middag"
+  },
+  "cake": {
+    "title": "Tårta",
+    "text": "Dags att skära upp tårtan!"
+  },
+  "party": {
+    "title": "Festen är igång",
+    "text": "Vi dansar loss och har det trevligt"
+  },
+  "end": {
+    "title": "Kvällen når sitt slut",
+    "text": "Vi lämnar Sundby gård och tackar för oss!"
+  }
+}
