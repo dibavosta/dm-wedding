@@ -1,7 +1,12 @@
+import { verifyPassword } from "@/lib/auth";
+import { connectToDatabase } from "@/lib/mongodb";
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 
 export default NextAuth({
+  session: {
+    strategy: "jwt",
+  },
   providers: [
     CredentialsProvider({
       // The name to display on the sign in form (e.g. "Sign in with...")
@@ -16,30 +21,31 @@ export default NextAuth({
       },
       async authorize(credentials, req) {
         // Add logic here to look up the user from the credentials supplied
-        // const user = { id: 1, name: "J Smith", email: "jsmith@example.com" };
-        // if (
-        //   credentials?.username == "admin" &&
-        //   credentials?.password == "hello123"
-        // ) {
-        //   return user;
-        // } else {
-        //   return null;
-        // }
+        const client = await connectToDatabase();
+        const db = client.db;
+        const usersCollection = db.collection("user");
 
-        console.log("credentials: ", credentials);
-        const { username, password } = credentials as {
-          username: string;
-          password: string;
-        };
-        console.log("username: ", username);
-        console.log("password: ", password);
+        const user = await usersCollection.findOne({
+          username: credentials?.username,
+        });
 
-        // validate here your username and password
-        if (username !== "admin" && password !== "hello123") {
-          throw new Error("invalid credentials");
+        if (!user) {
+          client.client.close();
+          throw new Error("No user found!");
         }
-        // confirmed users
-        return { id: 1, name: "Guest" };
+
+        const isValid = await verifyPassword(
+          credentials?.password ?? "",
+          user.password
+        );
+
+        if (!isValid) {
+          client.client.close();
+          throw new Error("Could not log you in!");
+        }
+
+        client.client.close();
+        return { username: user.username };
       },
     }),
   ],

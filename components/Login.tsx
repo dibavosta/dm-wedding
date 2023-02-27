@@ -17,11 +17,10 @@ function Login({ locale }: StoryTimeLineProps) {
   async function loginResponseHandler(userInfo: any) {
     console.log("Gonna try and log in: ", userInfo);
     const res = await signIn("credentials", {
-      email: userInfo.email,
+      username: userInfo.username,
       password: userInfo.password,
       redirect: false,
     });
-    // signIn();
   }
 
   return (
