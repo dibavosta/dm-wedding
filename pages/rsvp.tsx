@@ -38,7 +38,7 @@ function RSVP({ locale }: RsvpProps) {
       </Head>
       <section>
         {sentRsvp ? (
-          <RsvpSubmitted />
+          <RsvpSubmitted locale={locale} />
         ) : (
           <div>
             <Title titleText={t("rsvp.title")} />
