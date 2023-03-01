@@ -13,33 +13,33 @@ function CountDownElement(props: CountDownElementProps) {
   const { t } = useTranslation("common");
 
   function getTimeText() {
-    if (props.timeUnit > 1) {
+    if (props.timeUnit === 1) {
       switch (props.timeText) {
         case TimeType.MONTH:
-          // return t("countdown.manyMonths")
-          return "months";
-          break;
+          return t("countDown.month");
         case TimeType.DAY:
-          return "days";
-          break;
+          return t("countDown.day");
         case TimeType.HOUR:
-          return "hours";
-          break;
+          return t("countDown.hour");
+        case TimeType.MINUTE:
+          return t("countDown.minute");
+        case TimeType.SECOND:
+          return t("countDown.second");
         default:
           break;
       }
     } else {
       switch (props.timeText) {
         case TimeType.MONTH:
-          // return t("countdown.manyMonths")
-          return "month";
-          break;
+          return t("countDown.months");
         case TimeType.DAY:
-          return "day";
-          break;
+          return t("countDown.days");
         case TimeType.HOUR:
-          return "hour";
-          break;
+          return t("countDown.hours");
+        case TimeType.MINUTE:
+          return t("countDown.minutes");
+        case TimeType.SECOND:
+          return t("countDown.seconds");
         default:
           break;
       }

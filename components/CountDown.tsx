@@ -1,7 +1,7 @@
 import { TimeType } from "@/enums/TimeType";
 import { Locale } from "@/types/Locale";
 import { useTranslation } from "next-i18next";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import CountDownElement from "./CountDownElement";
 
 interface CountDownProps {
@@ -10,57 +10,52 @@ interface CountDownProps {
 
 function CountDown(props: CountDownProps) {
   const { t } = useTranslation("common");
+  const countDownDate = new Date("2023-09-02T15:30:00+01:00").getTime();
+  var now = new Date().getTime();
+  const [days, setDays] = useState(0);
+  const [minutes, setMinutes] = useState(0);
+  const [hours, setHours] = useState(0);
+  const [seconds, setSeconds] = useState(0);
 
-  const calculateTimeLeft = () => {
-    var countDownDate = new Date("2023-09-02T15:30:00+01:00");
-    const today = new Date();
-    let time = {};
-
-    var months = diffInMonth(countDownDate, today);
-    var days = diffInDays(countDownDate, today);
-    var hours = diffInHours(countDownDate, today);
-    time = {
-      months: months,
-      days: days,
-      hours: hours,
-    };
-
-    return time;
-  };
-
-  function diffInMonth(countDownDate: Date, today: Date) {
-    const diff = Math.abs(countDownDate.getMonth() - today.getMonth());
-    return diff;
-  }
-
-  function diffInDays(countDownDate: Date, today: Date) {
-    const days = Math.abs(countDownDate.getDate() - today.getDate());
-    return days;
-  }
-
-  function diffInHours(countDownDate: Date, today: Date) {
-    const hours = Math.abs(countDownDate.getHours() - today.getHours());
-    return hours;
-  }
-
-  const timeLeft = calculateTimeLeft();
-
+  useEffect(() => {
+    const interval = setInterval(() => {
+      var timeTotal = countDownDate - now;
+      var seconds = Math.floor((timeTotal / 1000) % 60);
+      var minutes = Math.floor((timeTotal / 1000 / 60) % 60);
+      var hours = Math.floor((timeTotal / (1000 * 60 * 60)) % 24);
+      var days = Math.floor(timeTotal / (1000 * 60 * 60 * 24));
+      setDays(days);
+      setHours(hours);
+      setMinutes(minutes);
+      setSeconds(seconds);
+      if (timeTotal < 0) {
+        console.log("let us celebrate!");
+        clearInterval(interval);
+      }
+    }, 1000);
+    return () => clearInterval(interval);
+  });
   return (
     <div className="countdown-container">
       <CountDownElement
         locale={props.locale}
-        timeUnit={timeLeft.months}
-        timeText={TimeType.MONTH}
-      />
-      <CountDownElement
-        locale={props.locale}
-        timeUnit={timeLeft.days}
+        timeUnit={days}
         timeText={TimeType.DAY}
       />
       <CountDownElement
         locale={props.locale}
-        timeUnit={timeLeft.hours}
+        timeUnit={hours}
         timeText={TimeType.HOUR}
+      />
+      <CountDownElement
+        locale={props.locale}
+        timeUnit={minutes}
+        timeText={TimeType.MINUTE}
+      />
+      <CountDownElement
+        locale={props.locale}
+        timeUnit={seconds}
+        timeText={TimeType.SECOND}
       />
     </div>
   );

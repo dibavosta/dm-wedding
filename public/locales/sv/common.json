@@ -54,5 +54,17 @@
   "program": {
     "path": "Program",
     "title": "Dagens program"
+  },
+  "countDown": {
+    "month": "månad",
+    "day": "dag",
+    "hour": "timme",
+    "minute": "minut",
+    "second": "sekund",
+    "months": "månader",
+    "days": "dagar",
+    "hours": "timmar",
+    "minutes": "minuter",
+    "seconds": "sekunder"
   }
 }

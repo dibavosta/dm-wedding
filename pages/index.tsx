@@ -4,9 +4,10 @@ import { Locale } from "@/types/Locale";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Head from "next/head";
-// import DateCountdown from "react-date-countdown-timer";
-import { useState } from "react";
 import CountDown from "@/components/CountDown";
+import Amsterdam from "@/assets/amsterdam.jpg";
+import Image from "next/image";
+import BigImage from "@/components/BigImage";
 
 interface HomeProps {
   locale: Locale;
@@ -16,13 +17,12 @@ function HomePage({ locale }: HomeProps) {
   const { t } = useTranslation("common");
 
   return (
-    <Container>
+    <div>
       <Head>
         <title>{t("index.path")}</title>
       </Head>
-      <Title titleText={t("index.title")} />
-      <CountDown locale={locale} />
-    </Container>
+      <BigImage locale={locale} title="Vi ska gifta oss!" />
+    </div>
   );
 }
 
