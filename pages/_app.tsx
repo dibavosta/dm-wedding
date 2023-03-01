@@ -7,6 +7,7 @@ import "@/styles/RsvpForm.css";
 import "@/styles/ImageWithDescription.css";
 import "@/styles/RadioButtonContainer.css";
 import "@/styles/FullRsvpForm.css";
+import "@/styles/CountDown.css";
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
@@ -27,11 +28,11 @@ const App = (
   { locale }: LocaleProps
 ) => {
   return (
-    <SessionProvider session={session}>
-      <Layout locale={locale}>
-        <Component {...pageProps} />
-      </Layout>
-    </SessionProvider>
+    // <SessionProvider session={session}>
+    <Layout locale={locale}>
+      <Component {...pageProps} />
+    </Layout>
+    // </SessionProvider>
   );
 };
 

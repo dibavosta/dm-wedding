@@ -12,8 +12,7 @@ interface StoryProps {
 }
 
 function Story({ locale }: StoryProps) {
-  const { t } = useTranslation("common");
-
+  const { t } = useTranslation(["common", "story"]);
   return (
     <div className="outer">
       <Head>
@@ -33,7 +32,7 @@ export const getStaticProps = async ({ locale }: { locale: string }) => {
   return {
     props: {
       locale,
-      ...(await serverSideTranslations(locale, ["common"])),
+      ...(await serverSideTranslations(locale, ["common", "story"])),
     },
   };
 };

@@ -55,7 +55,11 @@
 }
 
 .header {
-  font-family: Caligraphy !important;
+  color: var(--background-color) !important;
+}
+
+.logo:hover {
+  cursor: pointer;
 }
 
 .hamburger-menu {

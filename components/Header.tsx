@@ -5,6 +5,8 @@ import * as React from "react";
 import Favicon from "./Favicon";
 import { useRouter } from "next/router";
 import LanguageButton from "./LanguageButton";
+import FaviconDeluxe from "./FaviconDeluxe";
+import myLogo from "../assets/MDdeluxe.svg";
 
 interface StoryTimeLineProps {
   locale: Locale;
@@ -13,12 +15,20 @@ interface StoryTimeLineProps {
 function Header({ locale }: StoryTimeLineProps) {
   const { t, i18n } = useTranslation("common");
   const router = useRouter();
+
+  const clickOnLogoHandler = () => {
+    router.replace("/");
+  };
+
   return (
     <div className="top">
       <div className="top-center">
         <div className="header">
-          <h1>{t("page.title")}</h1>
-          <Favicon />
+          <h1>hejhejhej</h1>
+          <div className="logo" onClick={clickOnLogoHandler}>
+            <FaviconDeluxe />
+          </div>
+          {/* <FaviconDeluxe /> */}
         </div>
       </div>
       <div className="top-right text-color">
