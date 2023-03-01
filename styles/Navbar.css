@@ -28,7 +28,7 @@
   height: 30px;
   border-style: solid;
   border-color: var(--background-color) var(--background-color)
-    var(--text-primary);
+    var(--theme-color);
   margin-top: 16px;
   display: flex;
   flex-direction: row;
@@ -69,6 +69,7 @@
 
 .mobile-menu {
   display: none;
+  height: 30px;
 }
 
 .open.mobile-menu {
@@ -76,7 +77,7 @@
   flex-direction: column;
   width: 150px;
   margin-left: 15%;
-  text-align: flex-start;
+  text-align: center;
 }
 
 .hamburger-react {

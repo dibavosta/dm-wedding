@@ -11,8 +11,7 @@ interface NavigationProps {
 }
 
 function Navigation({ locale }: NavigationProps) {
-  const { t, i18n } = useTranslation("common");
-  const router = useRouter();
+  const { t } = useTranslation("common");
   const [isOpen, setOpen] = useState(false);
 
   const handleHamburgerToggle = () => {
@@ -22,25 +21,7 @@ function Navigation({ locale }: NavigationProps) {
 
   return (
     <div className="navbar">
-      <Header locale={locale} />
-      <div className="desktop-menu bottom text-color">
-        <Link className="link-decoration color" href="/" locale={locale}>
-          {t("index.path")}
-        </Link>
-        <Link className="link-decoration color" href="/program" locale={locale}>
-          {t("program.path")}
-        </Link>
-        <Link className="link-decoration color" href="/story" locale={locale}>
-          {t("story.path")}
-        </Link>
-        <Link className="link-decoration color" href="/rsvp" locale={locale}>
-          {t("rsvp.path")}
-        </Link>
-        <Link className="link-decoration color" href="/venue" locale={locale}>
-          {t("location.path")}
-        </Link>
-      </div>
-      <div className="hamburger-menu">
+      <div className={"hamburger-menu" + (isOpen ? " hamburger-overlay" : "")}>
         <Hamburger
           rounded
           direction="right"
@@ -70,6 +51,25 @@ function Navigation({ locale }: NavigationProps) {
             {t("location.path")}
           </Link>
         </div>
+      </div>
+
+      <Header locale={locale} />
+      <div className="desktop-menu bottom text-color">
+        <Link className="link-decoration color" href="/" locale={locale}>
+          {t("index.path")}
+        </Link>
+        <Link className="link-decoration color" href="/program" locale={locale}>
+          {t("program.path")}
+        </Link>
+        <Link className="link-decoration color" href="/story" locale={locale}>
+          {t("story.path")}
+        </Link>
+        <Link className="link-decoration color" href="/rsvp" locale={locale}>
+          {t("rsvp.path")}
+        </Link>
+        <Link className="link-decoration color" href="/venue" locale={locale}>
+          {t("location.path")}
+        </Link>
       </div>
     </div>
   );

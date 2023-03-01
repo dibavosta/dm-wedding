@@ -28,7 +28,6 @@ function Header({ locale }: StoryTimeLineProps) {
           <div className="logo" onClick={clickOnLogoHandler}>
             <FaviconDeluxe />
           </div>
-          {/* <FaviconDeluxe /> */}
         </div>
       </div>
       <div className="top-right text-color">

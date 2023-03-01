@@ -87,3 +87,28 @@ h2 {
 .layout__item * + * {
   margin-top: 1em;
 }
+
+@media only screen and (max-width: 600px) {
+  .layout__item--figure {
+    display: flex;
+    flex-direction: column;
+    min-width: 0rem;
+    margin-right: unset;
+  }
+  .layout__item--body {
+    margin-right: unset;
+    flex-basis: 0rem;
+  }
+
+  .layout {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+  }
+
+  .layout:nth-child(even) {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+  }
+}

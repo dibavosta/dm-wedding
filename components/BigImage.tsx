@@ -19,6 +19,9 @@ function BigImage(props: BigImageProps) {
         <Image src={Amsterdam} alt="Diba and Manolo in Amsterdam"></Image>
         <div className="overlay">
           <div className="countdown-margin">
+            <div className="header-margin">
+              <Title titleText="Vi gifter oss (!) om:"></Title>
+            </div>
             <CountDown locale={props.locale} />
           </div>
         </div>
