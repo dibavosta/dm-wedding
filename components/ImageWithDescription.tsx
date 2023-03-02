@@ -11,6 +11,7 @@ const ImageWithDescription = (props: Props) => {
     <div>
       <div className="image-style">
         <Image
+          className="story-image"
           src={require("../assets/" + props.imageSource)}
           alt="image alt"
         ></Image>

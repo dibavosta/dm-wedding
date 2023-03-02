@@ -14,15 +14,17 @@ function BigImage(props: BigImageProps) {
   const { t } = useTranslation("common");
 
   return (
-    <div className="big-image-container">
-      <div className="image-wrapper">
-        <Image src={Amsterdam} alt="Diba and Manolo in Amsterdam"></Image>
-        <div className="overlay">
-          <div className="countdown-margin">
-            <div className="header-margin">
-              <Title titleText="Vi gifter oss (!) om:"></Title>
+    <div className="image-container-deluxe">
+      <div className="big-image-container">
+        <div className="image-wrapper">
+          <Image src={Amsterdam} alt="Diba and Manolo in Amsterdam"></Image>
+          <div className="overlay">
+            <div className="countdown-margin">
+              <div className="header-margin">
+                <Title titleText="Vi gifter oss (!) om:"></Title>
+              </div>
+              <CountDown locale={props.locale} />
             </div>
-            <CountDown locale={props.locale} />
           </div>
         </div>
       </div>

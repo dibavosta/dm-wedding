@@ -11,8 +11,9 @@
 img {
   display: block;
   object-fit: cover;
-  width: 100%;
+  width: 60vw;
   height: auto;
+  margin-left: 20%;
 }
 
 .overlay {
@@ -23,6 +24,8 @@ img {
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  left: 20%;
+  right: 20%;
 }
 
 .countdown-margin {
@@ -32,11 +35,24 @@ img {
   align-items: center;
 }
 
+.image-width {
+  display: flex;
+}
+
 @media only screen and (max-width: 600px) {
   .count-down {
     padding: 9px;
   }
   .title {
     font-size: 20px;
+  }
+  img {
+    width: 100vw;
+    margin-left: 0%;
+  }
+
+  .overlay {
+    left: 0%;
+    right: 0%;
   }
 }

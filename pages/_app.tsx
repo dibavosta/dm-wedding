@@ -10,6 +10,7 @@ import "@/styles/FullRsvpForm.css";
 import "@/styles/CountDown.css";
 import "@/styles/BigImage.css";
 import "@/styles/Hamburger.css";
+import "@/styles/venue.css";
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";

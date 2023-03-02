@@ -15,13 +15,15 @@ function StoryTimeLinePage({ locale }: StoryTimeLineProps) {
   const { t } = useTranslation("common");
 
   return (
-    <Container>
-      <Head>
-        <title>{t("program.path")}</title>
-      </Head>
-      <Title titleText={t("program.title")} />
-      <CustomizedTimeline locales={locale} />
-    </Container>
+    <section id="program-section">
+      <Container>
+        <Head>
+          <title>{t("program.path")}</title>
+        </Head>
+        <Title titleText={t("program.title")} />
+        <CustomizedTimeline locales={locale} />
+      </Container>
+    </section>
   );
 }
 

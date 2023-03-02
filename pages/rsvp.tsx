@@ -32,11 +32,11 @@ function RSVP({ locale }: RsvpProps) {
   }
 
   return (
-    <Container>
-      <Head>
-        <title>RSVP</title>
-      </Head>
-      <section>
+    <section id="rsvp-section">
+      <Container>
+        <Head>
+          <title>RSVP</title>
+        </Head>
         {sentRsvp ? (
           <RsvpSubmitted locale={locale} />
         ) : (
@@ -45,8 +45,8 @@ function RSVP({ locale }: RsvpProps) {
             <RsvpForm onSubmitForm={rsvpResponseHandler} locale={locale} />
           </div>
         )}
-      </section>
-    </Container>
+      </Container>
+    </section>
   );
 }
 

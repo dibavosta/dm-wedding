@@ -36,18 +36,30 @@ function Navigation({ locale }: NavigationProps) {
           </Link>
           <Link
             className="link-decoration color"
-            href="/program"
+            href="#program-section"
             locale={locale}
           >
             {t("program.path")}
           </Link>
-          <Link className="link-decoration color" href="/story" locale={locale}>
+          <Link
+            className="link-decoration color"
+            href="#story-section"
+            locale={locale}
+          >
             {t("story.path")}
           </Link>
-          <Link className="link-decoration color" href="/rsvp" locale={locale}>
+          <Link
+            className="link-decoration color"
+            href="#rsvp-section"
+            locale={locale}
+          >
             {t("rsvp.path")}
           </Link>
-          <Link className="link-decoration color" href="/venue" locale={locale}>
+          <Link
+            className="link-decoration color"
+            href="#venue-section"
+            locale={locale}
+          >
             {t("location.path")}
           </Link>
         </div>
@@ -58,16 +70,32 @@ function Navigation({ locale }: NavigationProps) {
         <Link className="link-decoration color" href="/" locale={locale}>
           {t("index.path")}
         </Link>
-        <Link className="link-decoration color" href="/program" locale={locale}>
+        <Link
+          className="link-decoration color"
+          href="#program-section"
+          locale={locale}
+        >
           {t("program.path")}
         </Link>
-        <Link className="link-decoration color" href="/story" locale={locale}>
+        <Link
+          className="link-decoration color"
+          href="#story-section"
+          locale={locale}
+        >
           {t("story.path")}
         </Link>
-        <Link className="link-decoration color" href="/rsvp" locale={locale}>
+        <Link
+          className="link-decoration color"
+          href="#rsvp-section"
+          locale={locale}
+        >
           {t("rsvp.path")}
         </Link>
-        <Link className="link-decoration color" href="/venue" locale={locale}>
+        <Link
+          className="link-decoration color"
+          href="#venue-section"
+          locale={locale}
+        >
           {t("location.path")}
         </Link>
       </div>

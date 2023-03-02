@@ -17,31 +17,33 @@ function VenuePage({ locale }: VenueProps) {
   const { t } = useTranslation("common");
 
   return (
-    <Container>
-      <Head>
-        <title>{t("location.path")}</title>
-      </Head>
-      <Title titleText={t("location.title")} />
-      <div>
-        <p className="text">{t("location.text")}</p>
-        <h2 className="headline">{t("location.directions")}</h2>
-        <TextWithHeadline
-          headlineText="location.car.title"
-          mainText="location.car.directions"
-          locale={locale}
-        />
-        <TextWithHeadline
-          headlineText="location.bus.title"
-          mainText="location.bus.directions"
-          locale={locale}
-        />
-        <TextWithHeadline
-          headlineText="location.publicTransport.title"
-          mainText="location.publicTransport.title"
-          locale={locale}
-        />
-      </div>
-    </Container>
+    <section id="venue-section">
+      <Container>
+        <Head>
+          <title>{t("location.path")}</title>
+        </Head>
+        <Title titleText={t("location.title")} />
+        <div>
+          <p className="text venue-description">{t("location.text")}</p>
+          <Title titleText={t("location.directions")}></Title>
+          <TextWithHeadline
+            headlineText="location.car.title"
+            mainText="location.car.directions"
+            locale={locale}
+          />
+          <TextWithHeadline
+            headlineText="location.bus.title"
+            mainText="location.bus.directions"
+            locale={locale}
+          />
+          <TextWithHeadline
+            headlineText="location.publicTransport.title"
+            mainText="location.publicTransport.title"
+            locale={locale}
+          />
+        </div>
+      </Container>
+    </section>
   );
 }
 
