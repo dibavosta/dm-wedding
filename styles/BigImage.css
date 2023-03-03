@@ -18,7 +18,7 @@ img {
 
 .overlay {
   position: absolute;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.3);
   inset: 0;
   /* center overlay text */
   display: flex;

@@ -22,10 +22,10 @@ function VenuePage({ locale }: VenueProps) {
         <Head>
           <title>{t("location.path")}</title>
         </Head>
-        <Title titleText={t("location.title")} />
+        <Title style={{}} titleText={t("location.title")} />
         <div>
           <p className="text venue-description">{t("location.text")}</p>
-          <Title titleText={t("location.directions")}></Title>
+          <Title style={{}} titleText={t("location.directions")}></Title>
           <TextWithHeadline
             headlineText="location.car.title"
             mainText="location.car.directions"

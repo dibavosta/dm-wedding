@@ -21,7 +21,10 @@ function BigImage(props: BigImageProps) {
           <div className="overlay">
             <div className="countdown-margin">
               <div className="header-margin">
-                <Title titleText="Vi gifter oss (!) om:"></Title>
+                <Title
+                  titleText="Vi gifter oss (!) om:"
+                  style={{ color: "var(--text-static) !important" }}
+                ></Title>
               </div>
               <CountDown locale={props.locale} />
             </div>

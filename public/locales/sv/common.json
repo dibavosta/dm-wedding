@@ -25,10 +25,13 @@
     "no": "Nej",
     "attendance": "Kommer du på bröllopet?",
     "child": {
-      "name": "Barnets/barnen namn",
-      "age": "Barnets/barnen ålder",
+      "name": "Barnets/barnens namn",
+      "age": "Barnets/barnens ålder",
       "foodPreferences": "Barnets/barnen matpreferenser"
-    }
+    },
+    "thanks": "Tack för ditt svar!",
+    "addAnother": "Vill du skicka in ett till svar? Klicka",
+    "here": "här"
   },
   "location": {
     "path": "Lokalen",

@@ -31,6 +31,10 @@ function RSVP({ locale }: RsvpProps) {
     setSentRsvp(true);
   }
 
+  const addAnotherGuestHandler = () => {
+    setSentRsvp(false);
+  };
+
   return (
     <section id="rsvp-section">
       <Container>
@@ -38,10 +42,10 @@ function RSVP({ locale }: RsvpProps) {
           <title>RSVP</title>
         </Head>
         {sentRsvp ? (
-          <RsvpSubmitted locale={locale} />
+          <RsvpSubmitted locale={locale} addAnother={addAnotherGuestHandler} />
         ) : (
           <div>
-            <Title titleText={t("rsvp.title")} />
+            <Title style={{}} titleText={t("rsvp.title")} />
             <RsvpForm onSubmitForm={rsvpResponseHandler} locale={locale} />
           </div>
         )}

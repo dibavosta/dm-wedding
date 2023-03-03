@@ -129,3 +129,20 @@ input:focus {
   background-color: var(--text-secondary);
   border-color: var(--text-secondary);
 }
+
+.add-another-button {
+  font: inherit;
+  cursor: pointer;
+  color: var(--theme-color);
+  border: none;
+  background-color: var(--foreground-primary);
+  font-weight: 700;
+}
+
+.thank-you {
+  padding-top: 12px;
+}
+
+.thank-you-title {
+  color: var(--text-primary);
+}

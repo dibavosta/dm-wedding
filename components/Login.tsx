@@ -29,7 +29,7 @@ function Login({ locale }: StoryTimeLineProps) {
         <title>Login</title>
       </Head>
       <section>
-        <Title titleText="Log in" />
+        <Title style={{}} titleText="Log in" />
         <LoginForm onSubmitForm={loginResponseHandler} locale={locale} />
       </section>
     </Container>

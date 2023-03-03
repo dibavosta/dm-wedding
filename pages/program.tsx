@@ -20,7 +20,7 @@ function StoryTimeLinePage({ locale }: StoryTimeLineProps) {
         <Head>
           <title>{t("program.path")}</title>
         </Head>
-        <Title titleText={t("program.title")} />
+        <Title style={{}} titleText={t("program.title")} />
         <CustomizedTimeline locales={locale} />
       </Container>
     </section>

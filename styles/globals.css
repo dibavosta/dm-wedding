@@ -16,9 +16,12 @@
     --foreground-primary: #f8f8f8;
     --foreground-tertiary: #e0e0e0;
     --background-shadow: rgba(0, 0, 0, 0.2);
-    --text-primary: #b97b52;
-    --text-secondary: #8f683d;
+    --text-primary: rgba(0, 0, 0);
+    --text-secondary: rgba(0, 0, 0, 0.87);
     --text-primary-inverted: #ffffff;
+    --hamburger-overlay: rgba(255, 255, 255, 0.9);
+    --text-static: rgba(255, 255, 255, 0.87);
+
     /* --foreground-rgb: #ffffff; */
   }
 }
@@ -35,6 +38,8 @@
     --text-primary: rgba(255, 255, 255, 0.87);
     --text-secondary: rgba(255, 255, 255, 0.6);
     --text-primary-inverted: #000000;
+    --text-static: rgba(255, 255, 255, 0.87);
+    --hamburger-overlay: rgba(0, 0, 0, 0.9);
   }
 }
 

@@ -28,7 +28,10 @@
       "name": "",
       "age": "",
       "foodPreferences": ""
-    }
+    },
+    "thanks": "Thank you for your response!",
+    "addAnother": "Would you like to send another rsvp? Click",
+    "here": "here"
   },
   "location": {
     "path": "L",
