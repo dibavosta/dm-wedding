@@ -3,6 +3,7 @@
   --theme-darker: #71512f;
 
   --theme-color: #b97b52;
+  --theme-color-transparent: rgba(185, 123, 82, 0.95);
   --text-primary: var(--text-primary);
   --text-secondary: var(--text-secondary);
 
@@ -16,6 +17,7 @@
   :root {
     --background-color: #fff;
     --foreground-primary: #f8f8f8;
+    --foreground-primary-transparent: rgba(248, 248, 248, 0.95);
     --foreground-tertiary: #e0e0e0;
     --background-shadow: rgba(0, 0, 0, 0.2);
     --text-primary: rgba(0, 0, 0);
@@ -33,6 +35,7 @@
     --background-color: #1b1b1b;
     /* --foreground-primary: #232222; */
     --foreground-primary: #313131;
+    --foreground-primary-transparent: rgba(49, 49, 49, 0.95);
     /* --foreground-primary: #424242; */
     --foreground-tertiary: #000000;
     --background-shadow: rgba(0, 0, 0, 0.2);

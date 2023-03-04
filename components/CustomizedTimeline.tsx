@@ -72,7 +72,7 @@ export default function CustomizedTimeline(props: TimelineProps) {
           </Typography>
           <Typography
             sx={{
-              ontSize: 12,
+              fontSize: 12,
             }}
           >
             {t("ceremony.text")}
@@ -123,7 +123,7 @@ export default function CustomizedTimeline(props: TimelineProps) {
           </Typography>
           <Typography
             sx={{
-              ontSize: 12,
+              fontSize: 12,
             }}
           >
             {t("drinks.text")}
@@ -178,7 +178,7 @@ export default function CustomizedTimeline(props: TimelineProps) {
           </Typography>
           <Typography
             sx={{
-              ontSize: 12,
+              fontSize: 12,
             }}
           >
             {t("dinner.text")}
@@ -234,7 +234,7 @@ export default function CustomizedTimeline(props: TimelineProps) {
           </Typography>
           <Typography
             sx={{
-              ontSize: 12,
+              fontSize: 12,
             }}
           >
             {t("cake.text")}
@@ -285,7 +285,7 @@ export default function CustomizedTimeline(props: TimelineProps) {
           </Typography>
           <Typography
             sx={{
-              ontSize: 12,
+              fontSize: 12,
             }}
           >
             {t("party.text")}
@@ -336,7 +336,7 @@ export default function CustomizedTimeline(props: TimelineProps) {
           </Typography>
           <Typography
             sx={{
-              ontSize: 12,
+              fontSize: 12,
             }}
           >
             {t("end.text")}
