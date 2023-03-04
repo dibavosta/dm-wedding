@@ -1,5 +1,7 @@
 :root {
-  /* --theme-dark: #8f683d; */
+  --theme-dark: #8f683d;
+  --theme-darker: #71512f;
+
   --theme-color: #b97b52;
   --text-primary: var(--text-primary);
   --text-secondary: var(--text-secondary);

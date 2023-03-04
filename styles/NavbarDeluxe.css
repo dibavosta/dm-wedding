@@ -1,4 +1,4 @@
-.top {
+.top-d {
   height: 100px;
   width: 100%;
   display: flex;
@@ -6,7 +6,7 @@
   margin-top: 28px;
 }
 
-.top .top-center {
+.top-d .top-center-d {
   flex: 10%;
   height: 100%;
   display: flex;
@@ -15,7 +15,7 @@
   margin-left: 64px;
 }
 
-.top .top-right {
+.top-d .top-right-d {
   flex: 10%;
   height: 100%;
   display: flex;
@@ -24,85 +24,93 @@
   margin-right: 44px;
 }
 
-.bottom {
-  height: 30px;
+.bottom-d {
+  height: 40px;
   border-style: solid;
-  border-color: var(--background-color) var(--background-color)
-    var(--theme-color);
-  margin-top: 16px;
+  background-color: var(--theme-color);
+  border-color: var(--theme-color) var(--theme-color) var(--theme-darker);
+  /* margin-top: 16px; */
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
 }
 
-.link-decoration {
+.link-decoration-d {
   text-decoration: none;
 }
 
-.desktop-menu {
+.desktop-menu-d {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  margin-left: 15%;
-  margin-right: 15%;
+  /* margin-left: 15%; */
+  /* margin-right: 15%; */
 }
 
-.bottom button {
+.bottom-d button {
   background-color: transparent;
   border: none;
   cursor: pointer;
 }
 
-.header {
+.header-d {
   color: var(--background-color) !important;
 }
 
-.logo:hover {
+.logo-d:hover {
   cursor: pointer;
 }
 
-.hamburger-menu {
+.hamburger-menu-d {
   display: none;
   /* margin-left: 15%; */
 }
 
-.mobile-menu {
+.mobile-menu-d {
   display: none;
   height: 30px;
 }
 
-.open.mobile-menu {
+.open-d.mobile-menu-d {
   display: flex;
   flex-direction: column;
-  width: 150px;
-  margin-left: 15%;
+  height: 60vh;
+  justify-content: space-evenly;
   text-align: center;
 }
+/* width: 150px;
+    text-align: center;
+    height: 60vh;
+    justify-content: space-evenly; */
 
-.ul-list-lang {
+.ul-list-lang-d {
   list-style-type: none;
   display: inline-flex;
 }
 
-.li-lang {
+.li-lang-d {
   display: inline;
   margin: 5px;
 }
 
-.margin {
+.margin-d {
   padding: 10px;
 }
 
 @media only screen and (max-width: 600px) {
-  .desktop-menu {
+  .desktop-menu-d {
     display: none;
   }
-  .hamburger-menu {
+  .hamburger-menu-d {
     display: block;
   }
 
-  .top .top-center {
+  .top-d .top-center-d {
     margin-left: 5%;
+  }
+  .hamburger-container {
+    display: block;
+    height: 48px;
   }
 }
