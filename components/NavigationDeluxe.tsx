@@ -1,11 +1,9 @@
-import { i18n, useTranslation } from "next-i18next";
+import { useTranslation } from "next-i18next";
 import React, { useState } from "react";
 import { Fade as Hamburger } from "hamburger-react";
 import Link from "next/link";
 import { Locale } from "@/types/Locale";
 import { useRouter } from "next/router";
-import Header from "./Header";
-import HeaderDeluxe from "./HeaderDeluxe";
 import LanguageButton from "./LanguageButton";
 
 interface NavigationDeluxeProps {
@@ -96,7 +94,8 @@ function NavigationDeluxe(props: NavigationDeluxeProps) {
                     }
                     active={i18n.language === locale}
                     locale={locale}
-                    href={router.asPath}
+                    // href={router.asPath}
+                    href="/"
                   ></LanguageButton>
                 </li>
               ))}
@@ -153,14 +152,14 @@ function NavigationDeluxe(props: NavigationDeluxeProps) {
                   }
                   active={i18n.language === locale}
                   locale={locale}
-                  href={router.asPath}
+                  // href={router.asPath}
+                  href="/"
                 ></LanguageButton>
               </li>
             ))}
           </ul>
         </div>
       </div>
-      <HeaderDeluxe locale={props.locale} />
     </div>
   );
 }
