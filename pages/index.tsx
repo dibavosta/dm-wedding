@@ -20,7 +20,7 @@ function HomePage({ locale }: HomeProps) {
       <Head>
         <title>{t("index.path")}</title>
       </Head>
-      <BigImage locale={locale} title="Vi ska gifta oss!" />
+      {/* <BigImage locale={locale} title="Vi ska gifta oss!" /> */}
       <Story locale={locale} />
       <Program locale={locale} />
       <VenuePage locale={locale} />

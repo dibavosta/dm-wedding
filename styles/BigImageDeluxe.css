@@ -11,11 +11,8 @@
 img {
   display: block;
   object-fit: cover;
-  /* width: 60vw; */
-  /* height: auto; */
   width: 100vw;
   height: 80vh;
-  /* margin-left: 20%; */
   margin-left: 0%;
 }
 

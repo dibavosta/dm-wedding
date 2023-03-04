@@ -98,6 +98,11 @@
   padding: 10px;
 }
 
+.mobile-lang-picker {
+  display: none;
+  font-size: 20px;
+}
+
 @media only screen and (max-width: 600px) {
   .desktop-menu-d {
     display: none;
@@ -110,7 +115,19 @@
     margin-left: 5%;
   }
   .hamburger-container {
+    display: flex;
+    height: 48px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .hamburger-padding {
     display: block;
     height: 48px;
+    width: 48px;
+  }
+
+  .mobile-lang-picker {
+    display: flex;
   }
 }

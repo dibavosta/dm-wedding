@@ -14,7 +14,7 @@ function HeaderDeluxe(props: HeaderDeluxeProps) {
   return (
     <div>
       {/* <NavigationDeluxe locale={props.locale} /> */}
-      <BigImageDeluxe locale={props.locale} title="Vi ska gifta oss!" />
+      <BigImageDeluxe locale={props.locale} />
     </div>
   );
 }

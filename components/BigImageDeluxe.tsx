@@ -8,7 +8,7 @@ import FaviconDeluxe from "./FaviconDeluxe";
 
 interface BigImageProps {
   locale: Locale;
-  title: string;
+  // title: string;
 }
 
 function BigImageDeluxe(props: BigImageProps) {

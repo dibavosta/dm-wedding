@@ -1,10 +1,12 @@
 import { useSession } from "next-auth/react";
 import Head from "next/head";
+import React from "react";
 import Header from "./Header";
 import HeaderDeluxe from "./HeaderDeluxe";
 import Login from "./Login";
 import Navigation from "./Navigation";
 import NavigationDeluxe from "./NavigationDeluxe";
+import Footer from "./Footer";
 
 function Layout(props: any) {
   //   const { data: session, status } = useSession();
@@ -38,6 +40,7 @@ function Layout(props: any) {
       <NavigationDeluxe locale={props.locale} />
       {/* <Navigation locale={props.locale} /> */}
       <main>{props.children}</main>
+      <Footer locale={props.locale} />
     </div>
   );
   //   } else {

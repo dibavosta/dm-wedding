@@ -8,6 +8,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 import { Locale } from "@/types/Locale";
 import Head from "next/head";
+import BigImage from "@/components/BigImage";
 
 interface VenueProps {
   locale: Locale;
@@ -43,6 +44,7 @@ function VenuePage({ locale }: VenueProps) {
           />
         </div>
       </Container>
+      <BigImage locale={locale} title="Vi ska gifta oss!" />
     </section>
   );
 }
