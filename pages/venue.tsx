@@ -18,8 +18,8 @@ function VenuePage({ locale }: VenueProps) {
   const { t } = useTranslation("common");
 
   return (
-    <section id="venue-section">
-      <Container>
+    <section className="section-top" id="venue-section">
+      <Container style={{ alignItems: "center" }}>
         <Head>
           <title>{t("location.path")}</title>
         </Head>

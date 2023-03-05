@@ -74,6 +74,7 @@ body {
 body {
   color: var(--foreground-rgb);
   background-color: var(--background-color);
+  font-family: Montserrat !important;
 }
 
 a {
@@ -85,4 +86,44 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+.section-top {
+  padding-top: 48px;
+}
+
+@font-face {
+  font-family: "AmaticSC";
+  src: url("../fonts/AmaticSC/AmaticSC-Regular.ttf");
+  src: url("../fonts/AmaticSC/AmaticSC-Bold.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Abril";
+  src: url("../fonts/Abril_Fatface/AbrilFatface-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat/Montserrat-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat/Montserrat-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat/Montserrat-Light.ttf");
+  font-weight: 100;
+  font-style: normal;
 }

@@ -16,11 +16,10 @@ function HomePage({ locale }: HomeProps) {
   const { t } = useTranslation("common");
 
   return (
-    <section>
+    <section className="section-top">
       <Head>
         <title>{t("index.path")}</title>
       </Head>
-      {/* <BigImage locale={locale} title="Vi ska gifta oss!" /> */}
       <HeaderDeluxe locale={locale} />
       <Story locale={locale} />
       <Program locale={locale} />

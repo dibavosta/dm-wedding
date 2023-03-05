@@ -36,8 +36,8 @@ function RSVP({ locale }: RsvpProps) {
   };
 
   return (
-    <section id="rsvp-section">
-      <Container>
+    <section className="section-top" id="rsvp-section">
+      <Container style={{}}>
         <Head>
           <title>RSVP</title>
         </Head>

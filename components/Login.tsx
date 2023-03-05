@@ -24,7 +24,7 @@ function Login({ locale }: StoryTimeLineProps) {
   }
 
   return (
-    <Container>
+    <Container style={{}}>
       <Head>
         <title>Login</title>
       </Head>

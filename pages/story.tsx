@@ -11,7 +11,7 @@ interface StoryProps {
 function Story({ locale }: StoryProps) {
   const { t } = useTranslation(["common", "story"]);
   return (
-    <section id="story-section">
+    <section className="section-top" id="story-section">
       <div className="outer">
         <Head>
           <title>{t("story.path")}</title>

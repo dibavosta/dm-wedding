@@ -1,15 +1,12 @@
 .title {
   color: var(--text-primary);
   margin-bottom: 12px;
-  font-size: 28px;
+  font-size: 22px;
   font-weight: 900;
-  /* font-family: Quicksand-bold; */
-  /* font-weight: 700; */
 }
 
 .color {
   color: var(--theme-color);
-  font-family: Quicksand;
 }
 
 .outer-container {
