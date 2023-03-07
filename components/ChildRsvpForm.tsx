@@ -135,7 +135,7 @@ function ChildRsvpForm(props: Props) {
             alignSelf: "flex-end",
           }}
         >
-          Send
+          {t("rsvp.send")}
         </Button>
       </div>
     </div>

@@ -31,12 +31,13 @@
     },
     "thanks": "Tack för ditt svar!",
     "addAnother": "Vill du skicka in ett till svar? Klicka",
-    "here": "här"
+    "here": "här",
+    "send": "Skicka"
   },
   "location": {
     "path": "Lokalen",
-    "text": "Vigseln, följt av middag och festen kommer alla att hålla till på Sundby Gård. Adressen är Sundby Gårdsväg 5, 141 91 Huddinge",
     "title": "Lokalen",
+    "text": "Vigseln, följt av middag och festen kommer alla att hålla till på Sundby Gård. Adressen är Sundby Gårdsväg 5, 141 91 Huddinge",
     "directions": "Hitta hit",
     "car": {
       "title": "Med bil",
@@ -48,7 +49,11 @@
     },
     "publicTransport": {
       "title": "Med kollektivtrafik",
-      "directions": "Med Buss 709 från Huddinge pendeltågsstation, gå av vid stationen Sundby Gård. Med buss 865 från Flemingsbergs station alternativt från Handenterminalen, stannar ute vid väg 259 stationen Gladövägen, 15 minuters gångväg"
+      "directions": "Det finns ett par alternativ på hur ni kan ta er hit. Med Buss 709 från Huddinge pendeltågsstation, gå av vid stationen Sundby Gård. Annars går buss 865 från Flemingsbergs station alternativt från Handenterminalen, den stannar ute vid väg 259 stationen Gladövägen vilket är en 15 minuters gångväg till lokalen."
+    },
+    "outdoor-indoor": {
+      "title": "Vädret på dagen.",
+      "ceremony": "Vigseln kommer förhoppningsvis att hållas på en gräsplätt utomhus. Minglet som är efter vigseln kommer också att hållas utomhus, så det kanske hade varit bra att ta med något att ta på sig ifall det blir lite kyligt. Ifall det skulle ösregna flyttar vi givetvis in vigseln och minglet, men vi tänker oss att vi ska vara ute ifall det duggregnar lite grann. Resten av kvällen kommer att spenderas inomhus."
     }
   },
   "image": {

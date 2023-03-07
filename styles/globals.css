@@ -12,7 +12,7 @@
   --theme-color-transparent: rgba(185, 123, 82, 0.95);
   --text-primary: var(--text-primary);
   --text-secondary: var(--text-secondary);
-
+  --text-static: rgba(249, 245, 231, 0.87);
   --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
@@ -23,16 +23,16 @@
   :root {
     /* --background-color: #fff; */
     /* --foreground-primary: #f8f8f8; */
+    /* --foreground-primary-transparent: rgba(248, 248, 248, 0.95); */
     --background-color: #f9f5e7;
     --foreground-primary: #f8ead8;
-    --foreground-primary-transparent: rgba(248, 248, 248, 0.95);
+    --foreground-primary-transparent: rgba(248, 234, 216, 0.95);
     --foreground-tertiary: #e0e0e0;
     --background-shadow: rgba(0, 0, 0, 0.2);
     --text-primary: rgba(0, 0, 0);
     --text-secondary: rgba(0, 0, 0, 0.87);
     --text-primary-inverted: #ffffff;
     --hamburger-overlay: rgba(255, 255, 255, 0.9);
-    --text-static: rgba(255, 255, 255, 0.87);
 
     /* --foreground-rgb: #ffffff; */
   }
@@ -45,15 +45,18 @@
     /* --background-color: #1b1b1b; */
     /* --foreground-primary: #313131; */
     --foreground-primary: #393e46;
-    --foreground-primary-transparent: rgba(49, 49, 49, 0.95);
+    --foreground-primary-transparent: rgba(57, 62, 70, 0.95);
     /* --foreground-primary: #424242; */
     --foreground-tertiary: #000000;
     --background-shadow: rgba(0, 0, 0, 0.2);
     --foreground-rgb: #ffffff;
-    --text-primary: rgba(255, 255, 255, 0.87);
+    /* --text-primary: rgba(255, 255, 255, 0.87);
     --text-secondary: rgba(255, 255, 255, 0.6);
+    --text-static: rgba(255, 255, 255, 0.87); */
+    --text-primary: rgba(249, 245, 231, 0.87);
+    --text-secondary: rgba(249, 245, 231, 0.6);
+
     --text-primary-inverted: #000000;
-    --text-static: rgba(255, 255, 255, 0.87);
     --hamburger-overlay: rgba(0, 0, 0, 0.9);
   }
 }
@@ -72,7 +75,7 @@ body {
 }
 
 body {
-  color: var(--foreground-rgb);
+  color: var(--text-primary);
   background-color: var(--background-color);
   font-family: Montserrat !important;
 }

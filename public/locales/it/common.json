@@ -31,24 +31,29 @@
     },
     "thanks": "Thank you for your response!",
     "addAnother": "Would you like to send another rsvp? Click",
-    "here": "here"
+    "here": "here",
+    "send": "Send"
   },
   "location": {
     "path": "L",
-    "text": "t",
     "title": "T",
-    "directions": "Direziones",
+    "text": "The ceremony, followed by the reception and dinner will be held at Sundby Gård. The address is Sundby Gårdsväg 5, 141 91 Huddinge",
+    "directions": "How to get to the venue",
     "car": {
-      "title": "Con macchina",
-      "directions": "1"
+      "title": "Get here by car",
+      "directions": "Just put the address in Google Maps and follow the directions to the venue. There is free parking on the premises."
     },
     "bus": {
-      "title": "Con autobus privata",
-      "directions": "2"
+      "title": "Get here by the chartered transportation",
+      "directions": "We have chartered a bus that will take you to Sundby Gård från Stockholm Central station. The bus will depart at XX.XX to make sure it is at the venue by 4.30 pm. There will also be a chartered bus at the very end of the evening which will depart around 2 am. If this sounds interesting to you, make sure you fill it in in your rsvp."
     },
     "publicTransport": {
-      "title": "Con autobus",
-      "directions": "3"
+      "title": "Get here with public transportation",
+      "directions": "There are a few options for you. With bus 709 from Huddinge train station, get off at the station Sundby Gård. The other option is bus 865 from Flemingsberg's train station (or from Handenterminalen). It stops out on road 259 at the station Gladövägen, which is a 15 minute walk to the venue."
+    },
+    "outdoor-indoor": {
+      "title": "A note on weather conditions",
+      "ceremony": "The ceremony will hopefully be held outdoors on a grass area. The coctail hour that will follow the ceremony will also be held partially outdoors. So you may want to bring a light jacket in case it gets a little cold. If it's pouring down rain, we will move the ceremony indoors but we will survive outdoors in case of little drops of rain. The rest of the evening will take place indoors."
     }
   },
   "image": {

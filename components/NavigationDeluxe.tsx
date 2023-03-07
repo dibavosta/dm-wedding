@@ -20,6 +20,10 @@ function NavigationDeluxe(props: NavigationDeluxeProps) {
     console.log("clicked on hamburger, open: " + isOpen);
   };
 
+  const handleMobileNavClick = () => {
+    setOpen(!isOpen);
+  };
+
   return (
     <div className="navbar-d">
       <div className="hamburger-container">
@@ -40,9 +44,10 @@ function NavigationDeluxe(props: NavigationDeluxeProps) {
 
             <div className={"mobile-menu-d" + (isOpen ? " open-d" : "")}>
               <Link
-                className="link-decoration color"
+                className="link-decoration-d color"
                 href="/"
                 locale={props.locale}
+                onClick={handleHamburgerToggle}
               >
                 {t("index.path")}
               </Link>
@@ -50,6 +55,7 @@ function NavigationDeluxe(props: NavigationDeluxeProps) {
                 className="link-decoration-d color"
                 href="#program-section"
                 locale={props.locale}
+                onClick={handleHamburgerToggle}
               >
                 {t("program.path")}
               </Link>
@@ -57,6 +63,7 @@ function NavigationDeluxe(props: NavigationDeluxeProps) {
                 className="link-decoration-d color"
                 href="#story-section"
                 locale={props.locale}
+                onClick={handleHamburgerToggle}
               >
                 {t("story.path")}
               </Link>
@@ -64,6 +71,7 @@ function NavigationDeluxe(props: NavigationDeluxeProps) {
                 className="link-decoration-d color"
                 href="#rsvp-section"
                 locale={props.locale}
+                onClick={handleHamburgerToggle}
               >
                 {t("rsvp.path")}
               </Link>
@@ -71,6 +79,7 @@ function NavigationDeluxe(props: NavigationDeluxeProps) {
                 className="link-decoration-d color"
                 href="#venue-section"
                 locale={props.locale}
+                onClick={handleHamburgerToggle}
               >
                 {t("location.path")}
               </Link>

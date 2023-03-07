@@ -9,9 +9,11 @@ export interface Props {
 
 function TextWithHeadline(props: Props) {
   const { t } = useTranslation("common");
-
+  console.log(props.mainText);
   return (
     <div>
+      {/* <h3 className="headline">{t(props.headlineText)}</h3>
+      <p className="text">{t(props.mainText)}</p> */}
       <h3 className="headline">{t(props.headlineText)}</h3>
       <p className="text">{t(props.mainText)}</p>
     </div>
