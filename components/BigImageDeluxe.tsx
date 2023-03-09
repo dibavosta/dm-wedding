@@ -11,18 +11,16 @@ function BigImageDeluxe(props: BigImageProps) {
   const { t } = useTranslation("common");
 
   return (
-    <div className="image-container-deluxe-d">
-      <div className="big-image-container-d">
-        <div className="image-wrapper-d">
-          <Image src={Amsterdam} alt="Diba and Manolo in Amsterdam"></Image>
-          <div className="overlay-d">
-            <div className="countdown-margin-d">
-              <h1 className="header-text header-names">Manolo & Diba</h1>
-              <h1 className="header-text header-invite">
-                invite you to their wedding celebration
-              </h1>
-              <h1 className="header-text header-date">2 September 2023</h1>
-            </div>
+    <div className="big-image-container-d">
+      <div className="image-wrapper-d">
+        <Image src={Amsterdam} alt="Diba and Manolo in Amsterdam"></Image>
+        <div className="overlay-d">
+          <div className="countdown-margin-d">
+            <h1 className="header-text header-names">Manolo & Diba</h1>
+            <h1 className="header-text header-invite">
+              invite you to their wedding celebration
+            </h1>
+            <h1 className="header-text header-date">2 September 2023</h1>
           </div>
         </div>
       </div>

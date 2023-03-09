@@ -3,7 +3,6 @@ import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Head from "next/head";
 import StorySection from "@/components/StorySection";
-import BigImage from "@/components/BigImage";
 import CountDown from "@/components/CountDown";
 import Title from "@/components/Title";
 
@@ -26,7 +25,6 @@ function Story({ locale }: StoryProps) {
         <StorySection locale={locale} section="fifth" />
         <StorySection locale={locale} section="sixth" />
       </div>
-      {/* <BigImage locale={locale} title="Vi ska gifta oss!" /> */}
       <div className="countdown-margin">
         <div className="header-margin">
           <Title

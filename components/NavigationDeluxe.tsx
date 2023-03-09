@@ -17,11 +17,6 @@ function NavigationDeluxe(props: NavigationDeluxeProps) {
 
   const handleHamburgerToggle = () => {
     setOpen(!isOpen);
-    console.log("clicked on hamburger, open: " + isOpen);
-  };
-
-  const handleMobileNavClick = () => {
-    setOpen(!isOpen);
   };
 
   return (

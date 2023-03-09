@@ -19,9 +19,6 @@
   .hamburger-menu {
     display: block;
   }
-}
-
-@media only screen and (max-width: 600px) {
   .outer-container {
     margin-left: 5%;
     margin-right: 5%;
