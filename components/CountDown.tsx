@@ -3,6 +3,7 @@ import { Locale } from "@/types/Locale";
 import { useTranslation } from "next-i18next";
 import { useEffect, useState } from "react";
 import CountDownElement from "./CountDownElement";
+import Title from "./Title";
 
 interface CountDownProps {
   locale: Locale;
@@ -36,27 +37,35 @@ function CountDown(props: CountDownProps) {
     return () => clearInterval(interval);
   });
   return (
-    <div className="countdown-container">
-      <CountDownElement
-        locale={props.locale}
-        timeUnit={days}
-        timeText={TimeType.DAY}
-      />
-      <CountDownElement
-        locale={props.locale}
-        timeUnit={hours}
-        timeText={TimeType.HOUR}
-      />
-      <CountDownElement
-        locale={props.locale}
-        timeUnit={minutes}
-        timeText={TimeType.MINUTE}
-      />
-      <CountDownElement
-        locale={props.locale}
-        timeUnit={seconds}
-        timeText={TimeType.SECOND}
-      />
+    <div className="countdown-margin">
+      <div className="header-margin">
+        <Title
+          titleText="Vi gifter oss (!) om:"
+          style={{ color: "var(--text-primary) !important" }}
+        ></Title>
+      </div>
+      <div className="countdown-container">
+        <CountDownElement
+          locale={props.locale}
+          timeUnit={days}
+          timeText={TimeType.DAY}
+        />
+        <CountDownElement
+          locale={props.locale}
+          timeUnit={hours}
+          timeText={TimeType.HOUR}
+        />
+        <CountDownElement
+          locale={props.locale}
+          timeUnit={minutes}
+          timeText={TimeType.MINUTE}
+        />
+        <CountDownElement
+          locale={props.locale}
+          timeUnit={seconds}
+          timeText={TimeType.SECOND}
+        />
+      </div>
     </div>
   );
 }

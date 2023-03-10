@@ -1,6 +1,6 @@
 import "@/styles/globals.css";
 import "@/styles/Fundamentals.css";
-import "@/styles/Story.css";
+// import "@/styles/Story.css";
 import "@/styles/RsvpForm.css";
 import "@/styles/ImageWithDescription.css";
 import "@/styles/RadioButtonContainer.css";

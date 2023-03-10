@@ -5,6 +5,7 @@ import Head from "next/head";
 import StorySection from "@/components/StorySection";
 import CountDown from "@/components/CountDown";
 import Title from "@/components/Title";
+import styles from "@/components/Story.module.css";
 
 interface StoryProps {
   locale: Locale;
@@ -14,7 +15,7 @@ function Story({ locale }: StoryProps) {
   const { t } = useTranslation(["common", "story"]);
   return (
     <section className="section-top" id="story-section">
-      <div className="outer">
+      <div className={styles.outer}>
         <Head>
           <title>{t("story.path")}</title>
         </Head>
@@ -25,15 +26,7 @@ function Story({ locale }: StoryProps) {
         <StorySection locale={locale} section="fifth" />
         <StorySection locale={locale} section="sixth" />
       </div>
-      <div className="countdown-margin">
-        <div className="header-margin">
-          <Title
-            titleText="Vi gifter oss (!) om:"
-            style={{ color: "var(--text-primary) !important" }}
-          ></Title>
-        </div>
-        <CountDown locale={locale} />
-      </div>
+      <CountDown locale={locale} />
     </section>
   );
 }
