@@ -200,7 +200,7 @@ function FullRsvpForm(props: Props) {
               },
             }}
           >
-            Send
+            {t("rsvp.send")}
           </Button>
         </div>
       )}

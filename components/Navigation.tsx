@@ -3,7 +3,6 @@ import { useState } from "react";
 import { Fade as Hamburger } from "hamburger-react";
 import Link from "next/link";
 import { Locale } from "@/types/Locale";
-import { useRouter } from "next/router";
 import Header from "./Header";
 
 interface NavigationProps {

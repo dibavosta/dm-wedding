@@ -1,5 +1,9 @@
 function Container(props: any) {
-  return <div className="content-container">{props.children}</div>;
+  return (
+    <div style={props.style} className="content-container">
+      {props.children}
+    </div>
+  );
 }
 
 export default Container;

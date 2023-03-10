@@ -15,8 +15,8 @@ function StoryTimeLinePage({ locale }: StoryTimeLineProps) {
   const { t } = useTranslation("common");
 
   return (
-    <section id="program-section">
-      <Container>
+    <section className="section-top" id="program-section">
+      <Container style={{ alignItems: "center" }}>
         <Head>
           <title>{t("program.path")}</title>
         </Head>

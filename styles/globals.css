@@ -1,26 +1,39 @@
+/* light: #A7727D
+#EDDBC7
+#F8EAD8
+#F9F5E7
+ */
+
 :root {
-  /* --theme-dark: #8f683d; */
+  --theme-dark: #8f683d;
+  --theme-darker: #71512f;
+
   --theme-color: #b97b52;
+  --theme-color-transparent: rgba(185, 123, 82, 0.95);
   --text-primary: var(--text-primary);
   --text-secondary: var(--text-secondary);
-
+  --text-static: rgba(249, 245, 231, 0.87);
   --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+  -webkit-tap-highlight-color: transparent;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-    --background-color: #fff;
-    --foreground-primary: #f8f8f8;
+    /* --background-color: #fff; */
+    /* --foreground-primary: #f8f8f8; */
+    /* --foreground-primary-transparent: rgba(248, 248, 248, 0.95); */
+    --background-color: #f9f5e7;
+    --foreground-primary: #f8ead8;
+    --foreground-primary-transparent: rgba(248, 234, 216, 0.95);
     --foreground-tertiary: #e0e0e0;
     --background-shadow: rgba(0, 0, 0, 0.2);
     --text-primary: rgba(0, 0, 0);
     --text-secondary: rgba(0, 0, 0, 0.87);
     --text-primary-inverted: #ffffff;
     --hamburger-overlay: rgba(255, 255, 255, 0.9);
-    --text-static: rgba(255, 255, 255, 0.87);
 
     /* --foreground-rgb: #ffffff; */
   }
@@ -28,17 +41,23 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background-color: #1b1b1b;
     /* --foreground-primary: #232222; */
-    --foreground-primary: #313131;
+    --background-color: #222831;
+    /* --background-color: #1b1b1b; */
+    /* --foreground-primary: #313131; */
+    --foreground-primary: #393e46;
+    --foreground-primary-transparent: rgba(57, 62, 70, 0.95);
     /* --foreground-primary: #424242; */
     --foreground-tertiary: #000000;
     --background-shadow: rgba(0, 0, 0, 0.2);
     --foreground-rgb: #ffffff;
-    --text-primary: rgba(255, 255, 255, 0.87);
+    /* --text-primary: rgba(255, 255, 255, 0.87);
     --text-secondary: rgba(255, 255, 255, 0.6);
+    --text-static: rgba(255, 255, 255, 0.87); */
+    --text-primary: rgba(249, 245, 231, 0.87);
+    --text-secondary: rgba(249, 245, 231, 0.6);
+
     --text-primary-inverted: #000000;
-    --text-static: rgba(255, 255, 255, 0.87);
     --hamburger-overlay: rgba(0, 0, 0, 0.9);
   }
 }
@@ -57,8 +76,9 @@ body {
 }
 
 body {
-  color: var(--foreground-rgb);
+  color: var(--text-primary);
   background-color: var(--background-color);
+  font-family: Montserrat !important;
 }
 
 a {
@@ -70,4 +90,44 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+.section-top {
+  padding-top: 48px;
+}
+
+@font-face {
+  font-family: "AmaticSC";
+  src: url("../fonts/AmaticSC/AmaticSC-Regular.ttf");
+  src: url("../fonts/AmaticSC/AmaticSC-Bold.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Abril";
+  src: url("../fonts/Abril_Fatface/AbrilFatface-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat/Montserrat-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat/Montserrat-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat/Montserrat-Light.ttf");
+  font-weight: 100;
+  font-style: normal;
 }

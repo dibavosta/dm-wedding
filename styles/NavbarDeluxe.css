@@ -1,0 +1,139 @@
+.top-d {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-top: 28px;
+}
+
+.top-d .top-center-d {
+  flex: 10%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 64px;
+}
+
+.top-d .top-right-d {
+  flex: 10%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 44px;
+}
+
+.bottom-d {
+  height: 40px;
+  border-style: solid;
+  background-color: var(--theme-color-transparent);
+  border-color: var(--theme-color) var(--theme-color) var(--theme-darker);
+  /* margin-top: 16px; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.link-decoration-d {
+  text-decoration: none;
+}
+
+.desktop-menu-d {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 48px;
+}
+
+.bottom-d button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.header-d {
+  color: var(--background-color) !important;
+}
+
+.logo-d:hover {
+  cursor: pointer;
+}
+
+.hamburger-menu-d {
+  display: none;
+}
+
+.mobile-menu-d {
+  display: none;
+  height: 30px;
+}
+
+.open-d.mobile-menu-d {
+  display: flex;
+  flex-direction: column;
+  height: 60vh;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.ul-list-lang-d {
+  list-style-type: none;
+  display: inline-flex;
+}
+
+.li-lang-d {
+  display: inline;
+  margin: 5px;
+}
+
+.margin-d {
+  padding: 10px;
+}
+
+.mobile-lang-picker {
+  display: none;
+  font-size: 20px;
+}
+
+.navbar-d {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+@media only screen and (max-width: 600px) {
+  .desktop-menu-d {
+    display: none;
+  }
+  .hamburger-menu-d {
+    display: block;
+  }
+
+  .top-d .top-center-d {
+    margin-left: 5%;
+  }
+  .hamburger-container {
+    display: flex;
+    height: 48px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .hamburger-padding {
+    display: block;
+    height: 48px;
+    width: 48px;
+  }
+
+  .mobile-lang-picker {
+    display: flex;
+  }
+
+  .navbar-d {
+    background-color: var(--foreground-primary-transparent);
+  }
+}

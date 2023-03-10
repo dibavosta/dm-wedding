@@ -1,8 +1,8 @@
 import { Locale } from "@/types/Locale";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import HeaderDeluxe from "../components/HeaderDeluxe";
 import Head from "next/head";
-import BigImage from "@/components/BigImage";
 import Story from "./story";
 import Program from "./program";
 import VenuePage from "./venue";
@@ -16,11 +16,11 @@ function HomePage({ locale }: HomeProps) {
   const { t } = useTranslation("common");
 
   return (
-    <section>
+    <section className="section-top">
       <Head>
         <title>{t("index.path")}</title>
       </Head>
-      <BigImage locale={locale} title="Vi ska gifta oss!" />
+      <HeaderDeluxe locale={locale} />
       <Story locale={locale} />
       <Program locale={locale} />
       <VenuePage locale={locale} />

@@ -7,6 +7,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { Locale } from "@/types/Locale";
 import Head from "next/head";
 import { useState } from "react";
+import ImageSlider from "@/components/ImageSlider";
 
 interface RsvpProps {
   locale: Locale;
@@ -36,8 +37,9 @@ function RSVP({ locale }: RsvpProps) {
   };
 
   return (
-    <section id="rsvp-section">
-      <Container>
+    <section className="section-top" id="rsvp-section">
+      <ImageSlider />
+      <Container style={{}}>
         <Head>
           <title>RSVP</title>
         </Head>

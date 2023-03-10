@@ -15,6 +15,8 @@ export interface Props {
 }
 
 function RsvpForm(props: Props) {
+  const { t } = useTranslation("common");
+
   const firstNameRef = useRef<HTMLInputElement>(null);
   const lastNameRef = useRef<HTMLInputElement>(null);
   const [attending, setAttending] = useState(false);
@@ -95,8 +97,6 @@ function RsvpForm(props: Props) {
     props.onSubmitForm(fullFormData);
   }
 
-  const { t } = useTranslation("common");
-
   return (
     <div className="additional-form">
       <div className="form-container">
@@ -170,7 +170,7 @@ function RsvpForm(props: Props) {
               },
             }}
           >
-            Send
+            {t("rsvp.send")}
           </Button>
         </div>
       )}
