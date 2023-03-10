@@ -1,0 +1,131 @@
+.linkDecoration {
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+.desktopMenu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 48px;
+  border-style: solid;
+  background-color: var(--theme-color-transparent);
+  border-color: var(--theme-color) var(--theme-color) var(--theme-darker);
+  align-items: center;
+}
+
+.desktopMenu button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.logo-d:hover {
+  cursor: pointer;
+}
+
+.hamburgerMenu {
+  display: none;
+}
+
+.mobileMenu {
+  display: none;
+  height: 30px;
+}
+
+.open.mobileMenu {
+  display: flex;
+  flex-direction: column;
+  height: 60vh;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.listLang {
+  list-style-type: none;
+  display: inline-flex;
+}
+
+.lang {
+  display: inline;
+  margin: 5px;
+}
+
+.mobileLangPicker {
+  display: none;
+  font-size: 20px;
+}
+
+.navbar {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.hamburgerOverlay {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: var(--hamburgerOverlay);
+  overflow-y: hidden;
+  transition: 0.5s;
+}
+
+.overlayContent {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.hamburgerOverlay {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.hamburgerOverlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media only screen and (max-width: 600px) {
+  .desktopMenu {
+    display: none;
+  }
+  .hamburgerMenu {
+    display: block;
+  }
+
+  .hamburgerContainer {
+    display: flex;
+    height: 48px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .hamburgerPadding {
+    display: block;
+    height: 48px;
+    width: 48px;
+  }
+
+  .mobileLangPicker {
+    display: flex;
+  }
+
+  .navbar {
+    background-color: var(--foreground-primary-transparent);
+  }
+}

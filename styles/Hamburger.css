@@ -1,11 +1,11 @@
-.hamburger-overlay {
+.hamburgerOverlay {
   height: 100%;
   width: 100%;
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: var(--hamburger-overlay);
+  background-color: var(--hamburgerOverlay);
   overflow-y: hidden;
   transition: 0.5s;
 }
@@ -18,7 +18,7 @@
   margin-top: 30px;
 }
 
-.hamburger-overlay {
+.hamburgerOverlay {
   padding: 8px;
   text-decoration: none;
   font-size: 36px;
@@ -27,7 +27,7 @@
   transition: 0.3s;
 }
 
-.hamburger-overlay .closebtn {
+.hamburgerOverlay .closebtn {
   position: absolute;
   top: 20px;
   right: 45px;
