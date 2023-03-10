@@ -1,7 +1,7 @@
 .my-slider-container {
-  width: 500px;
+  margin-left: 25%;
+  margin-right: 25%;
   height: 280px;
-  margin: 0 auto;
 }
 
 .slider-wrapper {
@@ -56,5 +56,7 @@
 @media only screen and (max-width: 600px) {
   .my-slider-container {
     width: 100%;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
