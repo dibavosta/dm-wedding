@@ -1,10 +1,9 @@
 import "@/styles/globals.css";
 import "@/styles/Fundamentals.css";
-// import "@/styles/Story.css";
-import "@/styles/RsvpForm.css";
+// import "@/styles/RsvpForm.css";
+// import "@/styles/FullRsvpForm.css";
 import "@/styles/ImageWithDescription.css";
 import "@/styles/RadioButtonContainer.css";
-import "@/styles/FullRsvpForm.css";
 import "@/styles/CountDown.css";
 import "@/styles/BigImage.css";
 import "@/styles/Hamburger.css";

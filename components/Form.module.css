@@ -1,0 +1,12 @@
+.formContainer {
+  background-color: var(--foreground-primary);
+  border-radius: 6px;
+  box-shadow: 0 2px 8px var(--background-shadow);
+  margin-bottom: 16px;
+  max-width: 100%;
+}
+
+.form {
+  margin: 0 12px 0 12px;
+  padding: 32px;
+}

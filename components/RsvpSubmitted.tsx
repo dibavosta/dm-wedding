@@ -1,5 +1,7 @@
 import { Locale } from "@/types/Locale";
 import { useTranslation } from "next-i18next";
+import formStyles from "@/components/form.module.css";
+import styles from "@/components/RsvpForm.module.css";
 
 interface RsvpSubmittedProps {
   locale: Locale;
@@ -14,11 +16,16 @@ function RsvpSubmitted(props: RsvpSubmittedProps) {
   };
 
   return (
-    <div className="form-container form">
-      <h3 className="thank-you-title">{t("rsvp.thanks")}</h3>
-      <p className="text thank-you">
+    <div
+      className={`${formStyles.formContainer} ${formStyles.form} ${styles.thankYouMargin}`}
+    >
+      <h3 className={styles.thankYouTitle}>{t("rsvp.thanks")}</h3>
+      <p className={`${styles.text} ${styles.thankYou}`}>
         {t("rsvp.addAnother")}{" "}
-        <button className="add-another-button" onClick={addAnotherGuestHandler}>
+        <button
+          className={styles.addAnotherButton}
+          onClick={addAnotherGuestHandler}
+        >
           {t("rsvp.here")}
         </button>
       </p>

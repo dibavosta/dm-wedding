@@ -4,7 +4,6 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Head from "next/head";
 import StorySection from "@/components/StorySection";
 import CountDown from "@/components/CountDown";
-import Title from "@/components/Title";
 import styles from "@/components/Story.module.css";
 
 interface StoryProps {

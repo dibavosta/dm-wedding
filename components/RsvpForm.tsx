@@ -8,6 +8,8 @@ import AddPersonSpeedDial from "./AddPersonSpeedDial";
 import ChildRsvpForm from "./ChildRsvpForm";
 import Button from "@mui/material/Button";
 import SendIcon from "@mui/icons-material/Send";
+import formStyles from "@/components/form.module.css";
+import styles from "@/components/RsvpForm.module.css";
 
 export interface Props {
   onSubmitForm: (params: any) => void;
@@ -98,19 +100,19 @@ function RsvpForm(props: Props) {
   }
 
   return (
-    <div className="additional-form">
-      <div className="form-container">
-        <form id="rsvp" className="form" onSubmit={submitHandler}>
-          <div className="input-control">
+    <div className={styles.additionalForm}>
+      <div className={formStyles.formContainer}>
+        <form id="rsvp" className={formStyles.form} onSubmit={submitHandler}>
+          <div className={styles.inputControl}>
             <label htmlFor="firstName">{t("rsvp.firstName")}</label>
             <input required type="text" id="firstName" ref={firstNameRef} />
           </div>
-          <div className="input-control">
+          <div className={styles.inputControl}>
             <label htmlFor="lastName">{t("rsvp.lastName")}</label>
             <input required type="text" id="lastName" ref={lastNameRef} />
           </div>
-          <div className="radio-button-control">
-            <label className="question" htmlFor="attendance">
+          <div className={styles.radioButtonControl}>
+            <label className={styles.question} htmlFor="attendance">
               {t("rsvp.attendance")}
             </label>
             <RadioButtonContainer
@@ -128,7 +130,7 @@ function RsvpForm(props: Props) {
                 onSendForm={registerDetailResponse}
                 locale={props.locale}
               />
-              <div className="butt">
+              <div className={styles.butt}>
                 {addPartner || addChild ? (
                   <div></div>
                 ) : (
@@ -157,7 +159,7 @@ function RsvpForm(props: Props) {
           locale={props.locale}
         />
       ) : (
-        <div className="bottom-button">
+        <div className={styles.bottomButton}>
           <Button
             variant="contained"
             form="rsvp"
