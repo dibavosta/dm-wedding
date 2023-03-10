@@ -24,39 +24,46 @@ const ImageSlider = () => {
     setCurrentIndex(slideIndex);
   };
 
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     const isLastSlide = currentIndex === slides.length - 1;
-  //     const newIndex = isLastSlide ? 0 : currentIndex + 1;
-  //     setCurrentIndex(newIndex);
-  //   }, 5000);
-  //   return () => clearInterval(interval);
-  // });
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const isLastSlide = currentIndex === slides.length - 1;
+      const newIndex = isLastSlide ? 0 : currentIndex + 1;
+      setCurrentIndex(newIndex);
+    }, 5000);
+    return () => clearInterval(interval);
+  });
+
+  const isSelected = (slideIndex: number) => {
+    return currentIndex === slideIndex ? styles.selected : "";
+  };
 
   return (
     <div>
-      <div className="outer-image">
-        <div className="my-slider-container">
-          <div className="arrow left" onClick={goToPrevious}>
+      <div className={styles.outerImage}>
+        <div className={styles.sliderContainer}>
+          <div
+            className={`${styles.arrow} ${styles.left}`}
+            onClick={goToPrevious}
+          >
             ‹
           </div>
 
-          <div className="slider-wrapper">
+          <div className={styles.sliderWrapper}>
             <Image
-              className="slide-image"
+              className={styles.slideImage}
               src={require("../assets/" + slides[currentIndex])}
               alt="heh"
             />
           </div>
-          <div className="arrow right" onClick={goToNext}>
+          <div className={`${styles.arrow} ${styles.right}`} onClick={goToNext}>
             ›
           </div>
         </div>
       </div>
-      <div className="dots-container">
+      <div className={styles.dotsContainer}>
         {slides.map((slide, slideIndex) => (
           <div
-            className={"dot " + (currentIndex === slideIndex ? "selected" : "")}
+            className={`${styles.dot} ${isSelected(slideIndex)}`}
             key={slideIndex}
             onClick={() => goToSlide(slideIndex)}
           >
