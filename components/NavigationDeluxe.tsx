@@ -83,9 +83,9 @@ function NavigationDeluxe(props: NavigationDeluxeProps) {
         </div>
         <div className="mobile-lang-picker">
           <div className="text-color">
-            <ul className="ul-list-lang">
+            <ul className="ul-list-lang-d">
               {router.locales?.map((locale) => (
-                <li className="li-lang" key={locale}>
+                <li className="li-lang-d" key={locale}>
                   <LanguageButton
                     displayName={
                       locale === "sv"
@@ -141,9 +141,9 @@ function NavigationDeluxe(props: NavigationDeluxeProps) {
           {t("location.path")}
         </Link>
         <div className="text-color">
-          <ul className="ul-list-lang">
+          <ul className="ul-list-lang-d">
             {router.locales?.map((locale) => (
-              <li className="li-lang" key={locale}>
+              <li className="li-lang-d" key={locale}>
                 <LanguageButton
                   displayName={
                     locale === "sv"

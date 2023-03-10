@@ -1,7 +1,5 @@
 import "@/styles/globals.css";
-import "@/styles/LanguageButton.css";
 import "@/styles/Fundamentals.css";
-import "@/styles/Navbar.css";
 import "@/styles/NavbarDeluxe.css";
 import "@/styles/Story.css";
 import "@/styles/RsvpForm.css";
