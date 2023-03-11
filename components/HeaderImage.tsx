@@ -2,16 +2,16 @@ import { Locale } from "@/types/Locale";
 import Amsterdam from "@/assets/amsterdam.jpg";
 import Image from "next/image";
 import { useTranslation } from "next-i18next";
-import styles from "@/components/BigImageDeluxe.module.css";
-interface BigImageProps {
+import styles from "@/components/HeaderImage.module.css";
+interface HeaderImageProps {
   locale: Locale;
 }
 
-function BigImageDeluxe(props: BigImageProps) {
+function HeaderImage(props: HeaderImageProps) {
   const { t } = useTranslation("common");
 
   return (
-    <div className={styles.bigImageContainer}>
+    <div className={styles.container}>
       <div className={styles.imageWrapper}>
         <Image
           className={styles.image}
@@ -36,4 +36,4 @@ function BigImageDeluxe(props: BigImageProps) {
   );
 }
 
-export default BigImageDeluxe;
+export default HeaderImage;
