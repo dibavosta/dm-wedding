@@ -1,7 +1,5 @@
 import "@/styles/globals.css";
 import "@/styles/Fundamentals.css";
-import "@/styles/HeaderDeluxe.css";
-import "@/styles/Footer.css";
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
