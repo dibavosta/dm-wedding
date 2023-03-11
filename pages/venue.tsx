@@ -19,9 +19,9 @@ function VenuePage({ locale }: VenueProps) {
   return (
     <section className="section-top" id="venue-section">
       <Container style={{ alignItems: "center" }}>
-        <Head>
+        {/* <Head>
           <title>{t("location.path")}</title>
-        </Head>
+        </Head> */}
         <Title style={{}} titleText={t("location.title")} />
         <div>
           <p style={{ color: "var(--text-secondary)", marginBottom: "12px" }}>

@@ -17,9 +17,9 @@ function StoryTimeLinePage({ locale }: StoryTimeLineProps) {
   return (
     <section className="section-top" id="program-section">
       <Container style={{ alignItems: "center" }}>
-        <Head>
+        {/* <Head>
           <title>{t("program.path")}</title>
-        </Head>
+        </Head> */}
         <Title style={{}} titleText={t("program.title")} />
         <CustomizedTimeline locales={locale} />
       </Container>

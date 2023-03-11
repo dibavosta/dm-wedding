@@ -15,9 +15,9 @@ function Story({ locale }: StoryProps) {
   return (
     <section className="section-top" id="story-section">
       <div className={styles.outer}>
-        <Head>
+        {/* <Head>
           <title>{t("story.path")}</title>
-        </Head>
+        </Head> */}
         <StorySection locale={locale} section="first" />
         <StorySection locale={locale} section="second" />
         <StorySection locale={locale} section="third" />

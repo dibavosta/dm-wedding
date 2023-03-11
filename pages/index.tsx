@@ -18,7 +18,8 @@ function HomePage({ locale }: HomeProps) {
   return (
     <section className="section-top">
       <Head>
-        <title>{t("index.path")}</title>
+        <title>Manolo & Diba</title>
+        {/* <title>{t("index.path")}</title> */}
       </Head>
       <Header locale={locale} />
       <Story locale={locale} />
