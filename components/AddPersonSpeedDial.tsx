@@ -61,7 +61,7 @@ function AddPersonSpeedDial(props: SpeedDialProps) {
       setHideDial(true);
       props.onAddPartner();
     }
-  }, [open]);
+  }, [open]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <Box

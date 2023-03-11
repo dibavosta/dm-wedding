@@ -33,7 +33,7 @@ function RsvpDetailsForm(props: Props) {
 
   useEffect(() => {
     sendForm();
-  }, [enteredSpeech, enteredBusTo, enteredBusFrom]);
+  }, [enteredSpeech, enteredBusTo, enteredBusFrom]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const sendForm = () => {
     const foodPreferences = foodPreferencesRef.current?.value;
