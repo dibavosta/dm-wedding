@@ -36,11 +36,11 @@ const App = (
   { locale }: LocaleProps
 ) => {
   return (
-    // <SessionProvider session={session}>
-    <Layout locale={locale}>
-      <Component {...pageProps} />
-    </Layout>
-    // </SessionProvider>
+    <SessionProvider session={session}>
+      <Layout locale={locale}>
+        <Component {...pageProps} />
+      </Layout>
+    </SessionProvider>
   );
 };
 

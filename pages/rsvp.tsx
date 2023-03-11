@@ -19,16 +19,16 @@ function RSVP({ locale }: RsvpProps) {
 
   async function rsvpResponseHandler(enteredData: any) {
     console.log("Submitting to db: ", enteredData);
-    // const response = await fetch("/api/send-rsvp", {
-    //   method: "POST",
-    //   body: JSON.stringify(enteredData),
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    // });
+    const response = await fetch("/api/send-rsvp", {
+      method: "POST",
+      body: JSON.stringify(enteredData),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
 
-    // const data = await response.json();
-    // console.log(data);
+    const data = await response.json();
+    console.log(data);
     setSentRsvp(true);
   }
 
@@ -40,9 +40,9 @@ function RSVP({ locale }: RsvpProps) {
     <section className="section-top" id="rsvp-section">
       <ImageSlider />
       <Container style={{}}>
-        <Head>
+        {/* <Head>
           <title>RSVP</title>
-        </Head>
+        </Head> */}
         {sentRsvp ? (
           <RsvpSubmitted locale={locale} addAnother={addAnotherGuestHandler} />
         ) : (
