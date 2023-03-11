@@ -1,14 +1,14 @@
-.radio-button-container {
+.radioButtonContainer {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-.radio-button-label:hover {
+.radioButtonLabel:hover {
   cursor: pointer;
 }
 
-.radio-button {
+.radioButton {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -16,13 +16,13 @@
   margin: 8px 0 0 16px;
 }
 
-.radio-button-label {
+.radioButtonLabel {
   text-align: flex-start;
   color: var(--text-primary);
   font-size: small;
   margin-left: 8px;
 }
 
-input {
+.input {
   accent-color: var(--theme-color);
 }

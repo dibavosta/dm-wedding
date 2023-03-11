@@ -1,6 +1,7 @@
 import { Locale } from "@/types/Locale";
 import { useTranslation } from "next-i18next";
 import { useState } from "react";
+import styles from "@/components/RadioButtonContainer.module.css";
 
 export interface Props {
   numberOfButtons: number;
@@ -32,8 +33,9 @@ function RadioButtonContainer(props: Props) {
 
   for (let i = 0; i < props.numberOfButtons; i++) {
     radioButtons.push(
-      <div className="radio-button" key={props.radioIds[i]}>
+      <div className={styles.radioButton} key={props.radioIds[i]}>
         <input
+          className={styles.input}
           type="radio"
           id={props.radioIds[i]}
           name={props.name}
@@ -41,14 +43,14 @@ function RadioButtonContainer(props: Props) {
           checked={isRadioSelected(props.radioIds[i])}
           onChange={radioClickedHandler}
         ></input>
-        <label className="radio-button-label" htmlFor={props.radioIds[i]}>
+        <label className={styles.radioButtonLabel} htmlFor={props.radioIds[i]}>
           {t(props.labels[i])}
         </label>
       </div>
     );
   }
 
-  return <div className="radio-button-container">{radioButtons}</div>;
+  return <div className={styles.radioButtonContainer}>{radioButtons}</div>;
 }
 
 export default RadioButtonContainer;

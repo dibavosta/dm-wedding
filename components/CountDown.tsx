@@ -4,6 +4,7 @@ import { useTranslation } from "next-i18next";
 import { useEffect, useState } from "react";
 import CountDownElement from "./CountDownElement";
 import Title from "./Title";
+import styles from "@/components/CountDown.module.css";
 
 interface CountDownProps {
   locale: Locale;
@@ -37,14 +38,14 @@ function CountDown(props: CountDownProps) {
     return () => clearInterval(interval);
   });
   return (
-    <div className="countdown-margin">
-      <div className="header-margin">
+    <div className={styles.countdownMargin}>
+      <div>
         <Title
           titleText="Vi gifter oss (!) om:"
           style={{ color: "var(--text-primary) !important" }}
         ></Title>
       </div>
-      <div className="countdown-container">
+      <div className={styles.countdownContainer}>
         <CountDownElement
           locale={props.locale}
           timeUnit={days}
