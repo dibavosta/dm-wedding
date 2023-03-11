@@ -1,13 +1,8 @@
 import "@/styles/globals.css";
 import "@/styles/Fundamentals.css";
-// import "@/styles/ImageWithDescription.css";
-// import "@/styles/RadioButtonContainer.css";
-// import "@/styles/CountDown.css";
-import "@/styles/BigImage.css";
 import "@/styles/Hamburger.css";
 import "@/styles/venue.css";
 import "@/styles/HeaderDeluxe.css";
-import "@/styles/BigImageDeluxe.css";
 import "@/styles/Footer.css";
 import "@/styles/VenueMap.css";
 import "@fontsource/roboto/300.css";
