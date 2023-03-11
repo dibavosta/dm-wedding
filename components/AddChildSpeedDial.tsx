@@ -50,7 +50,7 @@ function AddChildSpeedDial(props: ChildSpeedDialProps) {
       setHideDial(true);
       props.onAddChild();
     }
-  }, [open]);
+  }, [open]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <Box
