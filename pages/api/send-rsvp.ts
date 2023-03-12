@@ -8,6 +8,7 @@ async function handler(request: any, response: any) {
 
     try {
       const client = await connectToDatabase();
+
       const db = client.db;
       const rsvpCollection = db.collection("rsvp");
       const result = await rsvpCollection.insertOne(data);
@@ -16,11 +17,9 @@ async function handler(request: any, response: any) {
 
       response.status(201).json({ message: "rsvp sent!" });
     } catch (error) {
-      response
-        .status(500)
-        .json({
-          message: `Something went wrong when sengin the rsvp! ${error}`,
-        });
+      response.status(500).json({
+        message: `Error: ${error}`,
+      });
     }
   }
 }

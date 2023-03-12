@@ -44,7 +44,7 @@ export default NextAuth({
           throw new Error("Could not log you in!");
         }
 
-        client.client.close();
+        // client.client.close();
         return { username: user.username } as any;
       },
     }),
