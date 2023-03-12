@@ -18,7 +18,9 @@ async function handler(request: any, response: any) {
     } catch (error) {
       response
         .status(500)
-        .json({ message: "Something went wrong when sengin the rsvp!" });
+        .json({
+          message: `Something went wrong when sengin the rsvp! ${error}`,
+        });
     }
   }
 }
