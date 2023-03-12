@@ -8,6 +8,8 @@ import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import AddChildSpeedDial from "./AddChildSpeedDial";
 import ChildRsvpForm from "./ChildRsvpForm";
+import formStyles from "@/components/Form.module.css";
+import styles from "@/components/RsvpForm.module.css";
 
 export interface Props {
   onSendForm: (params: any) => void;
@@ -86,11 +88,15 @@ function FullRsvpForm(props: Props) {
   }
 
   return (
-    <div className="additional-form">
-      <div className="form-container">
-        <form id="fullForm" className="form" onSubmit={submitHandler}>
-          <div className="additional-form-header">
-            <h3 className="add-new">Enter details of partner</h3>
+    <div className={styles.additionalForm}>
+      <div className={formStyles.formContainer}>
+        <form
+          id="fullForm"
+          className={formStyles.form}
+          onSubmit={submitHandler}
+        >
+          <div className={styles.additionalFormHeader}>
+            <h3 className={styles.addNew}>{t("rsvp.partner")}</h3>
             <IconButton
               onClick={removeAdditionalForm}
               sx={{
@@ -107,16 +113,16 @@ function FullRsvpForm(props: Props) {
               />
             </IconButton>
           </div>
-          <div className="input-control">
+          <div className={styles.inputControl}>
             <label htmlFor="firstName">{t("rsvp.firstName")}</label>
             <input required type="text" id="firstName" ref={firstNameRef} />
           </div>
-          <div className="input-control">
+          <div className={styles.inputControl}>
             <label htmlFor="lastName">{t("rsvp.lastName")}</label>
             <input required type="text" id="lastName" ref={lastNameRef} />
           </div>
-          <div className="radio-button-control">
-            <label className="question" htmlFor="attendance">
+          <div className={styles.radioButtonControl}>
+            <label className={styles.question} htmlFor="attendance">
               {t("rsvp.attendance")}
             </label>
             <RadioButtonContainer
@@ -128,12 +134,12 @@ function FullRsvpForm(props: Props) {
               locale={props.locale}
             />
           </div>
-          <div className="input-control">
+          <div className={styles.inputControl}>
             <label htmlFor="foodPreferences">{t("rsvp.foodPreferences")}</label>
             <textarea id="foodPreferences" rows={2} ref={foodPreferencesRef} />
           </div>
-          <div className="radio-button-control">
-            <label className="question" htmlFor="speech">
+          <div className={styles.radioButtonControl}>
+            <label className={styles.question} htmlFor="speech">
               {t("rsvp.speech")}
             </label>
             <RadioButtonContainer
@@ -145,8 +151,8 @@ function FullRsvpForm(props: Props) {
               locale={props.locale}
             />
           </div>
-          <div className="radio-button-control">
-            <label className="question" htmlFor="busTo">
+          <div className={styles.radioButtonControl}>
+            <label className={styles.question} htmlFor="busTo">
               {t("rsvp.busTo")}
             </label>
             <RadioButtonContainer
@@ -158,8 +164,8 @@ function FullRsvpForm(props: Props) {
               locale={props.locale}
             />
           </div>
-          <div className="radio-button-control">
-            <label className="question" htmlFor="busFrom">
+          <div className={styles.radioButtonControl}>
+            <label className={styles.question} htmlFor="busFrom">
               {t("rsvp.busFrom")}
             </label>
             <RadioButtonContainer
@@ -171,7 +177,7 @@ function FullRsvpForm(props: Props) {
               locale={props.locale}
             />
           </div>
-          <div className="butt">
+          <div className={styles.butt}>
             {addChild ? (
               <div></div>
             ) : (
@@ -187,7 +193,7 @@ function FullRsvpForm(props: Props) {
           locale={props.locale}
         />
       ) : (
-        <div className="bottom-button">
+        <div className={styles.bottomButton}>
           <Button
             variant="contained"
             form="fullForm"

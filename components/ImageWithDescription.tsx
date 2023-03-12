@@ -1,4 +1,5 @@
 import Image from "next/image";
+import styles from "@/components/ImageWithDescription.module.css";
 
 export interface Props {
   imageDescription: string;
@@ -9,9 +10,9 @@ const ImageWithDescription = (props: Props) => {
   const imageSource = props.imageSource;
   return (
     <div>
-      <div className="image-style">
+      <div className={styles.imageContainer}>
         <Image
-          className="story-image"
+          className={styles.imageStyle}
           src={require("../assets/" + props.imageSource)}
           alt="image alt"
         ></Image>

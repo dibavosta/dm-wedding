@@ -9,6 +9,7 @@ let cachedDb: Db;
 export async function connectToDatabase() {
   // check the cached.
   if (cachedClient && cachedDb) {
+    console.log("has cached client");
     // load from cache
     return {
       client: cachedClient,

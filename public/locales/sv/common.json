@@ -1,4 +1,9 @@
 {
+  "login": {
+    "title": "Logga in",
+    "username": "Användarnamn",
+    "password": "Lösenord"
+  },
   "page": {
     "title": "Diba & Manolo"
   },
@@ -27,8 +32,10 @@
     "child": {
       "name": "Barnets/barnens namn",
       "age": "Barnets/barnens ålder",
-      "foodPreferences": "Barnets/barnen matpreferenser"
+      "foodPreferences": "Barnets/barnen matpreferenser",
+      "title": "Barnet/barnens svar"
     },
+    "partner": "Er partners svar",
     "thanks": "Tack för ditt svar!",
     "addAnother": "Vill du skicka in ett till svar? Klicka",
     "here": "här",

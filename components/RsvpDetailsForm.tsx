@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "next-i18next";
 import RadioButtonContainer from "./RadioButtonContainer";
 import { Locale } from "@/types/Locale";
-
+import styles from "@/components/RsvpForm.module.css";
 export interface Props {
   onSendForm: (params: any) => void;
   locale: Locale;
@@ -48,8 +48,8 @@ function RsvpDetailsForm(props: Props) {
   };
 
   return (
-    <div className="attending">
-      <div className="input-control">
+    <div className={styles.attending}>
+      <div className={styles.inputControl}>
         <label htmlFor="foodPreferences">{t("rsvp.foodPreferences")}</label>
         <textarea
           id="foodPreferences"
@@ -58,8 +58,8 @@ function RsvpDetailsForm(props: Props) {
           ref={foodPreferencesRef}
         />
       </div>
-      <div className="radio-button-control">
-        <label className="question" htmlFor="speech">
+      <div className={styles.radioButtonControl}>
+        <label className={styles.question} htmlFor="speech">
           {t("rsvp.speech")}
         </label>
         <RadioButtonContainer
@@ -71,8 +71,8 @@ function RsvpDetailsForm(props: Props) {
           locale={props.locale}
         />
       </div>
-      <div className="radio-button-control">
-        <label className="question" htmlFor="busTo">
+      <div className={styles.radioButtonControl}>
+        <label className={styles.question} htmlFor="busTo">
           {t("rsvp.busTo")}
         </label>
         <RadioButtonContainer
@@ -84,8 +84,8 @@ function RsvpDetailsForm(props: Props) {
           locale={props.locale}
         />
       </div>
-      <div className="radio-button-control">
-        <label className="question" htmlFor="busFrom">
+      <div className={styles.radioButtonControl}>
+        <label className={styles.question} htmlFor="busFrom">
           {t("rsvp.busFrom")}
         </label>
         <RadioButtonContainer

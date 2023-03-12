@@ -2,6 +2,8 @@ import { TimeType } from "@/enums/TimeType";
 import { Locale } from "@/types/Locale";
 import { t } from "i18next";
 import { useTranslation } from "next-i18next";
+import formStyles from "@/components/Form.module.css";
+import styles from "@/components/CountDown.module.css";
 
 interface CountDownElementProps {
   timeUnit: number;
@@ -47,7 +49,7 @@ function CountDownElement(props: CountDownElementProps) {
   }
 
   return (
-    <div className="form-container count-down">
+    <div className={`${formStyles.formContainer} ${styles.countDown}`}>
       <div></div>
       <h3>{props.timeUnit}</h3>
       <p className="text">{getTimeText()}</p>

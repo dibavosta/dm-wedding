@@ -6,6 +6,8 @@ import Button from "@mui/material/Button";
 import SendIcon from "@mui/icons-material/Send";
 import DeleteIcon from "@mui/icons-material/Delete";
 import IconButton from "@mui/material/IconButton";
+import formStyles from "@/components/Form.module.css";
+import styles from "@/components/RsvpForm.module.css";
 
 export interface Props {
   onSendForm: (params: any) => void;
@@ -49,11 +51,15 @@ function ChildRsvpForm(props: Props) {
   }
 
   return (
-    <div className="additional-form">
-      <div className="form-container">
-        <form id="childform" className="form" onSubmit={submitHandler}>
-          <div className="additional-form-header">
-            <h3 className="add-new">Enter details of child</h3>
+    <div className={styles.additionalForm}>
+      <div className={formStyles.formContainer}>
+        <form
+          id="childform"
+          className={formStyles.form}
+          onSubmit={submitHandler}
+        >
+          <div className={styles.additionalFormHeader}>
+            <h3 className={styles.addNew}>{t("rsvp.child.title")}</h3>
             <IconButton
               onClick={removeAdditionalForm}
               sx={{
@@ -70,7 +76,7 @@ function ChildRsvpForm(props: Props) {
               />
             </IconButton>
           </div>
-          <div className="input-control">
+          <div className={styles.inputControl}>
             <label htmlFor="name">{t("rsvp.child.name")}</label>
             <input
               required
@@ -79,11 +85,11 @@ function ChildRsvpForm(props: Props) {
               ref={nameChildrenRef}
             />
           </div>
-          <div className="input-control">
+          <div className={styles.inputControl}>
             <label htmlFor="age">{t("rsvp.child.age")}</label>
             <input required type="text" id="ageChildren" ref={ageChildrenRef} />
           </div>
-          <div className="input-control">
+          <div className={styles.inputControl}>
             <label htmlFor="foodPreferences">
               {t("rsvp.child.foodPreferences")}
             </label>
@@ -93,8 +99,8 @@ function ChildRsvpForm(props: Props) {
               ref={foodPreferencesChildrenRef}
             />
           </div>
-          <div className="radio-button-control">
-            <label className="question" htmlFor="busTo">
+          <div className={styles.radioButtonControl}>
+            <label className={styles.question} htmlFor="busTo">
               {t("rsvp.busTo")}
             </label>
             <RadioButtonContainer
@@ -106,8 +112,8 @@ function ChildRsvpForm(props: Props) {
               locale={props.locale}
             />
           </div>
-          <div className="radio-button-control">
-            <label className="question" htmlFor="busFrom">
+          <div className={styles.radioButtonControl}>
+            <label className={styles.question} htmlFor="busFrom">
               {t("rsvp.busFrom")}
             </label>
             <RadioButtonContainer
@@ -121,7 +127,7 @@ function ChildRsvpForm(props: Props) {
           </div>
         </form>
       </div>
-      <div className="bottom-button">
+      <div className={styles.bottomButton}>
         <Button
           variant="contained"
           type="submit"

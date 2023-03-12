@@ -6,12 +6,14 @@ import Title from "@/components/Title";
 import LoginForm from "./LoginForm";
 import { signIn } from "next-auth/react";
 import Container from "./Container";
-
-interface StoryTimeLineProps {
+import Footer from "./Footer";
+import LoggedOutHeader from "./LoggedOutHeader";
+import styles from "@/components/LoggedOutHeader.module.css";
+interface LoginProps {
   locale: Locale;
 }
 
-function Login({ locale }: StoryTimeLineProps) {
+function Login(props: LoginProps) {
   const { t } = useTranslation("common");
 
   async function loginResponseHandler(userInfo: any) {
@@ -24,15 +26,22 @@ function Login({ locale }: StoryTimeLineProps) {
   }
 
   return (
-    <Container style={{}}>
-      <Head>
-        <title>Login</title>
-      </Head>
-      <section>
-        <Title style={{}} titleText="Log in" />
-        <LoginForm onSubmitForm={loginResponseHandler} locale={locale} />
-      </section>
-    </Container>
+    <div className={styles.container}>
+      <LoggedOutHeader locale={props.locale} />
+      <Container style={{}}>
+        <Head>
+          <title>{t("login.title")}</title>
+        </Head>
+        <section>
+          <Title style={{}} titleText={t("login.title")} />
+          <LoginForm
+            onSubmitForm={loginResponseHandler}
+            locale={props.locale}
+          />
+        </section>
+      </Container>
+      <Footer locale={props.locale} />
+    </div>
   );
 }
 

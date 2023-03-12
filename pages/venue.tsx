@@ -24,7 +24,9 @@ function VenuePage({ locale }: VenueProps) {
         </Head> */}
         <Title style={{}} titleText={t("location.title")} />
         <div>
-          <p className="text venue-description">{t("location.text")}</p>
+          <p style={{ color: "var(--text-secondary)", marginBottom: "12px" }}>
+            {t("location.text")}
+          </p>
           <VenueMap />
           <Title style={{}} titleText={t("location.directions")}></Title>
           <TextWithHeadline

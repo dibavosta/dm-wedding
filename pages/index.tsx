@@ -1,7 +1,7 @@
 import { Locale } from "@/types/Locale";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import HeaderDeluxe from "../components/HeaderDeluxe";
+import Header from "../components/Header";
 import Head from "next/head";
 import Story from "./story";
 import Program from "./program";
@@ -21,7 +21,7 @@ function HomePage({ locale }: HomeProps) {
         <title>Manolo & Diba</title>
         {/* <title>{t("index.path")}</title> */}
       </Head>
-      <HeaderDeluxe locale={locale} />
+      <Header locale={locale} />
       <Story locale={locale} />
       <Program locale={locale} />
       <VenuePage locale={locale} />

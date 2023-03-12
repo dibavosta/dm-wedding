@@ -1,4 +1,9 @@
 {
+  "login": {
+    "title": "Login",
+    "username": "Username",
+    "password": "Password"
+  },
   "page": {
     "title": "Diba & Manolo"
   },
@@ -27,8 +32,10 @@
     "child": {
       "name": "",
       "age": "",
-      "foodPreferences": ""
+      "foodPreferences": "",
+      "title": "Enter details of child"
     },
+    "partner": "Enter details of partner",
     "thanks": "Thank you for your response!",
     "addAnother": "Would you like to send another rsvp? Click",
     "here": "here",

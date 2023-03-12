@@ -33,7 +33,7 @@
     --text-primary: rgba(0, 0, 0);
     --text-secondary: rgba(0, 0, 0, 0.87);
     --text-primary-inverted: #ffffff;
-    --hamburger-overlay: rgba(255, 255, 255, 0.9);
+    --hamburgerOverlay: rgba(255, 255, 255, 0.9);
 
     /* --foreground-rgb: #ffffff; */
   }
@@ -58,7 +58,7 @@
     --text-secondary: rgba(249, 245, 231, 0.6);
 
     --text-primary-inverted: #000000;
-    --hamburger-overlay: rgba(0, 0, 0, 0.9);
+    --hamburgerOverlay: rgba(0, 0, 0, 0.9);
   }
 }
 

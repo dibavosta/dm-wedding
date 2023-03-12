@@ -4,6 +4,8 @@ import * as React from "react";
 import Button from "@mui/material/Button";
 import SendIcon from "@mui/icons-material/Send";
 import { useRef, useState } from "react";
+import formStyles from "@/components/Form.module.css";
+import styles from "@/components/RsvpForm.module.css";
 
 interface LoginFormProps {
   onSubmitForm: (params: any) => void;
@@ -24,20 +26,24 @@ function LoginForm(props: LoginFormProps) {
   }
 
   return (
-    <div className="additional-form">
-      <div className="form-container">
-        <form id="loginForm" className="form" onSubmit={submitHandler}>
-          <div className="input-control">
-            <label htmlFor="userName">Username</label>
+    <div className={styles.additionalForm}>
+      <div className={formStyles.formContainer}>
+        <form
+          id="loginForm"
+          className={formStyles.form}
+          onSubmit={submitHandler}
+        >
+          <div className={styles.inputControl}>
+            <label htmlFor="userName">{t("login.username")}</label>
             <input required type="text" id="userName" ref={usernameRef} />
           </div>
-          <div className="input-control">
-            <label htmlFor="password">Password</label>
+          <div className={styles.inputControl}>
+            <label htmlFor="password">{t("login.password")}</label>
             <input required id="password" type="password" ref={passwordRef} />
           </div>
         </form>
       </div>
-      <div className="bottom-button">
+      <div className={styles.bottomButton}>
         <Button
           variant="contained"
           form="loginForm"
@@ -50,7 +56,7 @@ function LoginForm(props: LoginFormProps) {
             },
           }}
         >
-          Send
+          {t("rsvp.send")}
         </Button>
       </div>
     </div>

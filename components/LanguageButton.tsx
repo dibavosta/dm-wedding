@@ -12,7 +12,7 @@ const LanguageButton = (props: Props) => {
   const { i18n } = useTranslation("common");
   return (
     <Link
-      className={props.active ? "active" : ""}
+      style={{ fontStyle: props.active ? "italic" : "" }}
       href={props.href}
       locale={props.locale}
       scroll={false}
