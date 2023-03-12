@@ -4,7 +4,7 @@ import * as React from "react";
 import Button from "@mui/material/Button";
 import SendIcon from "@mui/icons-material/Send";
 import { useRef, useState } from "react";
-import formStyles from "@/components/form.module.css";
+import formStyles from "@/components/Form.module.css";
 import styles from "@/components/RsvpForm.module.css";
 
 interface LoginFormProps {

@@ -8,7 +8,7 @@ import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import AddChildSpeedDial from "./AddChildSpeedDial";
 import ChildRsvpForm from "./ChildRsvpForm";
-import formStyles from "@/components/form.module.css";
+import formStyles from "@/components/Form.module.css";
 import styles from "@/components/RsvpForm.module.css";
 
 export interface Props {

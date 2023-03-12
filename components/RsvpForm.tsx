@@ -8,7 +8,7 @@ import AddPersonSpeedDial from "./AddPersonSpeedDial";
 import ChildRsvpForm from "./ChildRsvpForm";
 import Button from "@mui/material/Button";
 import SendIcon from "@mui/icons-material/Send";
-import formStyles from "@/components/form.module.css";
+import formStyles from "@/components/Form.module.css";
 import styles from "@/components/RsvpForm.module.css";
 
 export interface Props {
