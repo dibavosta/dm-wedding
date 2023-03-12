@@ -2,7 +2,7 @@ import { TimeType } from "@/enums/TimeType";
 import { Locale } from "@/types/Locale";
 import { t } from "i18next";
 import { useTranslation } from "next-i18next";
-import formStyles from "@/components/form.module.css";
+import formStyles from "@/components/Form.module.css";
 import styles from "@/components/CountDown.module.css";
 
 interface CountDownElementProps {
