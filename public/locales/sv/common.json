@@ -1,4 +1,9 @@
 {
+  "login": {
+    "title": "Logga in",
+    "username": "Användarnamn",
+    "password": "Lösenord"
+  },
   "page": {
     "title": "Diba & Manolo"
   },

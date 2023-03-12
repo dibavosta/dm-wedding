@@ -1,4 +1,9 @@
 {
+  "login": {
+    "title": "Login",
+    "username": "Username",
+    "password": "Password"
+  },
   "page": {
     "title": "Diba & Manolo"
   },

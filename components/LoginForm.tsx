@@ -34,11 +34,11 @@ function LoginForm(props: LoginFormProps) {
           onSubmit={submitHandler}
         >
           <div className={styles.inputControl}>
-            <label htmlFor="userName">Username</label>
+            <label htmlFor="userName">{t("login.username")}</label>
             <input required type="text" id="userName" ref={usernameRef} />
           </div>
           <div className={styles.inputControl}>
-            <label htmlFor="password">Password</label>
+            <label htmlFor="password">{t("login.password")}</label>
             <input required id="password" type="password" ref={passwordRef} />
           </div>
         </form>
