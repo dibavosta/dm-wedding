@@ -1,6 +1,6 @@
 import { Locale } from "@/types/Locale";
 import { useTranslation } from "next-i18next";
-import formStyles from "@/components/form.module.css";
+import formStyles from "@/components/Form.module.css";
 import styles from "@/components/RsvpForm.module.css";
 
 interface RsvpSubmittedProps {
