@@ -59,7 +59,7 @@ function ChildRsvpForm(props: Props) {
           onSubmit={submitHandler}
         >
           <div className={styles.additionalFormHeader}>
-            <h3 className={styles.addNew}>Enter details of child</h3>
+            <h3 className={styles.addNew}>{t("rsvp.child.title")}</h3>
             <IconButton
               onClick={removeAdditionalForm}
               sx={{

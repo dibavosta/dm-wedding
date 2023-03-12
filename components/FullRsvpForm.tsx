@@ -96,7 +96,7 @@ function FullRsvpForm(props: Props) {
           onSubmit={submitHandler}
         >
           <div className={styles.additionalFormHeader}>
-            <h3 className={styles.addNew}>Enter details of partner</h3>
+            <h3 className={styles.addNew}>{t("rsvp.partner")}</h3>
             <IconButton
               onClick={removeAdditionalForm}
               sx={{
