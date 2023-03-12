@@ -66,9 +66,7 @@ function Layout(props: any) {
           <meta name="theme-color" content="#ffffff"></meta>
         </Head>
         <div>
-          {/* <Navigation locale={props.locale} /> */}
           <Login locale={props.locale} />
-          {/* <Footer locale={props.locale} /> */}
         </div>
       </div>
     );
