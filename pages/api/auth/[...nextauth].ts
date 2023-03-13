@@ -43,6 +43,7 @@ export default NextAuth({
           client.client.close();
           throw new Error("Could not log you in!");
         }
+
         return { username: user.username } as any;
       },
     }),

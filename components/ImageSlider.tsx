@@ -3,7 +3,20 @@ import Image from "next/image";
 import styles from "./ImageSlider.module.css";
 
 const ImageSlider = () => {
-  const slides = ["amsterdam.jpg", "bild.jpg"];
+  const slides = [
+    "amsterdam.jpg",
+    "bild.jpg",
+    "bus.JPG",
+    "datatjej.JPG",
+    "granna.JPG",
+    "korea.JPG",
+    "korea2.JPG",
+    "philli.JPG",
+    "philli2.JPG",
+    "philli3.JPG",
+    "philli4.JPG",
+    "stockholm.JPG",
+  ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const imageArray = [];
